@@ -117,7 +117,7 @@ int WINAPI WinMain(HINSTANCE hInstance, HINSTANCE hPrevInstance, LPSTR lpCmdLine
 	windowClass.hCursor       = LoadCursor(NULL, IDC_ARROW);
 	windowClass.hbrBackground = (HBRUSH)GetStockObject(WHITE_BRUSH);
 	windowClass.lpszMenuName  = NULL;
-	windowClass.lpszClassName = "MyClass";
+	windowClass.lpszClassName = L"MyClass";
 	windowClass.hIconSm       = LoadIcon(NULL, IDI_WINLOGO);
 
 	if(!RegisterClassEx(&windowClass))
@@ -133,8 +133,8 @@ int WINAPI WinMain(HINSTANCE hInstance, HINSTANCE hPrevInstance, LPSTR lpCmdLine
 	result = FMOD_System_CreateDSPByType(system, FMOD_DSP_TYPE_HIGHPASS, &dsphighpass);
 
 	hwnd = CreateWindowEx(NULL,
-						  "MyClass",
-						  "VolcanoStudio",
+						  L"MyClass",
+						  L"VolcanoStudio",
 						  WS_OVERLAPPEDWINDOW | WS_VISIBLE | WS_SYSMENU | WS_CAPTION,
 						  100, 100,
 						  400, 400,
