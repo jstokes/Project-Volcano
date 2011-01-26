@@ -1,7 +1,6 @@
 
 *.user
 *.filters
-*.vcxproj
 
 /Volcano/
 #ignore thumbnails created by windows
