@@ -126,11 +126,11 @@ int WINAPI WinMain(HINSTANCE hInstance, HINSTANCE hPrevInstance, LPSTR lpCmdLine
 
     result = FMOD_System_Create(&system);
     result = FMOD_System_Init(system, 32, FMOD_INIT_NORMAL, NULL);
-    result = FMOD_System_CreateSound(system, "drumloop.wav", FMOD_HARDWARE, 0, &sound1);
+    result = FMOD_System_CreateSound(system, "./media/drumloop.wav", FMOD_HARDWARE, 0, &sound1);
     result = FMOD_Sound_SetMode(sound1, FMOD_LOOP_NORMAL);
-    result = FMOD_System_CreateSound(system, "bass_off_beat.wav", FMOD_SOFTWARE, 0, &sound2);
+    result = FMOD_System_CreateSound(system, "./media/bass_off_beat.wav", FMOD_SOFTWARE, 0, &sound2);
 	result = FMOD_Sound_SetMode(sound2, FMOD_LOOP_NORMAL);
-    result = FMOD_System_CreateSound(system, "trance_lead.wav", FMOD_HARDWARE, 0, &sound3);
+    result = FMOD_System_CreateSound(system, "./media/trance_lead.wav", FMOD_HARDWARE, 0, &sound3);
 	result = FMOD_System_CreateDSPByType(system, FMOD_DSP_TYPE_HIGHPASS, &dsphighpass);
 
 	hwnd = CreateWindowEx(NULL,
