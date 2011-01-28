@@ -108,6 +108,7 @@
     <ResourceCompile Include="icon\app.rc" />
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="src\keymain.cpp" />
     <ClCompile Include="src\main.cpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
