@@ -8,18 +8,17 @@
 #include <math.h>
 #include <process.h>
 
-void printPlayingChannels(thread_args* t);
-void createSounds(FMOD::Sound** sound);
-
-const int NUM_CHANNELS = 12;
-
 struct thread_args {
 	FMOD::System      *system;
 	FMOD::Sound       *sound;
-	FMOD::Channel     *channel;
 	int               threadNo;
 	bool              paused;
 };
+
+const int NUM_CHANNELS = 12;
+FMOD::Channel *channel[NUM_CHANNELS];
+void createSounds(FMOD::Sound** sound, FMOD::System* system);
+void printPlayingChannels(thread_args* t);
 
 void ERRCHECK(FMOD_RESULT result)
 {
@@ -37,18 +36,19 @@ void startKey(void* args) {
 	int key = 0;
 	FMOD::System   *system   = t->system;
 	FMOD::Sound    *sound    = t->sound;
-	FMOD::Channel  *channel = t->channel;
 	int threadNo             = t->threadNo;
 	bool paused              = t->paused;
 	FMOD_RESULT result;
 	bool current_status;
 
-	channel->getPaused(&current_status);
+	channel[threadNo]->getPaused(&current_status);
 
 	// if no change needs to be made
 	if (current_status == paused) _endthread();
 
-	channel->setPaused(paused);
+	channel[threadNo]->setPaused(paused);
+	result = system->playSound(FMOD_CHANNEL_REUSE, sound, paused, &channel[threadNo]);
+	ERRCHECK(result);
 	_endthread();
 }
 
@@ -75,7 +75,8 @@ int main(int argc, char* argv[]) {
 	}
 	for (int i = 0; i < 80; i++) printf("-");
 
-	printf("To use press key numbers 1-7.  They each represent a different key on \nthe electronic keyboard\n\n");
+	//printf("To use press letters a-'.  They each represent a different key on \nthe piano\n\n");
+	printf("Use the number keys 1-9. Only 8 sounds work, I'll have to hardcode in the others");
 
 	/*
 		Initialize variables for program
@@ -84,13 +85,12 @@ int main(int argc, char* argv[]) {
 	FMOD_RESULT     result;
 	int             key = 0;
 	FMOD::Sound     *sound[NUM_CHANNELS];
-	FMOD::Channel   *channel[NUM_CHANNELS];
 
     // Create system and initialize
 	result = FMOD::System_Create(&system); ERRCHECK(result);
 	result = system->init(NUM_CHANNELS, FMOD_INIT_NORMAL, NULL); ERRCHECK(result);
 
-	createSounds(sound);
+	createSounds(sound, system);
 
 	thread_args t[NUM_CHANNELS];
 	// Create thread arguments for each key
@@ -99,7 +99,6 @@ int main(int argc, char* argv[]) {
 		t[i].threadNo = i; // thread number
 		t[i].system   = system;
 		t[i].sound    = sound[i];
-		t[i].channel  = channel[i];
 	}
 
 	int begin = 49; // Beginning key is the '1' key, for now
@@ -140,7 +139,31 @@ void printPlayingChannels(thread_args* t) {
 }
 
 
-void createSounds(FMOD::Sound** sound) {
-	char* piano[NUM_CHANNELS];
+void createSounds(FMOD::Sound** sound, FMOD::System* system) {
 
+	FMOD_RESULT result;
+	char* dir =  "./media/piano/";
+	char* notes[NUM_CHANNELS];
+	char full_dir[25];
+
+	notes[0]   =  "G#.wav";
+	notes[1]   =  "A.wav";
+	notes[2]   =  "A#.wav";
+	notes[3]   =  "B.wav";
+	notes[4]   =  "C.wav";
+	notes[5]   =  "C#.wav";
+	notes[6]   =  "D.wav";
+	notes[7]   =  "Eb.wav";
+	notes[8]   =  "E.wav";
+	notes[9]   =  "F.wav";
+	notes[10]  =  "F#.wav";
+	notes[11]  =  "G.wav";
+
+	for (int i = 0; i < NUM_CHANNELS; i++) {
+		full_dir[0] = '\0';
+		strcat(full_dir, dir);
+		strcat(full_dir, notes[i]);
+		result = system->createSound(full_dir, FMOD_SOFTWARE, 0, &sound[i]); 
+		ERRCHECK(result);
+	}
 }
