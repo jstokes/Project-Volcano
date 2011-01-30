@@ -41,13 +41,13 @@
   <PropertyGroup Label="UserMacros" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
     <LinkIncremental>true</LinkIncremental>
-    <IncludePath>$(VCInstallDir)include;$(VCInstallDir)atlmfc\include;$(WindowsSdkDir)include;$(FrameworkSDKDir)\include;C:\Program Files (x86)\FMOD SoundSystem\FMOD Programmers API Win32\api\inc;C:\Program Files (x86)\FMOD SoundSystem\FMOD Programmers API Win32\api\include;</IncludePath>
-    <LibraryPath>$(VCInstallDir)lib;$(VCInstallDir)atlmfc\lib;$(WindowsSdkDir)lib;$(FrameworkSDKDir)\lib;C:\Program Files (x86)\FMOD SoundSystem\FMOD Programmers API Win32\api\lib;</LibraryPath>
+    <IncludePath>$(VCInstallDir)include;$(VCInstallDir)atlmfc\include;$(WindowsSdkDir)include;$(FrameworkSDKDir)\include;C:\Program Files\FMOD SoundSystem\FMOD Programmers API Win32\api\inc;C:\Program Files\FMOD SoundSystem\FMOD Programmers API Win32\api\include;</IncludePath>
+    <LibraryPath>$(VCInstallDir)lib;$(VCInstallDir)atlmfc\lib;$(WindowsSdkDir)lib;$(FrameworkSDKDir)\lib;C:\Program Files\FMOD SoundSystem\FMOD Programmers API Win32\api\lib;</LibraryPath>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
     <LinkIncremental>false</LinkIncremental>
-    <IncludePath>$(VCInstallDir)include;$(VCInstallDir)atlmfc\include;$(WindowsSdkDir)include;$(FrameworkSDKDir)\include;C:\Program Files (x86)\FMOD SoundSystem\FMOD Programmers API Win32\api\inc;</IncludePath>
-    <LibraryPath>$(VCInstallDir)lib;$(VCInstallDir)atlmfc\lib;$(WindowsSdkDir)lib;$(FrameworkSDKDir)\lib;C:\Program Files (x86)\FMOD SoundSystem\FMOD Programmers API Win32\api\lib;</LibraryPath>
+    <IncludePath>$(VCInstallDir)include;$(VCInstallDir)atlmfc\include;$(WindowsSdkDir)include;$(FrameworkSDKDir)\include;C:\Program Files\FMOD SoundSystem\FMOD Programmers API Win32\api\inc;</IncludePath>
+    <LibraryPath>$(VCInstallDir)lib;$(VCInstallDir)atlmfc\lib;$(WindowsSdkDir)lib;$(FrameworkSDKDir)\lib;C:\Program Files\FMOD SoundSystem\FMOD Programmers API Win32\api\lib;</LibraryPath>
   </PropertyGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
     <ClCompile>
@@ -55,7 +55,7 @@
       <Optimization>Disabled</Optimization>
       <PreprocessorDefinitions>DEBUG;WIN32;_CONSOLE;_CRT_SECURE_NO_WARNINGS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <PrecompiledHeader>NotUsing</PrecompiledHeader>
-      <AdditionalIncludeDirectories>C:\Program Files (x86)\FMOD SoundSystem\FMOD Programmers API Win32\api\inc;</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>C:\Program Files\FMOD SoundSystem\FMOD Programmers API Win32\api\inc;</AdditionalIncludeDirectories>
       <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
       <AdditionalOptions>
       </AdditionalOptions>
@@ -65,8 +65,8 @@
     </ClCompile>
     <Link>
       <GenerateDebugInformation>true</GenerateDebugInformation>
-      <AdditionalDependencies>C:\Program Files (x86)\FMOD SoundSystem\FMOD Programmers API Win32\api\lib\fmodex_vc.lib;%(AdditionalDependencies)</AdditionalDependencies>
-      <AdditionalLibraryDirectories>C:\Program Files (x86)\FMOD SoundSystem\FMOD Programmers API Win32\api\lib;</AdditionalLibraryDirectories>
+      <AdditionalDependencies>C:\Program Files\FMOD SoundSystem\FMOD Programmers API Win32\api\lib\fmodex_vc.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalLibraryDirectories>C:\Program Files\FMOD SoundSystem\FMOD Programmers API Win32\api\lib;</AdditionalLibraryDirectories>
       <SubSystem>Console</SubSystem>
       <EntryPointSymbol>
       </EntryPointSymbol>
@@ -77,12 +77,12 @@
       <WarningLevel>Level3</WarningLevel>
       <PreprocessorDefinitions>WIN32;NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <PrecompiledHeader>Use</PrecompiledHeader>
-      <AdditionalIncludeDirectories>C:\Program Files (x86)\FMOD SoundSystem\FMOD Programmers API Win32\api\inc;</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>C:\Program Files\FMOD SoundSystem\FMOD Programmers API Win32\api\inc;</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
       <GenerateDebugInformation>true</GenerateDebugInformation>
-      <AdditionalDependencies>C:\Program Files (x86)\FMOD SoundSystem\FMOD Programmers API Win32\api\lib\fmodex_vc.lib;</AdditionalDependencies>
-      <AdditionalLibraryDirectories>C:\Program Files (x86)\FMOD SoundSystem\FMOD Programmers API Win32\api\lib;</AdditionalLibraryDirectories>
+      <AdditionalDependencies>C:\Program Files\FMOD SoundSystem\FMOD Programmers API Win32\api\lib\fmodex_vc.lib;</AdditionalDependencies>
+      <AdditionalLibraryDirectories>C:\Program Files\FMOD SoundSystem\FMOD Programmers API Win32\api\lib;</AdditionalLibraryDirectories>
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
@@ -108,7 +108,7 @@
     <ResourceCompile Include="icon\app.rc" />
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="src\keymain.cpp" />
+    <ClCompile Include="src\keymain_console.cpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
