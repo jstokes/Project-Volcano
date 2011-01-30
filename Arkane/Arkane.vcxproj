@@ -108,7 +108,7 @@
     <ResourceCompile Include="icon\app.rc" />
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="src\keymain_console.cpp" />
+    <ClCompile Include="src\keymain.cpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
