@@ -18,6 +18,7 @@ struct thread_args {
 	FMOD::Sound       *sound;
 	int               threadNo;
 	bool              paused;
+	char              key;
 };
 
 /*
@@ -39,7 +40,8 @@ void printIntro();
 void ERRCHECK(FMOD_RESULT result) {
     if (result != FMOD_OK) {
         printf("FMOD error! (%d) %s\n", result, FMOD_ErrorString(result));
-        exit(-1);
+        Sleep(10000);
+		exit(-1);
     }
 }
 
@@ -74,23 +76,26 @@ void startKey(void* args) {
 
 	thread_args* t = (thread_args*)args;
 
-	int key = 0;
 	FMOD::System   *system   = t->system;
 	FMOD::Sound    *sound    = t->sound;
 	int threadNo             = t->threadNo;
 	bool paused              = t->paused;
+	char key                 = t->key;
 	FMOD_RESULT result;
 	bool current_status;
 
-	channel[threadNo]->getPaused(&current_status);
+	while(1) {
+		if (GetKeyState(key) & 0x80) paused = false;
+		else paused = true;               // key is not pressed
+	
+		// if no change needs to be made
+		channel[threadNo]->getPaused(&current_status);
+		if (current_status == paused) continue;
 
-	// if no change needs to be made
-	if (current_status == paused) _endthread();
-
-	channel[threadNo]->setPaused(paused);
-	result = system->playSound(FMOD_CHANNEL_REUSE, sound, paused, &channel[threadNo]);
-	ERRCHECK(result);
-	_endthread();
+		channel[threadNo]->setPaused(paused);
+		result = system->playSound(FMOD_CHANNEL_REUSE, sound, paused, &channel[threadNo]);
+		ERRCHECK(result);
+	}
 }
 
 /*
@@ -127,30 +132,12 @@ void printIntro() {
 void playSounds(thread_args *t, FMOD::System *system) {
 	
 	FMOD_RESULT result;
-	
-	char keys[NUM_CHANNELS];
-	keys[0] = 'A';
-	keys[1] = 'W';
-	keys[2] = 'S';
-	keys[3] = 'E';
-	keys[4] = 'D';
-	keys[5] = 'F';
-	keys[6] = 'T';
-	keys[7] = 'G';
-	keys[8] = 'Y';
-	keys[9] = 'H';
-	keys[10] = 'U';
-	keys[11] = 'J';
 
+	for (int i = 0; i < NUM_CHANNELS; i++) {
+		_beginthread(startKey, 0, (void*)&t[i]);
+	}
+	
 	do {
-		
-		for (int i = 0; i < NUM_CHANNELS; i++) {
-			if (GetKeyState(keys[i]) & 0x80) t[i].paused = false;
-			else t[i].paused = true;               // key is not pressed
-		
-		 // check keys from 0-num_channels
-			_beginthread(startKey, 0, (void*)&t[i]);
-		}
 		
 		result = system->update(); ERRCHECK(result);
 
@@ -164,13 +151,27 @@ void playSounds(thread_args *t, FMOD::System *system) {
 */
 void createThreadArgs(FMOD::Sound** sound, FMOD::System* system, thread_args *t) {
 
+	char keys[NUM_CHANNELS];
+	keys[0] = 'A';
+	keys[1] = 'W';
+	keys[2] = 'S';
+	keys[3] = 'E';
+	keys[4] = 'D';
+	keys[5] = 'F';
+	keys[6] = 'T';
+	keys[7] = 'G';
+	keys[8] = 'Y';
+	keys[9] = 'H';
+	keys[10] = 'U';
+	keys[11] = 'J';
 	// Create thread arguments for each key
 	for (int i = 0; i < NUM_CHANNELS; i++) {
 		/* Args for threads! */
 		t[i].threadNo = i; // thread number
 		t[i].system   = system;
 		t[i].sound    = sound[i];
-		t[i].paused   = true; // all channels start out pasued
+		t[i].paused   = true; // all channels start out paused
+		t[i].key      = keys[i];
 	}
 }
 
