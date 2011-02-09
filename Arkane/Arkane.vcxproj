@@ -67,7 +67,7 @@
       <GenerateDebugInformation>true</GenerateDebugInformation>
       <AdditionalDependencies>C:\Program Files\FMOD SoundSystem\FMOD Programmers API Win32\api\lib\fmodex_vc.lib;%(AdditionalDependencies)</AdditionalDependencies>
       <AdditionalLibraryDirectories>C:\Program Files\FMOD SoundSystem\FMOD Programmers API Win32\api\lib;</AdditionalLibraryDirectories>
-      <SubSystem>Console</SubSystem>
+      <SubSystem>Windows</SubSystem>
       <EntryPointSymbol>
       </EntryPointSymbol>
     </Link>
@@ -91,7 +91,22 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="icon\app.ico" />
+    <None Include="bmp\bitmap1.bmp" />
+    <None Include="bmp\bitmap10.bmp" />
+    <None Include="bmp\bitmap11.bmp" />
+    <None Include="bmp\bitmap2.bmp" />
+    <None Include="bmp\bitmap3.bmp" />
+    <None Include="bmp\bitmap4.bmp" />
+    <None Include="bmp\bitmap5.bmp" />
+    <None Include="bmp\bitmap6.bmp" />
+    <None Include="bmp\bitmap7.bmp" />
+    <None Include="bmp\bitmap8.bmp" />
+    <None Include="bmp\bitmap9.bmp" />
+    <None Include="bmp\channel1.bmp" />
+    <None Include="bmp\channel2.bmp" />
+    <None Include="bmp\channel4.bmp" />
+    <None Include="bmp\channel8.bmp" />
+    <None Include="bmp\icon1.ico" />
     <None Include="media\bass_off_beat.wav" />
     <None Include="media\drumloop.wav" />
     <None Include="media\jaguar.wav" />
@@ -100,15 +115,21 @@
     <None Include="media\wave.mp3" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="bmp\resource.h" />
     <ClInclude Include="src\Channel.h" />
+    <ClInclude Include="src\InputClass.h" />
     <ClInclude Include="src\Sample.h" />
     <ClInclude Include="src\System.h" />
   </ItemGroup>
   <ItemGroup>
-    <ResourceCompile Include="icon\app.rc" />
+    <ResourceCompile Include="bmp\resources.rc" />
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="src\keymain.cpp" />
+    <ClCompile Include="src\Channel.cpp" />
+    <ClCompile Include="src\InputClass.cpp" />
+    <ClCompile Include="src\main.cpp" />
+    <ClCompile Include="src\Sample.cpp" />
+    <ClCompile Include="src\System.cpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

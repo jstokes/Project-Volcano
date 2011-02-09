@@ -1,7 +1,6 @@
 #ifndef SAMPLE_H
 #define SAMPLE_H
 
-#include "Channel.h"
 #include <fmod.h>
 #include <fmod_errors.h>
 
@@ -38,6 +37,8 @@ TODO
  filepath unless the file contains a song title.
 
 */
+#include <fmod.hpp>
+#include <fmod_errors.h>
 
 class Sample{
 
@@ -48,12 +49,13 @@ class Sample{
 		int key;
 		float BPM;
 		bool isLoop;
-		FMOD_SOUND sampleName;
+		FMOD::Sound * sample;
 
 	public:
-		Sample();
-		~Sample();
-
+		Sample(void);
+		~Sample(void);
+		bool CreateSampleFromFile(char*, FMOD::System*);
+		bool Play(FMOD::System*, FMOD::Channel*);
 
 };
 
