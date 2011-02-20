@@ -30,6 +30,8 @@ class Channel {
 		float pan;
 		//Effect effectsList[];
 		bool isActive;
+		bool isPlaying;
+		bool isMuted;
 		float volumeBeforeMuting;
 		Sample* sample1;
 
@@ -51,7 +53,7 @@ class Channel {
 		void StopLoopingSample();
 		void UnLoadSample();                          //Checks to make sure there is a sample
 		void Mute();
-		void Unmute();
+		void UnMute();
 		void SetReverb();
 		//bool DoesAnEmptyEffectSlotExistIfNotReturnTrueIfSoReturnFalse()
 		//AddEffect(Effect * newEffect)
@@ -65,6 +67,9 @@ class Channel {
 		void SetPan(float newPan);
 		float GetVolume();
 		float GetPan();
+		bool IsPlaying();
+		bool IsMuted();
+		void SetPlaying(bool);
 		
 };
 #endif
