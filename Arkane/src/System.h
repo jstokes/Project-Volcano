@@ -6,7 +6,6 @@
 #include <fmod_errors.h>
 #include <Windows.h>
 
-#include "Sample.h"
 #include "Channel.h"
 #include "InputClass.h"
 #include "../bmp/resource.h"

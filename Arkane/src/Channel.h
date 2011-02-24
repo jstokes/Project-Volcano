@@ -33,7 +33,18 @@ class Channel {
 		bool isPlaying;
 		bool isMuted;
 		float volumeBeforeMuting;
+		bool isMuted;
+		bool isPlaying;
 		Sample* sample1;
+
+		bool active;
+		bool dsphighpass_active;
+		bool dsplowpass_active;
+		float highPassLevel,lowPassLevel;
+		FMOD::DSP *dspLowPass;
+		FMOD::DSP *dspHighPass;
+		FMOD::DSP *dspflange;;
+		FMOD_RESULT effectResult;
 
 	public:
 		//Constructors and Destructors
@@ -55,6 +66,7 @@ class Channel {
 		void Mute();
 		void UnMute();
 		void SetReverb();
+		
 		//bool DoesAnEmptyEffectSlotExistIfNotReturnTrueIfSoReturnFalse()
 		//AddEffect(Effect * newEffect)
 		//RemoveEffect(effectCount)
@@ -64,12 +76,27 @@ class Channel {
 		void Activate();
 		//Getters and Setters
 		void SetVolume(float newVol);
+		bool IsPlaying();
+		void SetPlaying(bool playing);
+		bool IsMuted();
 		void SetPan(float newPan);
 		float GetVolume();
 		float GetPan();
 		bool IsPlaying();
 		bool IsMuted();
 		void SetPlaying(bool);
+		
+		float GetHighPass();
+		float GetLowPass();
+		//Will accept values 1 to 100, the value will be converted to the equivalent hz level between
+		//  10 and 22000, with those being the max values possible even if the input passed in exceeds
+		void SetHighPass(float);
+		//TODO: Rework to exponential
+		void SetLowPass(float);
+
+		//Pass in new pan level,-1.0 = Full left, 0.0 = center, 1.0 = full right.
+		void SetPanLevel(float);
+		float GetPanLevel();
 		
 };
 #endif
