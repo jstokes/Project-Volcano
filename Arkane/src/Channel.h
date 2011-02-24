@@ -62,7 +62,7 @@ class Channel {
 		void StopLoopingSample();
 		void UnLoadSample();                          //Checks to make sure there is a sample
 		void Mute();
-		void Unmute();
+		void UnMute();
 		void SetReverb();
 		
 		//bool DoesAnEmptyEffectSlotExistIfNotReturnTrueIfSoReturnFalse()

@@ -68,8 +68,7 @@
       <AdditionalDependencies>C:\Program Files\FMOD SoundSystem\FMOD Programmers API Win32\api\lib\fmodex_vc.lib;%(AdditionalDependencies)</AdditionalDependencies>
       <AdditionalLibraryDirectories>C:\Program Files\FMOD SoundSystem\FMOD Programmers API Win32\api\lib;</AdditionalLibraryDirectories>
       <SubSystem>Windows</SubSystem>
-      <EntryPointSymbol>
-      </EntryPointSymbol>
+      <EntryPointSymbol>main</EntryPointSymbol>
     </Link>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
@@ -119,7 +118,6 @@
     <ClInclude Include="src\Channel.h" />
     <ClInclude Include="src\InputClass.h" />
     <ClInclude Include="src\Sample.h" />
-    <ClInclude Include="src\System.h" />
   </ItemGroup>
   <ItemGroup>
     <ResourceCompile Include="bmp\resources.rc" />
@@ -127,9 +125,8 @@
   <ItemGroup>
     <ClCompile Include="src\Channel.cpp" />
     <ClCompile Include="src\InputClass.cpp" />
-    <ClCompile Include="src\main.cpp" />
     <ClCompile Include="src\Sample.cpp" />
-    <ClCompile Include="src\System.cpp" />
+    <ClCompile Include="src\test_main.cpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
