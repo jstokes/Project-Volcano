@@ -1,0 +1,26 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 11.00
+# Visual Studio 2010
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Sample", "Sample.csproj", "{B2F14CDF-8A0A-4A21-BA4D-15303A789910}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Channel", "..\Channel\Channel.csproj", "{7F20F26A-F6DB-43F0-8EDF-315B8B63F898}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|x86 = Debug|x86
+		Release|x86 = Release|x86
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{B2F14CDF-8A0A-4A21-BA4D-15303A789910}.Debug|x86.ActiveCfg = Debug|x86
+		{B2F14CDF-8A0A-4A21-BA4D-15303A789910}.Debug|x86.Build.0 = Debug|x86
+		{B2F14CDF-8A0A-4A21-BA4D-15303A789910}.Release|x86.ActiveCfg = Release|x86
+		{B2F14CDF-8A0A-4A21-BA4D-15303A789910}.Release|x86.Build.0 = Release|x86
+		{7F20F26A-F6DB-43F0-8EDF-315B8B63F898}.Debug|x86.ActiveCfg = Debug|x86
+		{7F20F26A-F6DB-43F0-8EDF-315B8B63F898}.Debug|x86.Build.0 = Debug|x86
+		{7F20F26A-F6DB-43F0-8EDF-315B8B63F898}.Release|x86.ActiveCfg = Release|x86
+		{7F20F26A-F6DB-43F0-8EDF-315B8B63F898}.Release|x86.Build.0 = Release|x86
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

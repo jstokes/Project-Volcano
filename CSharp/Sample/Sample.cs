@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using FMOD;
 
-namespace Sample
+namespace CSharp
 {
     class Sample
     {
@@ -24,6 +24,7 @@ namespace Sample
         public void CreateSampleFromFile(String fileName)
         {
             result = fmodSystem.createSound(fileName, MODE.SOFTWARE, ref sample);
+            ERRCHECK(result);
         }
 
         public void Play(FMOD.Channel channel)
@@ -32,9 +33,9 @@ namespace Sample
             ERRCHECK(result);
         }
 
-        private void ERRCHECK(FMOD.RESULT result) 
+        public static void ERRCHECK(FMOD.RESULT result) 
         {
-            Console.WriteLine("FMOD error! " + result + " - " + FMOD.Error.String(result);
+            Console.WriteLine("FMOD error! " + result + " - " + FMOD.Error.String(result));
             Environment.Exit(-1);
         }         
     }
