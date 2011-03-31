@@ -1,6 +1,6 @@
 Channel.cpp
-
 // represents the level coming through the channel
+
 float getCurrentLevels() 0 - 100
 
 void setLoopingMode(sample) 
@@ -11,3 +11,6 @@ void stopSample(sample)
 
 unloadSample(sample)
 
+float* getPCMData() { 
+    return pcm data for a sound sample
+}
