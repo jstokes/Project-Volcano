@@ -149,5 +149,12 @@ namespace CSharp
             Sample.ERRCHECK(result);
             return pan;
         }
+
+        public float[] GetPCMLevel()
+        {
+            float[] waveArray = null;
+            result = channel.getWaveData(waveArray, 500, 0); Sample.ERRCHECK(result);
+            return waveArray;
+        }
     }
 }
