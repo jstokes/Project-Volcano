@@ -4,9 +4,9 @@ using System.Linq;
 using System.Text;
 using FMOD;
 
-namespace CSharp
+namespace arkane
 {
-    class Channel
+    public class ArkaneChannel
     {
         FMOD.Channel channel;
         int channelIndex;
@@ -22,11 +22,12 @@ namespace CSharp
         bool dsplowpass_active;
         float highPassLevel, lowPassLevel = 0;
         FMOD.DSP dspLowPass, dspHighPass, dspFlange;
-        FMOD.RESULT result;
+        public FMOD.RESULT result;
         FMOD.System fmodSystem;
         DSPConnection con = new DSPConnection();
+        public FMOD.System system;
 
-        Channel(FMOD.System sys)
+        public ArkaneChannel(FMOD.System sys)
         {
             this.fmodSystem = sys;
             this.sample1 = new Sample(fmodSystem);
@@ -37,7 +38,7 @@ namespace CSharp
             channelIndex = index;
             fmodSystem.getChannel(channelIndex, ref channel);
             // -------Low Pass
-            fmodSystem.createDSPByType(DSP_TYPE.LOWPASS, ref dspLowPass);
+            /*fmodSystem.createDSPByType(DSP_TYPE.LOWPASS, ref dspLowPass);
             fmodSystem.addDSP(dspLowPass, ref con);
             dspLowPass.setParameter((int)DSP_LOWPASS.CUTOFF, 0);
             dspLowPass.getActive(ref dsplowpass_active);
@@ -46,7 +47,7 @@ namespace CSharp
             fmodSystem.createDSPByType(DSP_TYPE.HIGHPASS, ref dspHighPass);
             fmodSystem.addDSP(dspHighPass, ref con);
             dspHighPass.setParameter((int)DSP_LOWPASS.CUTOFF, 0);
-            dspHighPass.getActive(ref dsphighpass_active);
+            dspHighPass.getActive(ref dsphighpass_active);*/
 
         }
 
@@ -150,11 +151,7 @@ namespace CSharp
             return pan;
         }
 
-        public float[] GetPCMLevel()
-        {
-            float[] waveArray = null;
-            result = channel.getWaveData(waveArray, 500, 0); Sample.ERRCHECK(result);
-            return waveArray;
-        }
+        public void PlaySoundAt(float start, float duration) { }
+        public void SetLoop(bool isLoop) { }
     }
 }

@@ -4,17 +4,13 @@ using System.Linq;
 using System.Text;
 using FMOD;
 
-namespace CSharp
+namespace arkane
 {
     class Sample
     {
         FMOD.System fmodSystem;
-        Sound sample;
+        Sound sample = null;
         RESULT result;
-        String filePath;
-        int channelLoadedInto;
-        int key;
-        bool isLoop;
         
         public Sample(FMOD.System sys)
         {
@@ -23,7 +19,7 @@ namespace CSharp
 
         public void CreateSampleFromFile(String fileName)
         {
-            result = fmodSystem.createSound(fileName, MODE.SOFTWARE, ref sample);
+            result = fmodSystem.createSound(fileName, MODE.CREATESAMPLE, ref sample);
             ERRCHECK(result);
         }
 
@@ -35,8 +31,11 @@ namespace CSharp
 
         public static void ERRCHECK(FMOD.RESULT result) 
         {
-            Console.WriteLine("FMOD error! " + result + " - " + FMOD.Error.String(result));
-            Environment.Exit(-1);
+            if (result != FMOD.RESULT.OK)
+            {
+                Console.WriteLine("FMOD error! " + result + " - " + FMOD.Error.String(result));
+                //Environment.Exit(-1);
+            }
         }         
     }
 }

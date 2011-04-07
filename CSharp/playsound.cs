@@ -16,6 +16,7 @@ using System.ComponentModel;
 using System.Windows.Forms;
 using System.Data;
 using arkane;
+
 namespace playsound
 {
 
@@ -49,9 +50,8 @@ namespace playsound
             InitializeComponent();
             theChannel = new ArkaneChannel(system);
             theChannel.Initialize(0);
-            //theChannel.LoadSample("../../media/jaguar.wav");
-            //theChannel.PlaySample();
-            while (true) ;
+            theChannel.LoadSample("../../media/jaguar.wav");
+            theChannel.PlaySample();
         }
 
         [STAThread]
@@ -62,36 +62,36 @@ namespace playsound
 
         }
 
-        protected override void Dispose( bool disposing )
-        {
-            if( disposing )
-            {
-                FMOD.RESULT     result;
+        //protected override void Dispose( bool disposing )
+        //{
+        //    if( disposing )
+        //    {
+        //        FMOD.RESULT     result;
             
-                /*
-                    Shut down
-                */
-                if (sound3 != null)
-                {
-                    result = sound3.release();
-                    ERRCHECK(result);
-                }
+        //        /*
+        //            Shut down
+        //        */
+        //        if (sound3 != null)
+        //        {
+        //            result = sound3.release();
+        //            ERRCHECK(result);
+        //        }
 
-                if (system != null)
-                {
-                    result = system.close();
-                    ERRCHECK(result);
-                    result = system.release();
-                    ERRCHECK(result);
-                }
+        //        if (system != null)
+        //        {
+        //            result = system.close();
+        //            ERRCHECK(result);
+        //            result = system.release();
+        //            ERRCHECK(result);
+        //        }
 
-                if (components != null) 
-                {
-                    components.Dispose();
-                }
-            }
-            base.Dispose( disposing );
-        }
+        //        if (components != null) 
+        //        {
+        //            components.Dispose();
+        //        }
+        //    }
+        //    base.Dispose( disposing );
+        //}
 
         #region Windows Form Designer generated code
         /// <summary>
@@ -158,114 +158,114 @@ namespace playsound
             this.Controls.Add(this.statusBar);
             this.Controls.Add(this.exit_button);
             this.Controls.Add(this.button3);
-            this.Controls.Add(this.button2);
-            this.Controls.Add(this.button1);
+//            this.Controls.Add(this.button2);
+//            this.Controls.Add(this.button1);
             this.Name = "PlaySound";
             this.Text = "Play Sound Example";
             this.Load += new System.EventHandler(this.PlaySound_Load);
             this.ResumeLayout(false);
-
+            this.Visible = true;
         }
         #endregion
 
         
+        
+        //private void PlaySound_Load(object sender, System.EventArgs e)
+        //{
+        //    uint            version = 0;
+        //    FMOD.RESULT     result;
 
-        private void PlaySound_Load(object sender, System.EventArgs e)
-        {
-            uint            version = 0;
-            FMOD.RESULT     result;
+        //    /*
+        //        Create a System object and initialize.
+        //    */
+        //    result = FMOD.Factory.System_Create(ref system);
+        //    ERRCHECK(result);
 
-            /*
-                Create a System object and initialize.
-            */
-            result = FMOD.Factory.System_Create(ref system);
-            ERRCHECK(result);
+        //    result = system.getVersion(ref version);
+        //    ERRCHECK(result);
+        //    if (version < FMOD.VERSION.number)
+        //    {
+        //        MessageBox.Show("Error!  You are using an old version of FMOD " + version.ToString("X") + ".  This program requires " + FMOD.VERSION.number.ToString("X") + ".");
+        //        Application.Exit();
+        //    }
 
-            result = system.getVersion(ref version);
-            ERRCHECK(result);
-            if (version < FMOD.VERSION.number)
-            {
-                MessageBox.Show("Error!  You are using an old version of FMOD " + version.ToString("X") + ".  This program requires " + FMOD.VERSION.number.ToString("X") + ".");
-                Application.Exit();
-            }
+        //    result = system.init(32, FMOD.INITFLAGS.NORMAL, (IntPtr)null);
+        //    ERRCHECK(result);
 
-            result = system.init(32, FMOD.INITFLAGS.NORMAL, (IntPtr)null);
-            ERRCHECK(result);
+        //    result = system.createSound("../../media/jaguar.wav", FMOD.MODE.SOFTWARE, ref sound3);
+        //    ERRCHECK(result);
 
-            result = system.createSound("../../media/jaguar.wav", FMOD.MODE.SOFTWARE, ref sound3);
-            ERRCHECK(result);
+        //}
 
-        }
+        //private void button3_Click(object sender, System.EventArgs e)
+        //{
+        //    FMOD.RESULT     result;
 
-        private void button3_Click(object sender, System.EventArgs e)
-        {
-            FMOD.RESULT     result;
+        //    result = system.playSound(FMOD.CHANNELINDEX.FREE, sound3, false, ref channel);
+        //    ERRCHECK(result);
+        //}
 
-            result = system.playSound(FMOD.CHANNELINDEX.FREE, sound3, false, ref channel);
-            ERRCHECK(result);
-        }
+        //private void exit_button_Click(object sender, System.EventArgs e)
+        //{
+        //    Application.Exit();
+        //}
 
-        private void exit_button_Click(object sender, System.EventArgs e)
-        {
-            Application.Exit();
-        }
+        //private void timer_Tick(object sender, System.EventArgs e)
+        //{   
+        //    FMOD.RESULT     result;
 
-        private void timer_Tick(object sender, System.EventArgs e)
-        {   
-            FMOD.RESULT     result;
+        //    if (channel != null)
+        //    {
+        //        FMOD.Sound currentsound = null;
 
-            if (channel != null)
-            {
-                FMOD.Sound currentsound = null;
+        //        result = channel.isPlaying(ref playing);
+        //        if ((result != FMOD.RESULT.OK) && (result != FMOD.RESULT.ERR_INVALID_HANDLE) && (result != FMOD.RESULT.ERR_CHANNEL_STOLEN))
+        //        {
+        //            ERRCHECK(result);
+        //        }
 
-                result = channel.isPlaying(ref playing);
-                if ((result != FMOD.RESULT.OK) && (result != FMOD.RESULT.ERR_INVALID_HANDLE) && (result != FMOD.RESULT.ERR_CHANNEL_STOLEN))
-                {
-                    ERRCHECK(result);
-                }
+        //        result = channel.getPaused(ref paused);
+        //        if ((result != FMOD.RESULT.OK) && (result != FMOD.RESULT.ERR_INVALID_HANDLE) && (result != FMOD.RESULT.ERR_CHANNEL_STOLEN))
+        //        {
+        //            ERRCHECK(result);
+        //        }
 
-                result = channel.getPaused(ref paused);
-                if ((result != FMOD.RESULT.OK) && (result != FMOD.RESULT.ERR_INVALID_HANDLE) && (result != FMOD.RESULT.ERR_CHANNEL_STOLEN))
-                {
-                    ERRCHECK(result);
-                }
-
-                result = channel.getPosition(ref ms, FMOD.TIMEUNIT.MS);
-                if ((result != FMOD.RESULT.OK) && (result != FMOD.RESULT.ERR_INVALID_HANDLE) && (result != FMOD.RESULT.ERR_CHANNEL_STOLEN))
-                {
-                    ERRCHECK(result);
-                }
+        //        result = channel.getPosition(ref ms, FMOD.TIMEUNIT.MS);
+        //        if ((result != FMOD.RESULT.OK) && (result != FMOD.RESULT.ERR_INVALID_HANDLE) && (result != FMOD.RESULT.ERR_CHANNEL_STOLEN))
+        //        {
+        //            ERRCHECK(result);
+        //        }
                
-                channel.getCurrentSound(ref currentsound);
-                if (currentsound != null)
-                {
-                    result = currentsound.getLength(ref lenms, FMOD.TIMEUNIT.MS);
-                    if ((result != FMOD.RESULT.OK) && (result != FMOD.RESULT.ERR_INVALID_HANDLE) && (result != FMOD.RESULT.ERR_CHANNEL_STOLEN))
-                    {
-                        ERRCHECK(result);
-                    }
-                }
-            }
+        //        channel.getCurrentSound(ref currentsound);
+        //        if (currentsound != null)
+        //        {
+        //            result = currentsound.getLength(ref lenms, FMOD.TIMEUNIT.MS);
+        //            if ((result != FMOD.RESULT.OK) && (result != FMOD.RESULT.ERR_INVALID_HANDLE) && (result != FMOD.RESULT.ERR_CHANNEL_STOLEN))
+        //            {
+        //                ERRCHECK(result);
+        //            }
+        //        }
+        //    }
 
-            if (system != null)
-            {
-                system.getChannelsPlaying(ref channelsplaying);
+        //    if (system != null)
+        //    {
+        //        system.getChannelsPlaying(ref channelsplaying);
             
-                system.update();
-            }
+        //        system.update();
+        //    }
 
-            statusBar.Text = "Time " + ms/1000/60 + ":" + ms/1000%60 + ":" + ms/10%100 + "/" + lenms/1000/60 + ":" + lenms/1000%60 + ":" + lenms/10%100
-                + " : " + (paused ? "Paused " : playing ? "Playing" : "Stopped") + " : Channels Playing " + channelsplaying;
-        }
+        //    statusBar.Text = "Time " + ms/1000/60 + ":" + ms/1000%60 + ":" + ms/10%100 + "/" + lenms/1000/60 + ":" + lenms/1000%60 + ":" + lenms/10%100
+        //        + " : " + (paused ? "Paused " : playing ? "Playing" : "Stopped") + " : Channels Playing " + channelsplaying;
+        //}
 
-        private void ERRCHECK(FMOD.RESULT result)
-        {
-            if (result != FMOD.RESULT.OK)
-            {
-                timer.Stop();
-                MessageBox.Show("FMOD error! " + result + " - " + FMOD.Error.String(result));
-                Environment.Exit(-1);
-            }
-        }
+        //private void ERRCHECK(FMOD.RESULT result)
+        //{
+        //    if (result != FMOD.RESULT.OK)
+        //    {
+        //        timer.Stop();
+        //        MessageBox.Show("FMOD error! " + result + " - " + FMOD.Error.String(result));
+        //        Environment.Exit(-1);
+        //    }
+        //}
     }
 }
