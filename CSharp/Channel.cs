@@ -10,7 +10,6 @@ namespace arkane
     {
         FMOD.Channel channel;
         int channelIndex;
-        float volume = 1;
         float pan = 0;
         bool isActive = false;
         bool isPlaying = false;
@@ -38,7 +37,7 @@ namespace arkane
             channelIndex = index;
             fmodSystem.getChannel(channelIndex, ref channel);
             // -------Low Pass
-            /*fmodSystem.createDSPByType(DSP_TYPE.LOWPASS, ref dspLowPass);
+            fmodSystem.createDSPByType(DSP_TYPE.LOWPASS, ref dspLowPass);
             fmodSystem.addDSP(dspLowPass, ref con);
             dspLowPass.setParameter((int)DSP_LOWPASS.CUTOFF, 0);
             dspLowPass.getActive(ref dsplowpass_active);
@@ -47,7 +46,7 @@ namespace arkane
             fmodSystem.createDSPByType(DSP_TYPE.HIGHPASS, ref dspHighPass);
             fmodSystem.addDSP(dspHighPass, ref con);
             dspHighPass.setParameter((int)DSP_LOWPASS.CUTOFF, 0);
-            dspHighPass.getActive(ref dsphighpass_active);*/
+            dspHighPass.getActive(ref dsphighpass_active);
 
         }
 
@@ -59,7 +58,8 @@ namespace arkane
         public void PlaySample()
         {
             sample1.Play(channel);
-            SetVolume(volume);
+            SetVolume(1);
+            isPlaying = true;
         }
 
         public void SetVolume(float newVol)
@@ -73,8 +73,8 @@ namespace arkane
 
         public float GetVolume()
         {
-            float vol = 0;
-            result = channel.getVolume(ref vol);
+            float vol = -1;
+            result = channel.getVolume(ref vol); Sample.ERRCHECK(result);
             return vol;
         }
 
@@ -151,7 +151,21 @@ namespace arkane
             return pan;
         }
 
-        public void PlaySoundAt(float start, float duration) { }
-        public void SetLoop(bool isLoop) { }
+        public void PlaySoundAt(float start, float duration) 
+        {
+            // TODO
+        }
+        
+        public void SetLoop(bool isLoop) 
+        {
+            if (isLoop) result = channel.setMode(MODE.LOOP_NORMAL);
+            else result = channel.setMode(MODE.LOOP_OFF);
+            Sample.ERRCHECK(result);
+        }
+        public void StopSample() 
+        {
+            result = channel.stop(); Sample.ERRCHECK(result);
+            isPlaying = false;
+        }
     }
 }

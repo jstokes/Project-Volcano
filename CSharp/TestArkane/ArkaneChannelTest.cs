@@ -60,7 +60,7 @@ namespace TestArkane
             // Create New Channel to Test on
             theChannel = new ArkaneChannel(system);
             theChannel.Initialize(0);
-            theChannel.LoadSample("../../media/wave.mp3");
+            theChannel.LoadSample("../../../media/wave.mp3");
             theChannel.PlaySample();
         }
         
@@ -79,7 +79,7 @@ namespace TestArkane
         [TestMethod()]
         public void GetPanLevelTest()
         {
-            float expected = 10F; // TODO: Initialize to an appropriate value
+            float expected = 0F; // TODO: Initialize to an appropriate value
             theChannel.SetPanLevel(expected);
             float actual;
             actual = theChannel.GetPanLevel();
@@ -102,7 +102,9 @@ namespace TestArkane
         public void GetHighPassTest()
         {
             float expected = 10F; // TODO: Initialize to an appropriate value
-            theChannel.SetHighPass(expected);
+            expected = (float)(expected * 220 + 7.8);
+            if (expected > 22000) expected = 22000;
+            theChannel.SetHighPass(10F);
             float actual;
             actual = theChannel.GetHighPass();
             Assert.AreEqual(expected, actual);
@@ -114,10 +116,12 @@ namespace TestArkane
         [TestMethod()]
         public void GetVolumeTest()
         {
-            float expected = 10F;
+            float expected = .8F; // TODO: Initialize to an appropriate value
             theChannel.SetVolume(expected);
+            Assert.AreEqual(FMOD.RESULT.OK, theChannel.result);
             float actual;
             actual = theChannel.GetVolume();
+            Assert.AreEqual(FMOD.RESULT.OK, theChannel.result);
             Assert.AreEqual(expected, actual);
         }
 
@@ -129,6 +133,8 @@ namespace TestArkane
         {
             float expected = 10F; // TODO: Initialize to an appropriate value
             theChannel.SetLowPass(10F);
+            expected = 100 - expected;
+            expected = (float)(expected * 220 + 7.8);
             float actual;
             actual = theChannel.GetLowPass();
             Assert.AreEqual(expected, actual);
@@ -179,6 +185,7 @@ namespace TestArkane
         {
             float input = 10F; // TODO: Initialize to an appropriate value
             theChannel.SetHighPass(input);
+            input = (float)(input * 220 + 7.8);
             Assert.AreEqual(input, theChannel.GetHighPass());
         }
 
@@ -188,9 +195,12 @@ namespace TestArkane
         [TestMethod()]
         public void SetLowPassTest()
         {
-            float input = 0F; // TODO: Initialize to an appropriate value
+            float input = 10F; // TODO: Initialize to an appropriate value
             theChannel.SetLowPass(input);
-            Assert.Inconclusive("A method that does not return a value cannot be verified.");
+            input = 100 - input;
+            input = (float)(input * 220 + 7.8);
+            float actual = theChannel.GetLowPass();
+            Assert.AreEqual(input, actual);
         }
 
         /// <summary>
@@ -201,7 +211,8 @@ namespace TestArkane
         {
             float newPanLevel = 0F; // TODO: Initialize to an appropriate value
             theChannel.SetPanLevel(newPanLevel);
-            Assert.Inconclusive("A method that does not return a value cannot be verified.");
+            float actual = theChannel.GetPanLevel();
+            Assert.AreEqual(newPanLevel, actual);
         }
 
         /// <summary>
@@ -211,7 +222,7 @@ namespace TestArkane
         public void SetReverbTest()
         {
             theChannel.SetReverb();
-            Assert.Inconclusive("A method that does not return a value cannot be verified.");
+            // TODO: ???
         }
 
         /// <summary>
@@ -220,9 +231,34 @@ namespace TestArkane
         [TestMethod()]
         public void SetVolumeTest()
         {
-            float newVol = 0F; // TODO: Initialize to an appropriate value
+            float newVol = .8F; // TODO: Initialize to an appropriate value
             theChannel.SetVolume(newVol);
-            Assert.Inconclusive("A method that does not return a value cannot be verified.");
+            float actual = theChannel.GetVolume();
+            Assert.AreEqual(newVol, actual);
+        }
+
+        /// <summary>
+        ///A test for SetLoop
+        ///</summary>
+        [TestMethod()]
+        public void SetLoopTest()
+        {
+            bool isLoop = false;
+            theChannel.SetLoop(isLoop);
+            // TODO
+            // I'm not sure how to test these without having access to our 
+            // channel variable
+            // And no, its not a good idea to make that public
+        }
+
+        /// <summary>
+        ///A test for StopSample
+        ///</summary>
+        [TestMethod()]
+        public void StopSampleTest()
+        {
+            theChannel.StopSample();
+            Assert.AreEqual(false, theChannel.IsPlaying());
         }
     }
 }
