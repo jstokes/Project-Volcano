@@ -169,3 +169,8 @@ namespace arkane
         }
     }
 }
+
+/*
+which sets a boolean variable to true, and stores the current time marker (i think GetPosition might do it)
+and change the PlaySample method so that if it is paused, it plays back from the last recorded time marker
+*/
