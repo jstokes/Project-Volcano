@@ -64,12 +64,14 @@ namespace arkane
                 sample1.Play(channel, currentTime);
                 SetVolume(1);
                 isPlaying = true;
+                isPaused = false;
             }
             else
             {
                 sample1.Play(channel);
                 SetVolume(1);
                 isPlaying = true;
+                isPaused = false;
             }
         }
 
