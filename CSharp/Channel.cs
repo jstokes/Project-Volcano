@@ -191,9 +191,9 @@ namespace arkane
 
         public void Pause()
         {
-            this.StopSample();
-            this.isPaused = true;
-            result = channel.getPosition(ref this.currentTime, TIMEUNIT.MS);
+           this.StopSample();
+           result = channel.getPosition(ref this.currentTime, TIMEUNIT.MS);            
+           this.isPaused = true; 
             Sample.ERRCHECK(result);
         }
     }
