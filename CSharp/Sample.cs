@@ -35,7 +35,7 @@ namespace arkane
         {
             result = fmodSystem.playSound(CHANNELINDEX.FREE, sample, true, ref channel);
             ERRCHECK(result);
-            result = channel.setPosition(startTime, TIMEUNIT.BUFFERED); ERRCHECK(result);
+            result = channel.setPosition(startTime, TIMEUNIT.MS); ERRCHECK(result);
             result = channel.setPaused(false); ERRCHECK(result);
         }
 
