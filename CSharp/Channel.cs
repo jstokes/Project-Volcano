@@ -179,6 +179,13 @@ namespace arkane
             isPlaying = false;
         }
 
+        public uint GetPosition()
+        {
+            uint time = 0;
+            channel.getPosition(ref time, TIMEUNIT.BUFFERED);
+            return time;
+        }
+
         public void Pause()
         {
             this.isPlaying = false;
