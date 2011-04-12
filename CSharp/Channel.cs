@@ -185,7 +185,7 @@ namespace arkane
         public uint GetPosition()
         {
             uint time = 0;
-            channel.getPosition(ref time, TIMEUNIT.BUFFERED);
+            channel.getPosition(ref time, TIMEUNIT.MS);
             return time;
         }
 
@@ -193,7 +193,7 @@ namespace arkane
         {
             this.StopSample();
             this.isPaused = true;
-            result = channel.getPosition(ref this.currentTime, TIMEUNIT.BUFFERED);
+            result = channel.getPosition(ref this.currentTime, TIMEUNIT.MS);
             Sample.ERRCHECK(result);
         }
     }
