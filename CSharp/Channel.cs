@@ -14,6 +14,8 @@ namespace arkane
         bool isActive = false;
         bool isPlaying = false;
         bool isMuted = false;
+        bool isPaused = false;
+        uint currentTime;
         float volumeBeforeMuting;
         Sample sample1;
         bool active;
@@ -57,9 +59,18 @@ namespace arkane
 
         public void PlaySample()
         {
-            sample1.Play(channel);
-            SetVolume(1);
-            isPlaying = true;
+            if (isPaused)
+            {
+                sample1.Play(channel, currentTime);
+                SetVolume(1);
+                isPlaying = true;
+            }
+            else
+            {
+                sample1.Play(channel);
+                SetVolume(1);
+                isPlaying = true;
+            }
         }
 
         public void SetVolume(float newVol)
@@ -151,9 +162,9 @@ namespace arkane
             return pan;
         }
 
-        public void PlaySoundAt(float start, float duration) 
+        public void PlaySoundAt(uint start, uint duration) 
         {
-            // TODO
+            sample1.Play(this, start, duration);
         }
         
         public void SetLoop(bool isLoop) 
@@ -167,10 +178,13 @@ namespace arkane
             result = channel.stop(); Sample.ERRCHECK(result);
             isPlaying = false;
         }
+
+        public void Pause()
+        {
+            this.isPlaying = false;
+            this.isPaused = true;
+            result = channel.getPosition(ref this.currentTime, TIMEUNIT.BUFFERED);
+            Sample.ERRCHECK(result);
+        }
     }
 }
-
-/*
-which sets a boolean variable to true, and stores the current time marker (i think GetPosition might do it)
-and change the PlaySample method so that if it is paused, it plays back from the last recorded time marker
-*/
