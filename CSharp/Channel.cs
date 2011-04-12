@@ -164,6 +164,7 @@ namespace arkane
 
         public void PlaySoundAt(uint start, uint duration) 
         {
+            currentTime = start;
             sample1.Play(this, start, duration);
         }
         
