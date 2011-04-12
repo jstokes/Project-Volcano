@@ -189,7 +189,7 @@ namespace arkane
 
         public void Pause()
         {
-            this.isPlaying = false;
+            this.StopSample();
             this.isPaused = true;
             result = channel.getPosition(ref this.currentTime, TIMEUNIT.BUFFERED);
             Sample.ERRCHECK(result);
