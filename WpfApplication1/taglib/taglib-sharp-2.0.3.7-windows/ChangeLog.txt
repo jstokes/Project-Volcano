@@ -1,0 +1,3534 @@
+2010-03-20  Gabriel Burt  <gabriel.burt@gmail.com>
+
+	* README: Add svn info
+
+2010-03-20  Gabriel Burt  <gabriel.burt@gmail.com>
+
+	* README: add some real, useful info
+
+2010-03-20  Gabriel Burt  <gabriel.burt@gmail.com>
+
+	* configure.ac:
+	* NEWS: Update for 2.0.3.7 release
+
+2010-03-20  Alexander Kojevnikov <alexander@kojevnikov.com>
+
+	* configure.ac:
+	* src/Makefile.am: Patch from Bertrand Lorentz adding a check
+	for the `al` tool (bgo#575303)
+
+2010-03-20  Alexander Kojevnikov <alexander@kojevnikov.com>
+
+	* configure.ac: Patch from Ruben Vermeersch adding a fall back
+	to nunit-console if nunit-console2 is not found (bgo#593673)
+
+2010-03-20  Alexander Kojevnikov <alexander@kojevnikov.com>
+
+	* src/TagLib/Id3v2/Frames/RelativeVolumeFrame.cs:
+	* tests/fixtures/TagLib.Tests.TaggingFormats/Id3V2Test.cs:
+	Don't throw an exception if RVA2 data is partially incorrect
+
+2010-03-20  Alexander Kojevnikov <alexander@kojevnikov.com>
+
+	* Makefile.am:
+	* src/Makefile.am: Fix `make distcheck`
+
+2010-03-20  Alexander Kojevnikov <alexander@kojevnikov.com>
+
+	* src/TagLib/File.cs: Make TagLib.File IDisposable
+
+2010-03-20  Alexander Kojevnikov <alexander@kojevnikov.com>
+
+	* src/TagLib/Id3v2/ExtendedHeader.cs:
+	* tests/fixtures/TagLib.Tests.FileFormats/Id3V2FormatTest.cs:
+	* tests/samples/sample_v2_3_ext_header.mp3: Fix ID3v2.3 extended
+	header size calculation (bgo#604488)
+
+2010-03-20  Alexander Kojevnikov <alexander@kojevnikov.com>
+
+	* src:
+	* docs:
+	* tests:
+	* tests/samples:
+	* .gitignore:
+	* examples: Add svn:ignore and .gitignore
+
+2010-03-20  Alexander Kojevnikov <alexander@kojevnikov.com>
+
+	* src/TagLib/Id3v2/Tag.cs:
+	* tests/Makefile.am:
+	* tests/fixtures/TagLib.Tests.FileFormats/Id3V24FormatTest.cs:
+	* tests/samples/sample_v2_4_unsynch.mp3:
+	* tests/tests.csproj: Patch and unit tests from Eamon Nerbonne
+	fixing ID3v2 unsyncing (bgo#593138)
+	
+2010-03-02  Andrés G. Aragoneses  <knocte@gmail.com>
+
+	* src/TagLib/Aac/AudioHeader.cs: Fix all warnings not related
+	to XML documentation.
+
+2010-03-02  Andrés G. Aragoneses  <knocte@gmail.com>
+
+	* tests/tests.mdp:
+	* taglib-sharp.mds:
+	* taglib-sharp.sln:
+	* tests/tests.csproj:
+	* src/taglib-sharp.mdp:
+	* src/taglib-sharp.csproj:
+	* examples/ReadFromUri.mdp:
+	* examples/SetPictures.mdp:
+	* examples/ReadFromUri.csproj:
+	* examples/SetPictures.csproj: Projects/solution format migration,
+	deleting deprecated MD1.0 format.
+
+2010-02-24  Gabriel Burt  <gabriel.burt@gmail.com>
+
+	* configure.ac:
+	* NEWS: Update for 2.0.3.6 release
+
+2010-02-24  Gabriel Burt  <gabriel.burt@gmail.com>
+
+	* src/TagLib/Riff/WaveFormatEx.cs: Fix API break in 2.0.3.5.
+
+2010-02-23  Gabriel Burt  <gabriel.burt@gmail.com>
+
+	* NEWS: Update for 2.0.3.5 release
+
+2010-02-21  Gabriel Burt  <gabriel.burt@gmail.com>
+
+	* src/TagLib/Riff/WaveFormatEx.cs:
+	* src/TagLib/ICodec.cs:
+	* src/TagLib/Properties.cs:
+	* src/TagLib/Flac/StreamHeader.cs:
+	* src/TagLib/Ape/StreamHeader.cs:
+	* src/TagLib/Aiff/StreamHeader.cs:
+	* src/TagLib/WavPack/StreamHeader.cs: Patch from Alexander Kojevnikov
+	adding BitsPerSample property to TagLib.Properties (BGO #610585)
+
+2010-02-03  Gabriel Burt  <gabriel.burt@gmail.com>
+
+	* src/TagLib/Ogg/XiphComment.cs:
+	* tests/fixtures/TagLib.Tests.TaggingFormats/XiphTest.cs: Patch and unit
+	tests from Alexander Kojevnikov adding support for COMPILATION to
+	Vorbis/XiphComments (eg for ogg and flac files) (BGO #586336)
+
+2010-02-01  Gabriel Burt  <gabriel.burt@gmail.com>
+
+	* src/TagLib/NonContainer/EndTag.cs:
+	* src/TagLib/NonContainer/StartTag.cs:
+	* tests/fixtures/TagLib.Tests.FileFormats/Id3BothFormatTest.cs: Patch and
+	unit tests from Helmut Wahrmann (with assistance from Alexander
+	Kojevnikov) fixing bug with removing some/all tag-types from a file (BGO
+	#574653)
+
+2010-01-26  Gabriel Burt  <gabriel.burt@gmail.com>
+
+	* configure.ac:
+	* NEWS: Bump to 2.0.3.5 in prep for next release
+
+2010-01-26  Gabriel Burt  <gabriel.burt@gmail.com>
+
+	* NEWS: Update for release
+
+2010-01-20  Gabriel Burt  <gabriel.burt@gmail.com>
+
+	* src/TagLib/Id3v2/Frames/CommentsFrame.cs:
+	* tests/fixtures/TagLib.Tests.TaggingFormats/Id3V2Test.cs: Patch from
+	Alexander Kojevnikov fixing IndexOutOfRangeException (BGO #607376)
+
+2010-01-07  Gabriel Burt  <gabriel.burt@gmail.com>
+
+	* NEWS:
+	* configure.ac: Bump to 2.0.3.4 for upcoming release.
+
+2010-01-07  Gabriel Burt  <gabriel.burt@gmail.com>
+
+	* src/TagLib/Id3v2/Tag.cs:
+	* src/TagLib/Id3v2/FrameHeader.cs: Fix multiple issues with converting
+	release data metadata.  Was converting (renaming) TDAT to TDRC, but
+	that's mapping MMDD onto YYYY which doesn't make sense.  Now it will
+	map only TYER to TDRC, and then append the TDAT and TIME info to the TDRC
+	if they exist.  Fixes BGO #606283
+
+	* tests/fixtures/TagLib.Tests.FileFormats/AiffFormatTest.cs: Fix test that
+	depended on the incorrect behavior above.
+
+2009-12-13  Gabriel Burt  <gabriel.burt@gmail.com>
+
+	* src/TagLib/Mpeg4/BoxTypes.cs:
+	* src/TagLib/Mpeg4/BoxFactory.cs: Support the 'alis' handler code/track
+	type, found in the wild in an iTunes-ripped .m4a file (BGO #584193)
+
+2009-09-30  Aaron Bockover  <abockover@novell.com>
+
+	* NEWS: Update for 2.0.3.3 release
+	* configure.ac: Bump to 2.0.3.3
+
+2009-05-18  Gabriel Burt  <gabriel.burt@gmail.com>
+
+	* src/TagLib/ByteVector.cs:
+	* tests/fixtures/TagLib.Tests.Collections/ByteVectorTest.cs: Patch from
+	Alexander Kojevnikov fixing ArgumentOutOfRangeException when parsing some
+	comment frames (BGO #582735)
+
+2009-05-15  Gabriel Burt  <gabriel.burt@gmail.com>
+
+	* src/TagLib/Riff/File.cs:
+	* src/TagLib/FileTypes.cs:
+	* src/TagLib/Aac/File.cs:
+	* src/TagLib/Aac/AudioHeader.cs:
+	* src/TagLib/Aac/BitStream.cs:
+	* src/TagLib/TagLib.sources:
+	* src/taglib-sharp.mdp:
+	* docs/Package.en.xml.in:
+	* tests/tests.mdp:
+	* tests/fixtures/TagLib.Tests.FileFormats/AacFormatTest.cs:
+	* tests/Makefile.am:
+	* taglib-sharp.csproj: Patch from Patrick Dehne adding support for ADTS AAC
+	files (BGO #580553)
+
+2009-05-14  Gabriel Burt  <gabriel.burt@gmail.com>
+
+	* src/TagLib/Aiff/File.cs:
+	* src/TagLib/Aiff/StreamHeader.cs:
+	* src/TagLib/FileTypes.cs:
+	* src/TagLib/TagLib.sources:
+	* src/taglib-sharp.mdp:
+	* docs/Package.en.xml.in:
+	* tests/tests.mdp:
+	* tests/fixtures/TagLib.Tbgoests.FileFormats/AiffFormatTest.cs:
+	* tests/Makefile.am:
+	* taglib-sharp.csproj: Patch from Helmut Wahrmann adding support for the
+	AIFF file format (BGO #579261)
+
+2009-03-25  Gabriel Burt  <gabriel.burt@gmail.com>
+
+	* src/TagLib/Ogg/XiphComment.cs: Patch from Helmut Wahrmann adding two
+	fallback options for the album artist getter (BGO #574652)
+
+2009-03-19  Gabriel Burt  <gabriel.burt@gmail.com>
+
+	* src/TagLib/Ape/Tag.cs: Patch from Gregory S. Chudov fixing bug with
+	Ape.Tag's Pictures setter (BGO #575943)
+
+2009-03-18  Gabriel Burt  <gabriel.burt@gmail.com>
+
+	* tests/Makefile.am:
+	* examples/Makefile.am: Patch from Bertrand Lorentz fixing issue with
+	random files slipping into the tarball/dist (BGO #575302).  make distcheck
+	and running ./configure && make && make test work on the tarball
+
+2009-03-10  Gabriel Burt  <gabriel.burt@gmail.com>
+
+	* src/TagLib/Mpeg/File.cs:
+	* src/TagLib/Mpeg/AudioFile.cs:
+	Patch from Andy Beal adding support for m2v and m2v files (BGO #574411)
+
+2009-03-09  Gabriel Burt  <gabriel.burt@gmail.com>
+
+	* src/TagLib/Ape/Tag.cs: Patch from Bernd Niedergesaess adding support for
+	Sort* values in Ape tags (BGO #571421)
+
+2009-03-09  Gabriel Burt  <gabriel.burt@gmail.com>
+
+	* src/TagLib/Ogg/GroupedComment.cs: Patch from Bernd Niedergesaess and
+	Andy Beal improving code consistency (BGO #571443)
+
+2009-03-09  Gabriel Burt  <gabriel.burt@gmail.com>
+
+	* src/TagLib/Riff/AviHeaderList.cs: Patch from Bernd Niedergesaess to not
+	use obsolete ctor (BGO #571452)
+
+2009-03-09  Gabriel Burt  <gabriel.burt@gmail.com>
+
+	* docs/Makefile.am: Reduce the verbosity of docs build output.
+
+2009-03-09  Gabriel Burt  <gabriel.burt@gmail.com>
+
+	Patch from Andy Beal adding new properties: MusicBrainz -ArtistId,
+	-ReleaseId, -ReleaseArtistId, -TrackId, -DiscId, -ReleaseStatus, -ReleaseType,
+	-ReleaseCountry, MusicIpId, and AmazonId (BGO #563170)
+
+	* src/TagLib/CombinedTag.cs:
+	* src/TagLib/Tag.cs:
+	* src/TagLib/Id3v2/Tag.cs:
+	* src/TagLib/Ape/Tag.cs:
+	* src/TagLib/Mpeg4/AppleTag.cs:
+	* src/TagLib/Asf/Tag.cs:
+	* src/TagLib/Ogg/XiphComment.cs:
+	* src/TagLib/Ogg/GroupedComment.cs:
+	* tests/fixtures/TagLib.Tests.TaggingFormats/Mpeg4Test.cs:
+	* tests/fixtures/TagLib.Tests.TaggingFormats/ApeTest.cs:
+	* tests/fixtures/TagLib.Tests.TaggingFormats/Id3V2Test.cs:
+	* tests/fixtures/TagLib.Tests.TaggingFormats/XiphTest.cs:
+	* tests/fixtures/TagLib.Tests.TaggingFormats/AsfTest.cs: Add and test the
+	new properties.
+
+2009-03-04  Gabriel Burt  <gabriel.burt@gmail.com>
+
+	* src/TagLib/Id3v2/Frames/TextIdentificationFrame.cs: Patch from John
+	Millikin to be more robust in the face of tags with NULL bytes in the
+	middle of them by truncating the value before the first one (BGO #558123)
+
+	* tests/samples/corrupt/null_title_v2.mp3:
+	* tests/fixtures/TagLib.Tests.FileFormats/Id3V2FormatTest.cs: New corrupt
+	file with NULL bytes in the title field, and a test that we handle it ok.
+
+2009-02-19  Gabriel Burt  <gabriel.burt@gmail.com>
+
+	* src/TagLib/Flac/File.cs: Patch from Gregory S. Chudov fixing NRE thrown
+	when calling GetTag on a flac File (BGO #572380)
+
+	* tests/fixtures/TagLib.Tests.FileFormats/FlacFormatTest.cs: Add a unit
+	test written by me that fails without Gregory's patch, passes with it.
+
+2009-02-19  Gabriel Burt  <gabriel.burt@gmail.com>
+
+	* src/TagLib/Ogg/XiphComment.cs: Patch from Gregory S. Chudov fixing typo
+	in the Ogg DiscNumber setter that wrote the TrackCount to the DISCTOTAL
+	field (BGO #572381)
+
+2009-02-19  Gabriel Burt  <gabriel.burt@gmail.com>
+
+	* src/TagLib/Tag.cs: Patch from Gregory S. Chudov fixing bug in the CopyTo
+	method that copied the Copyright into the Conductor tag (BGO #572382)
+
+2009-02-19  Gabriel Burt  <gabriel.burt@gmail.com>
+
+	* src/TagLib/File.cs: Patch from Félix Velasco fixing a bug in our XML
+	documentation (BGO #572253)
+
+2009-02-19  Gabriel Burt  <gabriel.burt@gmail.com>
+
+	* configure.ac: Patch from Bertrand Lorentz using $(prefix)/lib in
+	GACUTIL_FLAGS instead of $(libdir) (BGO #572259)
+
+2009-02-19  Gabriel Burt  <gabriel.burt@gmail.com>
+
+	* docs/Makefile.am: Patch from Bertrand Lorentz fixing hardcoded mcs
+	reference (BGO #572450)
+
+2009-02-16  Gabriel Burt  <gabriel.burt@gmail.com>
+
+	* NEWS: Update for 2.0.3.2 release
+
+2009-02-16  Gabriel Burt  <gabriel.burt@gmail.com>
+
+	* src/TagLib/Ape/Tag.cs: Patch from Bernd Niedergesaess and Andy Beal
+	fixing our APE tag writing from writing out all uppercase tags to writing
+	the recommended tag casing.  But we support reading in any casing.  Also,
+	use BPM instead of TEMPO, and use Album Artist instead of AlbumArtist,
+	but read/write the latter for compabibility (BGO #571563)
+
+2009-02-16  Gabriel Burt  <gabriel.burt@gmail.com>
+
+	* src/TagLib/Id3v2/Tag.cs:
+	* src/TagLib/Ape/Tag.cs:
+	* docs/Package.en.xml.in:
+	* docs/Makefile.am: Patch from Bertrand Lorentz fixing build issue
+	with docs (BGO #571368)
+
+2009-02-12  Gabriel Burt  <gabriel.burt@gmail.com>
+
+	* src/TagLib/Mpeg/AudioFile.cs: Patch from Bernd Niedergesaess with style
+	help from Andy Beal, adding mp1/mp2 extensions/mimetypes (BGO #571466)
+
+2009-02-12  Gabriel Burt  <gabriel.burt@gmail.com>
+
+	* src/TagLib/Mpeg4/AppleTag.cs: Patch from Bernd Niedergesaess fixing
+	mpeg4 writing of BPM to file (BGO #571411)
+
+2009-02-11  Gabriel Burt  <gabriel.burt@gmail.com>
+
+	Patches from Bertrand Lorentz.
+
+	* tests/Makefile.am: fixes the typo that caused the test source files not
+	to be included in the tarball (BGO #569299)
+
+	* configure.ac: remove the call to AC_CANONICAL_SYSTEM (BGO #571361)
+
+2009-02-10  Gabriel Burt  <gabriel.burt@gmail.com>
+
+	* src/TagLib/Mpeg/File.cs: Patch from Andy Beal fixing issue where offset
+	was not being advanced when trying to read a GOP video packet inside a
+	video sequence (BGO #568964)
+
+2009-02-10  Gabriel Burt  <gabriel.burt@gmail.com>
+
+	* configure.ac: Bump in prep for the next release.
+
+	* examples/ReadFromUri.cs: Refactor a bit, and print out the *Sort
+	properties.
+
+2009-02-10  Gabriel Burt  <gabriel.burt@gmail.com>
+
+	* src/TagLib/Riff/File.cs: Patch from Andy Beal fixing bug where within a
+	while clause we would 'continue', but the actual counter incrementing
+	happened later in the while clause so the while condition was always true,
+	causing a freezing while writing video files (BGO #570892)
+
+2009-02-10  Gabriel Burt  <gabriel.burt@gmail.com>
+
+	* tests/Makefile.am:
+	* tests/samples/sample.avi:
+	* tests/fixtures/TagLib.Tests.FileFormats/AviFormatTest.cs: Patch from
+	Andy Beal adding unit testing for AVI files; currently gets stuck in
+	infinite loop because of bug with writing to AVI files.
+	
+2009-02-06  Gabriel Burt  <gabriel.burt@gmail.com>
+
+	* src/TagLib/Properties.cs: Patch from Andy Beal fixing VideoWidth getter, 
+	was incorrectly returning height (BGO #570745)
+
+2009-02-06  Gabriel Burt  <gabriel.burt@gmail.com>
+
+	* src/TagLib/Id3v2/Frame.cs: Patch from Andy Beal, fixing bug with not
+	skipping over Data Length Indicator field properly (BGO #568946)
+
+2009-01-23  Aaron Bockover  <abock@gnome.org>
+
+	* Makefile.am: Install .pc file to datadir since we're noarch
+
+2009-01-22  Gabriel Burt  <gabriel.burt@gmail.com>
+
+	* src/TagLib/CombinedTag.cs:
+	* src/TagLib/Id3v2/Tag.cs:
+	* src/TagLib/Id3v2/FrameTypes.cs:
+	* src/TagLib/Mpeg4/AppleTag.cs:
+	* src/TagLib/Mpeg4/BoxTypes.cs:
+	* src/TagLib/Tag.cs:
+	* src/TagLib/Asf/Tag.cs:
+	* src/TagLib/Ogg/XiphComment.cs:
+	* src/TagLib/Ogg/GroupedComment.cs: Patch from John Millikin and Andy Beal
+	adding support for PerformerSort, AlbumArtistSort, ComposerSort,
+	TitleSort, and AlbumSort to TagLib.Tag, with backends for Ogg, ID3, mpeg4,
+	and asf (BGO #567657).
+
+2009-01-20  Aaron Bockover  <abock@gnome.org>
+
+	* configure.ac: Bumped version to 2.0.3.1, output bz2 and gz
+
+	* Makefile.am: Added a push-release target
+
+	* NEWS: Updated for 2.0.3.1 release
+
+2009-01-15  Gabriel Burt  <gabriel.burt@gmail.com>
+
+	* tests/fixtures/TagLib.Tests.TaggingFormats/XiphTest.cs: Update unit test
+	to reflect that we do now support writing cover art to ogg files.
+
+2009-01-15  Gabriel Burt  <gabriel.burt@gmail.com>
+
+	* src/TagLib/Ogg/XiphComment.cs: Patch from John Millikin adding cover art
+	reading and writing support to Ogg (BGO #563168)
+
+2009-01-15  Gabriel Burt  <gabriel.burt@gmail.com>
+
+	* src/TagLib/Ape/File.cs:
+	* src/TagLib/Asf/File.cs:
+	* src/TagLib/Ogg/File.cs: Add more mimetypes and file extensions including
+	.oga and .ogv (BGO #532561)
+
+	* examples/ReadFromUri.cs: Avoid NRE crash
+
+2009-01-15  Gabriel Burt  <gabriel.burt@gmail.com>
+	
+	* src/TagLib/Mpeg4/file.cs: Patch from Andy Beal to recognize .m4b
+	files (Audiobook extention) in mpeg4 (BGO #567826)
+
+2009-01-13  Gabriel Burt  <gabriel.burt@gmail.com>
+
+	Patch from Andy Beal adding support for Dash atoms, used primarily for
+	storing extra text tags, such as the MusicBrainz tags.  The equivalent in
+	ID3 are the UserTextInfo frames.
+
+	* src/TagLib/Mpeg4/Boxes/AppleAdditionalInfoBox.cs: Add Constructor to
+	enable Instantiating a new AdditionalInfoBox without reading from file.
+
+	* src/TagLib/Mpeg4/AppleTag.cs: Add Methods for reading and writing
+	values to/from Dash Boxes (----)
+
+2008-12-15  Gabriel Burt  <gabriel.burt@gmail.com>
+
+	* src/TagLib/Id3v2/Tag.cs:
+	* src/TagLib/Id3v2/FrameFactory.cs: Add an alreadyUnsynched argument to
+	CreateFrame that is true when the overall id3v2 Tag has the Unsync flag
+	set, and used to ensure we don't double-synchronize the data for a frame.
+
+	* src/TagLib/Id3v2/FrameHeader.cs: Fix typo
+
+	* src/TagLib/Id3v2/Frame.cs: Fix typo, use the new CreateFrame
+
+	* src/TagLib/File.cs: Remove unnecessary (and buggy) position/length
+	adjustments in ReadBlock method.
+
+	* src/TagLib/NonContainer/StartTag.cs: Fix typos, ensure that ReadTag
+	returns the valid start value even if there is an exception creating it,
+	and write any tag-creation exceptions to Console.Error.
+
+2008-12-11  Gabriel Burt  <gabriel.burt@gmail.com>
+
+	* tests/ConsoleUi.cs:
+	* tests/Makefile.am:
+	* configure.ac: Remove ConsoleUi in favor of system-installed
+	nunit-console2.  Make the tests depend on the taglib-sharp.dll, and rename
+	the target 'test'.
+
+	* Makefile.am: Add 'test' target that calls make test in tests/
+
+2008-12-11  Gabriel Burt  <gabriel.burt@gmail.com>
+
+	* src/AssemblyInfo.cs.in: remove the if #SIGN - always sign
+
+	* tests/Makefile.am: Fix up source files list.
+
+	* tests/tests.mdp: enable Makefile integration
+
+	* configure.ac: Uncomment the nunit check and generate tests/Makefile
+
+2008-01-16  Jeffrey Stedfast  <fejj@novell.com>
+
+	* src/TagLib/Mpeg/AudioHeader.cs (AudioHeader): Do a bit more
+	thorough bitwise examination of the second byte in the MPEG sync
+	header.
+
+2008-01-10  Brian Nickel <brian.nickel@gmail.com>
+	
+	* NEWS: Updated for new release.
+	
+	* configure.ac: Now 2.0.3.0
+
+2008-01-09  Brian Nickel <brian.nickel@gmail.com>
+	
+	This commit does the following:
+		- Finishes XML documentation.
+		- Makes ASF tags enumerable.
+		- Allows saving RelativeVolumeFrames in 2.2 and 2.3 via
+		  semi-standard XRV and XRVA names.
+		- Prevents duplicates when genres are stored in "(0)Blues"
+		  format.
+	
+	* src/TagLib/Id3v2/Tag.cs:
+	* src/TagLib/Id3v2/Footer.cs:
+	* src/TagLib/Id3v2/FrameFactory.cs:
+	* src/TagLib/Id3v2/Header.cs:
+	* src/TagLib/Id3v2/Frames/UnsynchronisedLyricsFrame.cs:
+	* src/TagLib/Id3v2/Frames/CommentsFrame.cs:
+	* src/TagLib/Id3v2/Frames/SynchronizedLyricsFrame.cs:
+	* src/TagLib/Id3v2/Frames/AttachedPictureFrame.cs:
+	* src/TagLib/Id3v2/Frames/UniqueFileIdentifierFrame.cs:
+	* src/TagLib/Id3v2/Frames/TermsOfUseFrame.cs:
+	* src/TagLib/Id3v2/Frames/GeneralEncapsulatedObjectFrame.cs:
+	* src/TagLib/Id3v2/Frames/UnknownFrame.cs:
+	* src/TagLib/Id3v2/Frame.cs:
+	* src/TagLib/ListBase.cs:
+	* src/TagLib/Ogg/Codecs/Theora.cs:
+	* src/TagLib/Ogg/Codecs/Vorbis.cs:
+	* src/TagLib/Ogg/Codec.cs:
+	* src/TagLib/Ogg/Bitstream.cs: Finish documentation.
+	
+	* src/TagLib/Asf/Tag.cs:
+	* src/TagLib/Asf/ExtendedContentDescriptionObject.cs:
+	* src/TagLib/Asf/MetadataLibraryObject.cs: Make enumerable. (Thanks to
+	sambeckett for pointing out this missing feature.)
+	
+	* src/TagLib/Id3v2/Frames/TextIdentificationFrame.cs: If genre index is
+	followed by genre text, don't store it twice. (Thanks to sukhjinder for
+	the bug report.)
+	
+	* src/TagLib/Id3v2/Frames/RelativeVolumeFrame.cs:
+	* src/TagLib/Id3v2/FrameHeader.cs:
+	* tests/fixtures/TagLib.Tests.TaggingFormats/Id3V2Test.cs: Save RVA2 as
+	XRVA and XRV in older versions.
+	
+	* configure.ac: Now 2.0.2.22.
+
+2008-01-03  Brian Nickel <brian.nickel@gmail.com>
+	
+	*  src/Makefile.am: Generate taglib-sharp.dll.xml instead.
+	*  docs/Package.en.xml.in: Contains missing documentation and rules for
+	XmlInjector.exe.
+	
+	*  docs/XmlInjector.cs: A new XML manager which can remove, replace, and
+	insert nodes into an XML document based on XPath queries.
+	
+	*  docs/Makefile.am: Build XML from the slashdoc and use XmlInjector.exe
+	to insert missing parts into documentation as well as modify monodoc.xml
+	
+	*  docs/Package.en.xml: Depreciated by docs/Package.en.xml.in.
+	
+	*  docs/MonodocNodeConfig.cs: Depreciated by docs/XmlInjector.cs.
+	
+	*  configure.ac: Generate docs/Package.en.xml from
+	docs/Package.en.xml.in
+
+2008-01-02  Brian Nickel <brian.nickel@gmail.com>
+	
+	* src/Makefile.am: Generate taglib-sharp-docs.xml when building docs.
+	* docs/en/: Deleted. Will be replaced with autogeneration after this
+	update.
+	
+	* docs/Makefile.am: Add docs/Packages.en.xml do DIST_EXTRA
+	* docs/Package.en.xml: Contains values not in slashdocs.
+
+2008-01-02  Brian Nickel <brian.nickel@gmail.com>
+	
+	*  src/TagLib/CombinedTag.cs:
+	*  src/TagLib/ByteVectorList.cs:
+	*  src/TagLib/Id3v1/Tag.cs:
+	*  src/TagLib/Id3v1/StringHandler.cs:
+	*  src/TagLib/Riff/List.cs:
+	*  src/TagLib/Riff/File.cs:
+	*  src/TagLib/Riff/BitmapInfoHeader.cs:
+	*  src/TagLib/Riff/AviHeaderList.cs:
+	*  src/TagLib/Riff/DivXTag.cs:
+	*  src/TagLib/Riff/ListTag.cs:
+	*  src/TagLib/Riff/InfoTag.cs:
+	*  src/TagLib/Riff/MovieIdTag.cs:
+	*  src/TagLib/Riff/WaveFormatEx.cs:
+	*  src/TagLib/Genres.cs:
+	*  src/TagLib/Id3v2/Tag.cs:
+	*  src/TagLib/Id3v2/Frames/TextIdentificationFrame.cs:
+	*  src/TagLib/Id3v2/ExtendedHeader.cs:
+	*  src/TagLib/Mpeg/File.cs:
+	*  src/TagLib/Mpeg/VideoHeader.cs:
+	*  src/TagLib/Mpeg/AudioFile.cs:
+	*  src/TagLib/Mpeg/AudioHeader.cs:
+	*  src/TagLib/ByteVector.cs:
+	*  src/TagLib/SupportedMimeType.cs:
+	*  src/TagLib/Flac/Picture.cs:
+	*  src/TagLib/Flac/File.cs:
+	*  src/TagLib/Flac/StreamHeader.cs:
+	*  src/TagLib/Ape/Tag.cs:
+	*  src/TagLib/Ape/Footer.cs:
+	*  src/TagLib/Ape/File.cs:
+	*  src/TagLib/ListBase.cs:
+	*  src/TagLib/Mpeg4/Boxes/FullBox.cs:
+	*  src/TagLib/Mpeg4/Boxes/IsoChunkLargeOffsetBox.cs:
+	*  src/TagLib/Mpeg4/Boxes/IsoHandlerBox.cs:
+	*  src/TagLib/Mpeg4/Boxes/IsoChunkOffsetBox.cs:
+	*  src/TagLib/Mpeg4/Boxes/IsoMetaBox.cs:
+	*  src/TagLib/Mpeg4/FileParser.cs:
+	*  src/TagLib/Mpeg4/AppleTag.cs:
+	*  src/TagLib/Mpeg4/File.cs:
+	*  src/TagLib/Mpeg4/BoxHeader.cs:
+	*  src/TagLib/Mpeg4/Box.cs:
+	*  src/TagLib/Picture.cs:
+	*  src/TagLib/Tag.cs:
+	*  src/TagLib/Mpc/File.cs:
+	*  src/TagLib/Mpc/StreamHeader.cs:
+	*  src/TagLib/File.cs:
+	*  src/TagLib/WavPack/File.cs:
+	*  src/TagLib/WavPack/StreamHeader.cs:
+	*  src/TagLib/NonContainer/Tag.cs:
+	*  src/TagLib/NonContainer/File.cs:
+	*  src/TagLib/NonContainer/EndTag.cs:
+	*  src/TagLib/NonContainer/StartTag.cs:
+	*  src/TagLib/Asf/Tag.cs:
+	*  src/TagLib/Asf/HeaderExtensionObject.cs:
+	*  src/TagLib/Asf/File.cs:
+	*  src/TagLib/Asf/HeaderObject.cs:
+	*  src/TagLib/Asf/FilePropertiesObject.cs:
+	*  src/TagLib/Asf/ExtendedContentDescriptionObject.cs:
+	*  src/TagLib/Asf/UnknownObject.cs:
+	*  src/TagLib/Asf/MetadataLibraryObject.cs:
+	*  src/TagLib/Asf/PaddingObject.cs:
+	*  src/TagLib/Asf/StreamPropertiesObject.cs:
+	*  src/TagLib/Asf/ContentDescriptionObject.cs:
+	*  src/TagLib/Asf/Object.cs:
+	*  src/TagLib/Ogg/XiphComment.cs:
+	*  src/TagLib/Ogg/Page.cs:
+	*  src/TagLib/Ogg/File.cs:
+	*  src/TagLib/Ogg/Paginator.cs:
+	*  src/TagLib/Ogg/PageHeader.cs:
+	*  src/TagLib/Ogg/GroupedComment.cs: More docs, corrected some typos.
+
+2008-01-01  Brian Nickel <brian.nickel@gmail.com>
+	
+	I'm working to finish up the xmldocs so I can get rid of the aging docs
+	directory.
+	
+	* src/TagLib/Riff/List.cs:
+	* src/TagLib/Riff/AviStream.cs:
+	* src/TagLib/Riff/File.cs:
+	* src/TagLib/Riff/BitmapInfoHeader.cs:
+	* src/TagLib/Riff/AviHeaderList.cs:
+	* src/TagLib/Riff/DivXTag.cs:
+	* src/TagLib/Riff/ListTag.cs:
+	* src/TagLib/Riff/InfoTag.cs:
+	* src/TagLib/Riff/MovieIdTag.cs:
+	* src/TagLib/Riff/WaveFormatEx.cs:
+	* src/TagLib/Id3v2/Tag.cs:
+	* src/TagLib/Id3v2/Frames/UnsynchronisedLyricsFrame.cs:
+	* src/TagLib/Id3v2/Frames/RelativeVolumeFrame.cs:
+	* src/TagLib/Id3v2/Frames/CommentsFrame.cs:
+	* src/TagLib/Id3v2/Frames/SynchronizedLyricsFrame.cs:
+	* src/TagLib/Id3v2/Frames/PopularimeterFrame.cs:
+	* src/TagLib/Id3v2/Frames/AttachedPictureFrame.cs:
+	* src/TagLib/Id3v2/Frames/UniqueFileIdentifierFrame.cs:
+	* src/TagLib/Id3v2/Frames/PrivateFrame.cs:
+	* src/TagLib/Id3v2/Frames/MusicCdIdentifierFrame.cs:
+	* src/TagLib/Id3v2/Frames/TermsOfUseFrame.cs:
+	* src/TagLib/Id3v2/Frames/GeneralEncapsulatedObjectFrame.cs:
+	* src/TagLib/Id3v2/Frames/TextIdentificationFrame.cs:
+	* src/TagLib/Id3v2/Frames/PlayCountFrame.cs:
+	* src/TagLib/Id3v2/ExtendedHeader.cs:
+	* src/TagLib/Id3v2/Frame.cs:
+	* src/TagLib/ByteVector.cs:
+	* src/TagLib/Flac/BlockHeader.cs:
+	* src/TagLib/Ape/Tag.cs:
+	* src/TagLib/Ape/Item.cs:
+	* src/TagLib/Picture.cs:
+	* src/TagLib/Ogg/XiphComment.cs: A little documentation and
+	reformatting.
+	
+	* examples/BatchSet.cs: Add support for setting the ID3v2 version.
+
+2007-12-30  Brian Nickel <brian.nickel@gmail.com>
+	
+	This commit does the following:
+		- Makes Id3v2 skip iTunes settings-style comments.
+		- Makes ; the separator for multivalue fields in Mpeg4, rather
+		  than storing in multiple boxes.
+		- Cleans up Mpeg4 genre logic.
+		- Uses System.Globalization to choose the default language in
+		  Id3v2.
+		- Moves the comment written when Id3v2.Tag.Comment to be the
+		  first COMM in the frame so it is the first one recognized by
+		  other programs.
+	
+	*  src/TagLib/Id3v2/Tag.cs: Move the written comment to be the first
+	COMM frame if it isn't. Make "   " the fallback comment per instructions
+	on id3.org. Get the default language from CultureInfo.CurrentCulture
+	.ThreeLetterISOLanguageName.
+	
+	*  src/TagLib/Id3v2/Frames/CommentsFrame.cs: Skip iTunes comments if
+	they are set. There's no need for gibberish to show up as the comment.
+	
+	*  src/TagLib/Mpeg4/AppleTag.cs: Instead of adding multiple data boxes
+	for multi-string values, use `;' as a separator. It wasn't working out
+	in iTunes. (TagLib# can still read the tags is wrote earlier just fine.)
+	Use `@gnr' or `gnre', but don't attempt a weird mix of both at the same
+	time.
+	
+	*  tests/tests.mdp: Automatic changes by MonoDevelop 0.18.
+
+	* configure.ac: Now 2.0.2.21.
+
+2007-12-29  Brian Nickel <brian.nickel@gmail.com>
+	
+	This commit introduces some powerful new tests. They add more intensive
+	checking of saving and rendering and have lead to the preemptive
+	correction of several bugs.
+	
+	*  tests/tests.mdp: 
+	*  tests/fixtures/Helpers.cs: 
+	*  tests/fixtures/TagLib.FormatTests/FlacFormatTest.cs: 
+	*  tests/fixtures/TagLib.FormatTests/Id3V1FormatTest.cs: 
+	*  tests/fixtures/TagLib.FormatTests/Id3V2FormatTest.cs: 
+	*  tests/fixtures/TagLib.FormatTests/IFormatTest.cs: 
+	*  tests/fixtures/TagLib.FormatTests/AsfFormatTest.cs: 
+	*  tests/fixtures/TagLib.FormatTests/Id3BothFormatTest.cs: 
+	*  tests/fixtures/TagLib.FormatTests/OggFormatTest.cs: 
+	*  tests/fixtures/TagLib.FormatTests/MpcFormatTest.cs: 
+	*  tests/fixtures/TagLib.FormatTests/M4aFormatTest.cs: 
+	*  tests/fixtures/TagLib.Tests.FileFormats/FlacFormatTest.cs: 
+	*  tests/fixtures/TagLib.Tests.FileFormats/Id3V1FormatTest.cs: 
+	*  tests/fixtures/TagLib.Tests.FileFormats/Id3V2FormatTest.cs: 
+	*  tests/fixtures/TagLib.Tests.FileFormats/IFormatTest.cs: 
+	*  tests/fixtures/TagLib.Tests.FileFormats/AsfFormatTest.cs: 
+	*  tests/fixtures/TagLib.Tests.FileFormats/StandardTests.cs: 
+	*  tests/fixtures/TagLib.Tests.FileFormats/Id3BothFormatTest.cs: 
+	*  tests/fixtures/TagLib.Tests.FileFormats/OggFormatTest.cs: 
+	*  tests/fixtures/TagLib.Tests.FileFormats/MpcFormatTest.cs: 
+	*  tests/fixtures/TagLib.Tests.FileFormats/M4aFormatTest.cs: 
+	*  tests/fixtures/TagLib.Tests.TaggingFormats/Mpeg4Test.cs: 
+	*  tests/fixtures/TagLib.Tests.TaggingFormats/ApeTest.cs: 
+	*  tests/fixtures/TagLib.Tests.TaggingFormats/Id3V1Test.cs: 
+	*  tests/fixtures/TagLib.Tests.TaggingFormats/Id3V2Test.cs: 
+	*  tests/fixtures/TagLib.Tests.TaggingFormats/InfoTagTest.cs: 
+	*  tests/fixtures/TagLib.Tests.TaggingFormats/XiphTest.cs: 
+	*  tests/fixtures/TagLib.Tests.TaggingFormats/MovieIdTagTest.cs: 
+	*  tests/fixtures/TagLib.Tests.TaggingFormats/AsfTest.cs: 
+	*  tests/fixtures/TagLib.Tests.TaggingFormats/DivXTest.cs: Replaced unit
+	tests with new versions.
+
+2007-12-29  Brian Nickel <brian.nickel@gmail.com>
+	
+	This commit does the following:
+		- Fixes support for IsCompilation when saving as ID3v2.2.
+		- Makes Id3v2.Tag clonable.
+		- Fixes the project files.
+		- Fixes cloning UserTextInformationFrame.
+		
+		- CHANGES THE DEFAULT ID3v2 VERSION TO 3. While this may result
+		in some boos from people who consider ID3v2.4 to be the perfect
+		tagging format (myself included), the number of applications
+		that hiccup on ID3v2.4 is too astounding. This will not cause
+		tags already encoded at 2.4 to be reencoded at 2.3, but if new
+		tags are added to the file, they will be 2.3.
+	
+	*  src/TagLib/Id3v2/Tag.cs: Make Tag cloneable. Make default version 3.
+	
+	*  src/TagLib/Id3v2/FrameHeader.cs: Add version 2 mapping for TCMP so
+	IsComposer is saved in Id3v2.2.
+	
+	*  src/TagLib/Id3v2/Frames/TextIdentificationFrame.cs: If the frame
+	is a User*, create a User* when cloning.
+	
+	*  src/TagLib/Id3v2/ExtendedHeader.cs: Make cloneable.
+	
+	*  src/TagLib/Id3v2/FrameTypes.cs:
+	*  src/TagLib/Mpeg4/BoxTypes.cs: Add description of why these classes
+	exist, why they are internal, and why they aren't necessary for third
+	party programmers.
+	
+	*  src/taglib-sharp.mdp: 
+	*  taglib-sharp.csproj: Add VBRIHeader.cs
+
+2007-12-28  Brian Nickel <brian.nickel@gmail.com>
+	
+	This commit does the following:
+		- Adds IsCompilation to Id3v2.
+		- Adds support for deep CopyTo with Id3v2.
+		- Fixes support for deep CopyTo with Ape.
+		- Adds support for Fraunhofer VBRI headers in MPEG audio.
+		- Fixes a bug in reading XiphComments.
+		- Other trivial changes.
+	
+	* src/TagLib/Id3v2/Tag.cs: Added IsCompilation and CopyTo.
+	
+	* src/TagLib/Id3v2/FrameTypes.cs: Added TCMP.
+	
+	* src/TagLib/Id3v2/Frames/UnsynchronisedLyricsFrame.cs:
+	* src/TagLib/Id3v2/Frames/RelativeVolumeFrame.cs:
+	* src/TagLib/Id3v2/Frames/CommentsFrame.cs:
+	* src/TagLib/Id3v2/Frames/SynchronizedLyricsFrame.cs:
+	* src/TagLib/Id3v2/Frames/PopularimeterFrame.cs:
+	* src/TagLib/Id3v2/Frames/AttachedPictureFrame.cs:
+	* src/TagLib/Id3v2/Frames/UniqueFileIdentifierFrame.cs:
+	* src/TagLib/Id3v2/Frames/PrivateFrame.cs:
+	* src/TagLib/Id3v2/Frames/MusicCdIdentifierFrame.cs:
+	* src/TagLib/Id3v2/Frames/TermsOfUseFrame.cs:
+	* src/TagLib/Id3v2/Frames/GeneralEncapsulatedObjectFrame.cs:
+	* src/TagLib/Id3v2/Frames/TextIdentificationFrame.cs:
+	* src/TagLib/Id3v2/Frames/PlayCountFrame.cs:
+	* src/TagLib/Id3v2/Frame.cs: Made clonable.
+	
+	* src/TagLib/TagLib.sources:
+	* src/TagLib/Mpeg/VBRIHeader.cs:
+	* src/TagLib/Mpeg/AudioHeader.cs: Added support for Fraunhofer VBRI
+	header. This improves coverage of VBR files. (Thanks to hwahrmann for
+	proposing and authoring the changes.)
+	
+	* src/TagLib/Ape/Tag.cs: Fixed CopyTo to actually override
+	TagLib.Tag.CopyTo.
+	
+	* src/TagLib/Ape/Item.cs: Trivial formatting.
+	
+	* src/TagLib/Picture.cs: Try to make ObsoleteAttributes a bit clearer.
+	
+	* src/TagLib/Debugger.cs: Much nicer DumpHex.
+	
+	* src/TagLib/Ogg/XiphComment.cs: Don't fail when a bad comment (one
+	without a = is encountered, just ignore that field. (Thanks to hwahrmann
+	for the bug report and authoring the changes.)
+	
+	* examples/BatchSet.cs: Allow setting pictures.
+
+	* configure.ac: Now 2.0.2.20.
+
+2007-12-27  Brian Nickel <brian.nickel@gmail.com>
+	
+	This commit does the following:
+		- Adds support for .divx extension. (Just an AVI)
+		- Adds Tag.CopyTo to obsolete Tag.Duplicate. The difference is
+		  that Tag.CopyTo is overridable, so tags and implement their
+		  own, better, copying.
+		- Several small bugfixes correcting Mpeg4.Tag.IsCompilation,
+		  GIF images, reading Mpeg4 pictures without flags, and
+		  NonContainer.EndTag reading small files.
+		  
+		- COMPLETE REWORK of OGG pagination to handle multipage comments
+		  and saving that results in the creation of new pages. This
+		  fixes a bug posted by kurros on the forum and Banshee bug
+		  #502628.
+	
+	* src/TagLib/Riff/File.cs: Recognize the .divx extension. (Thanks to
+	sukhjinder for the feature request and jocker for confirming the fix.)
+	Use Tag.CopyTo instead of Tag.Duplicate.
+	
+	* src/TagLib/Flac/File.cs: Use Tag.CopyTo instead of Tag.Duplicate.
+	
+	* src/TagLib/Ape/Tag.cs: Add first real implementation of Tag.CopyTo.
+	
+	* src/TagLib/Ape/Item.cs: Make clonable.
+	
+	* src/TagLib/Mpeg4/AppleTag.cs: Don't check for image format flags, just
+	use data to identify the image type. iTunes apparently doesn't use the
+	flags anymore. (Thanks to DavidT@Imerge for the bug report.) Use 1 byte
+	rather than 4 to store the compilation setting. (Thanks to DavidT@Imerge
+	for the fix.)
+	
+	* src/TagLib/Picture.cs: Was setting mime-type to "image/png" for GIF.
+	
+	* src/TagLib/Tag.cs: Mark Tag.Duplicate as obsolete and replace with
+	overridable Tag.CopyTo. This will provide the option for better copying
+	from one tag to another if their types match rather than just doing the
+	simply copy available in Tag.Duplicate. See Ape.Tag for an
+	implemenation. More coming soon.
+	
+	* src/TagLib/NonContainer/File.cs: Don't read tags at the end of the
+	file if the tags at the start of the file are the entire file. (No
+	double dipping.)
+	
+	* src/TagLib/NonContainer/EndTag.cs: Don't crash if start < 128 when
+	reading. (Thanks to jonx for the bug report.) Use Tag.CopyTo instead of
+	Tag.Duplicate.
+	
+	* src/TagLib/NonContainer/StartTag.cs: Use Tag.CopyTo instead of
+	Tag.Duplicate.
+	
+	* src/TagLib/Ogg/File.cs: Use changes in Page and Paginator classes to
+	handle situations where the number of pages in the stream changes.
+	
+	* src/TagLib/Ogg/Page.cs: Add method for updating all Ogg pages after a
+	certain position with new page numbers. This is necessary if new pages
+	are inserted to avoid corrupting the file. Part of sweeping changes to
+	Ogg support.
+	
+	* src/TagLib/Ogg/Paginator.cs: Instead of just saving a single page,
+	properly paginate using a single page for the first packet in the file.
+	Optimally, produce the same number of pages as were in the file before,
+	but allow for creating more pages if the situation warrents it.
+	
+	* src/TagLib/Ogg/PageHeader.cs: Add a constructor which clones a header
+	but offsets page sequence by a specified number.
+	
+	* src/TagLib/Ogg/Bitstream.cs: Fix typo that was preventing multi-page
+	packets from reading correctly. What a difference a negation makes.
+
+	* configure.ac: Now 2.0.2.19.
+
+2007-12-25  Brian Nickel <brian.nickel@gmail.com>
+	
+	* src/TagLib/Riff/File.cs:
+	* src/TagLib/Flac/File.cs:
+	* src/TagLib/Mpeg4/File.cs:
+	* src/TagLib/NonContainer/File.cs:
+	* src/TagLib/Asf/File.cs:
+	* src/TagLib/Ogg/File.cs: Wrap constructors and save operations in
+	try/finally to ensure the streams get closed. (Thanks to oliphant for
+	the bug report.)
+
+2007-12-25  Brian Nickel <brian.nickel@gmail.com>
+	
+	* src/TagLib/Id3v1/Tag.cs: Added constructor to create from data. Added
+	documentation. Fixed properties to produce correct output when empty.
+	Removed broken IsEmpty property.
+	
+	* src/TagLib/Riff/List.cs: Make sure fields are cleared when SetValue
+	is called with any type of empty result.
+	
+	* src/TagLib/Riff/DivXTag.cs: Added constructor to create from data.
+	Added documentation. Fixed properties to produce correct output when
+	empty. Make Clear() clear `title'. Resize fields after encoding rather
+	than before to avoid possible sizing problems.
+	
+	* src/TagLib/Riff/MovieIdTag.cs: Read genre from correct position.
+	
+	* src/TagLib/Riff/WaveFormatEx.cs: Reformat and complete codec
+	descriptions.
+	
+	* src/TagLib/Id3v2/Tag.cs: Add constructor to create from data. Fixed
+	properties to produce correct output when empty.
+	
+	* src/TagLib/Id3v2/Frames/UnsynchronisedLyricsFrame.cs: Correct file
+	header.
+	
+	* src/TagLib/Id3v2/Frames/SynchronizedLyricsFrame.cs: Use alignment when
+	searching for delimiter to avoid breakage with UTF16BE.
+	
+	* src/TagLib/Id3v2/Frames/UniqueFileIdentifierFrame.cs: Tidy up a bit.
+	Add constructor with only owner as argument.
+	
+	* src/TagLib/Id3v2/Frames/PrivateFrame.cs: Throw NotImplementedException
+	when version is less than 3, rather than just outputting an empty tag.
+	
+	* src/TagLib/Id3v2/Frames/GeneralEncapsulatedObjectFrame.cs: Add size
+	of delimiter rather than 1 to avoid breakage with UTF16.
+	
+	* src/TagLib/Id3v2/Frames/TextIdentificationFrame.cs: Use delimiter
+	rather than single byte in a rejection method to avoid breakage. Have
+	genres produce "/" separated values after first non-indexable value is
+	encountered. eg. {"Blues", "Country", "Foobar", "Jazz"} becomes
+	"(0)(2)Foobar/Jazz". This format is completely recoverable. Add
+	constructor for User* which accepts just a description.
+	
+	* src/TagLib/Mpeg/AudioHeader.cs: Correct some documentation.
+	
+	* src/TagLib/ByteVector.cs: Pass generated BOM to StringTypeToEncoding
+	to make sure the correct encoding is used.
+	
+	* src/TagLib/Flac/File.cs: Correct documentation typo.
+	
+	* src/TagLib/Ape/Tag.cs: Add support for one of each type of picture
+	rather than just one front cover. Allow parsing of years not 4 digits
+	in length.
+	
+	* src/TagLib/Mpeg4/FileParser.cs: Prevent a crash if there isn't
+	sufficient data for reading the first block in parsers. Fix typo which
+	caused UtdaTree to not be filled, resulting in written tags not being
+	readable.
+	
+	* src/TagLib/Mpeg4/AppleTag.cs: Allow parsing of years not 4 digits
+	in length. Correctly clear zeroed values.
+	
+	* src/TagLib/Tag.cs: Use semicolons, rather than commas in Joined* to
+	reflect behavior of WMP.
+	
+	* src/TagLib/Picture.cs: Fix documentation typo.
+	
+	* src/TagLib/WavPack/StreamHeader.cs: Add some docs.
+	
+	* src/TagLib/Asf/Tag.cs: Remove "WM/GenreID" when a new genre is stored.
+	
+	* src/TagLib/Asf/ExtendedContentDescriptionObject.cs: Loop through names
+	rather than descriptors first when getting descriptors. That way the
+	first matching name is chosen rather than the first descriptor of any
+	name.
+	
+	* src/TagLib/Asf/ContentDescriptor.cs: Fix rendering bug that broke
+	storing values.
+
+	* configure.ac: Now 2.0.2.18.
+
+2007-10-02  Brian Nickel <brian.nickel@gmail.com>
+	
+	* src/TagLib/Riff/List.cs:
+	* src/TagLib/Riff/DivXTag.cs:
+	* src/TagLib/Id3v2/Frames/UnsynchronisedLyricsFrame.cs:
+	* src/TagLib/Id3v2/Frames/RelativeVolumeFrame.cs:
+	* src/TagLib/Id3v2/Frames/CommentsFrame.cs:
+	* src/TagLib/Id3v2/Frames/SynchronizedLyricsFrame.cs:
+	* src/TagLib/Id3v2/Frames/AttachedPictureFrame.cs:
+	* src/TagLib/Id3v2/Frames/TermsOfUseFrame.cs:
+	* src/TagLib/Id3v2/Frames/GeneralEncapsulatedObjectFrame.cs:
+	* src/TagLib/Id3v2/Frames/TextIdentificationFrame.cs:
+	* src/TagLib/Flac/Picture.cs: 
+	* src/TagLib/Ape/Tag.cs:
+	* src/TagLib/Ape/Item.cs:
+	* src/TagLib/Mpeg4/Boxes/IsoHandlerBox.cs:
+	* src/TagLib/Ogg/XiphComment.cs: Use ToString (StringType,int,int)
+	instead of ToString(StringType)
+	
+	* src/TagLib/Mpeg/AudioHeader.cs: Remove AudioHeader.position as it is
+	no longer needed.
+	
+	* src/TagLib/ByteVector.cs: Use ToString(StringType,int,int) in
+	ToStrings, mark ToString(StringType,int) as obsolete, add
+	ToString(StringType,int,int), add documentation. Relax exception
+	exception checking in ToString as it was causing unnecessary exceptions
+	when reading some zero byte strings. (Thanks to sambeckett for the bug
+	report.)
+	
+	* src/TagLib/Asf/Tag.cs: Use ContentDescriptionObject.Copyright instead
+	of an extended content descriptor. (Thanks to Dakuja for the bug
+	report.)
+
+	* src/TagLib/Id3v2/Frames/PopularimeterFrame.cs: Add nil separator when
+	rendering. Was causing tag to be unreadable. (Thanks to cody for the bug
+	report.)
+
+	* configure.ac: Now 2.0.2.17.
+
+2007-09-20  Brian Nickel <brian.nickel@gmail.com>
+	
+	* src/TagLib/ByteVector.cs: Fix overflow problem introduced last
+	release. (Thanks to hwahrmann for the bug report.)
+	
+	* src/TagLib/Asf/HeaderObject.cs: Switch the order of play_duration and
+	send_duration. Standard implementation is backwards from the
+	specification. (Thanks to hwahrmann for the bug report.)
+	
+	* src/TagLib/Asf/FilePropertiesObject.cs: Subtract preroll from
+	duration. (Thanks to hwahrmann for the bug report.)
+	
+	* configure.ac: Now 2.0.2.16.
+
+2007-09-18  Brian Nickel <brian.nickel@gmail.com>
+	
+	* src/TagLib/Riff/BitmapInfoHeader.cs: Reformat.
+	
+	* src/TagLib/Id3v2/FrameHeader.cs: Remove 'using System.Collections'
+	
+	* src/TagLib/Mpeg/AudioHeader.cs: Don't double-count position when
+	counting frames. (Thanks to hwahrmann for the bug report.)
+	
+	* src/TagLib/ByteVector.cs: Add UseBrokenLatin1Behavior to emulate bad
+	behavior of many taggers. When true, TagLib# will read Latin1 strings as
+	the system default encoding.
+	
+	* src/TagLib/Asf/ContentDescriptionObject.cs: 
+	* src/TagLib/Ape/Tag.cs: Documented.
+	
+	* src/TagLib/Riff/File.cs:
+	* src/TagLib/Mpeg4/Boxes/IsoHandlerBox.cs:
+	* src/TagLib/Asf/DescriptionRecord.cs:
+	* src/TagLib/Asf/ContentDescriptor.cs:
+	* src/TagLib/ReadOnlyByteVector.cs: Use ToString(StringType).
+
+	* configure.ac: Now 2.0.2.15.
+
+2007-09-17  Brian Nickel <brian.nickel@gmail.com>
+	
+	* src/TagLib/Id3v2/Tag.cs: New logic for SetFrameText was backwards,
+	causing frames to disappear. (Thanks to hwahrmann for the bug report.)
+	
+	* src/TagLib/Id3v2/FrameHeader.cs: Fix the reading of version 2 and 3
+	headers. They weren't being converted to the new headers. Add
+	FrameFlags.None.
+	
+	* src/TagLib/Id3v2/Header.cs: Add HeaderFlags.None.
+	
+	* configure.ac: Now 2.0.2.14.
+
+2007-09-16  Brian Nickel <brian.nickel@gmail.com>
+	
+	* src/TagLib/Id3v2/SynchData.cs:
+	* src/TagLib/Id3v2/FrameTypes.cs:
+	* src/TagLib/Id3v2/FrameHeader.cs:
+	* src/TagLib/Id3v2/Header.cs:
+	* src/TagLib/ByteVector.cs:
+	* src/TagLib/Ape/StreamHeader.cs: Documentation.
+
+2007-09-05  Brian Nickel <brian.nickel@gmail.com>
+
+	* src/TagLib/Flac/Block.cs: Completed docs.
+	
+	* src/TagLib/Id3v2/Tag.cs: GetItemAsUInt32 was fubar and always
+	returning zero. (Thanks to renzska for the bug report.) Always set the
+	encoding to the default when setting the contents of a frame. This
+	should hopefully prevent bad encoding. (Thanks to evgeni for the bug
+	report.)
+
+	* src/TagLib/Ape/Tag.cs: GetItemAsUInt32 was fubar and always returning
+	zero.
+	
+	* configure.ac:  Now 2.0.2.13.
+
+2007-09-04  Brian Nickel <brian.nickel@gmail.com>
+
+	Only 713 public members away from doing away with MonoDoc.
+	
+	* src/TagLib/Flac/File.cs: Completed docs.
+	
+	* src/TagLib/ByteVectorList.cs: 
+	* src/TagLib/Id3v1/Tag.cs: 
+	* src/TagLib/Id3v1/StringHandler.cs: 
+	* src/TagLib/Riff/List.cs: 
+	* src/TagLib/Riff/AviStream.cs: 
+	* src/TagLib/Riff/File.cs: 
+	* src/TagLib/Riff/BitmapInfoHeader.cs: 
+	* src/TagLib/Riff/AviHeaderList.cs: 
+	* src/TagLib/Riff/DivXTag.cs: 
+	* src/TagLib/Riff/ListTag.cs: 
+	* src/TagLib/Riff/InfoTag.cs: 
+	* src/TagLib/Riff/MovieIdTag.cs: 
+	* src/TagLib/Riff/WaveFormatEx.cs: 
+	* src/TagLib/Genres.cs: 
+	* src/TagLib/Id3v2/Tag.cs: 
+	* src/TagLib/Id3v2/Footer.cs: 
+	* src/TagLib/Id3v2/SynchData.cs: 
+	* src/TagLib/Id3v2/FrameTypes.cs: 
+	* src/TagLib/Id3v2/FrameFactory.cs: 
+	* src/TagLib/Id3v2/FrameHeader.cs: 
+	* src/TagLib/Id3v2/Header.cs: 
+	* src/TagLib/Id3v2/Frames/UnsynchronisedLyricsFrame.cs: 
+	* src/TagLib/Id3v2/Frames/RelativeVolumeFrame.cs: 
+	* src/TagLib/Id3v2/Frames/CommentsFrame.cs: 
+	* src/TagLib/Id3v2/Frames/SynchronizedLyricsFrame.cs: 
+	* src/TagLib/Id3v2/Frames/AttachedPictureFrame.cs: 
+	* src/TagLib/Id3v2/Frames/UniqueFileIdentifierFrame.cs: 
+	* src/TagLib/Id3v2/Frames/TermsOfUseFrame.cs: 
+	* src/TagLib/Id3v2/Frames/GeneralEncapsulatedObjectFrame.cs: 
+	* src/TagLib/Id3v2/Frames/TextIdentificationFrame.cs: 
+	* src/TagLib/Id3v2/Frames/UnknownFrame.cs: 
+	* src/TagLib/Id3v2/ExtendedHeader.cs: 
+	* src/TagLib/Id3v2/Frame.cs: 
+	* src/TagLib/ByteVector.cs: 
+	* src/TagLib/Properties.cs: 
+	* src/TagLib/SupportedMimeType.cs: 
+	* src/TagLib/Flac/Picture.cs: 
+	* src/TagLib/Flac/BlockHeader.cs: 
+	* src/TagLib/Flac/StreamHeader.cs: 
+	* src/TagLib/Flac/Block.cs: 
+	* src/TagLib/Ape/Tag.cs: 
+	* src/TagLib/Ape/Footer.cs: 
+	* src/TagLib/StringList.cs: 
+	* src/TagLib/FileTypes.cs: 
+	* src/TagLib/ListBase.cs: 
+	* src/TagLib/Mpeg4/Boxes/IsoSampleTableBox.cs: 
+	* src/TagLib/Mpeg4/Boxes/AppleItemListBox.cs: 
+	* src/TagLib/Mpeg4/Boxes/IsoUserDataBox.cs: 
+	* src/TagLib/Mpeg4/Boxes/IsoAudioSampleEntry.cs: 
+	* src/TagLib/Mpeg4/Boxes/AppleAnnotationBox.cs: 
+	* src/TagLib/Mpeg4/Boxes/IsoSampleDescriptionBox.cs: 
+	* src/TagLib/Mpeg4/Boxes/IsoMetaBox.cs: 
+	* src/TagLib/Mpeg4/FileParser.cs: 
+	* src/TagLib/Mpeg4/AppleTag.cs: 
+	* src/TagLib/Mpeg4/Box.cs: 
+	* src/TagLib/Picture.cs: 
+	* src/TagLib/Tag.cs: 
+	* src/TagLib/File.cs: 
+	* src/TagLib/Debugger.cs: 
+	* src/TagLib/Asf/Tag.cs: 
+	* src/TagLib/Asf/HeaderExtensionObject.cs: 
+	* src/TagLib/Asf/HeaderObject.cs: 
+	* src/TagLib/Asf/File.cs: 
+	* src/TagLib/Asf/ExtendedContentDescriptionObject.cs: 
+	* src/TagLib/Asf/Guid.cs: 
+	* src/TagLib/Asf/MetadataLibraryObject.cs: 
+	* src/TagLib/Ogg/XiphComment.cs: 
+	* src/TagLib/Ogg/Page.cs: 
+	* src/TagLib/Ogg/Codecs/Theora.cs: 
+	* src/TagLib/Ogg/Codecs/Vorbis.cs: 
+	* src/TagLib/Ogg/Codec.cs: 
+	* src/TagLib/Ogg/File.cs: 
+	* src/TagLib/Ogg/Paginator.cs: 
+	* src/TagLib/Ogg/PageHeader.cs: 
+	* src/TagLib/Ogg/GroupedComment.cs: 
+	* src/TagLib/Ogg/Bitstream.cs: 
+	* src/AssemblyInfo.cs.in: Replaced headers and use cref="T:...`1"
+	instead of "...{T}" until gmcs is fixed. This reduces warnings to
+	strictly CS1591.
+
+2007-09-03  Brian Nickel <brian.nickel@gmail.com>
+
+	* src/TagLib/Id3v2/Tag.cs: Renamed private method. Tidied up Read.
+	
+	* src/TagLib/Ape/Item.cs: Fixed some documentation.
+	
+	* src/TagLib/Ape/Tag.cs: 
+	* src/TagLib/Ape/Footer.cs: 
+	* src/TagLib/Asf/Tag.cs: 
+	* src/TagLib/Asf/HeaderExtensionObject.cs: 
+	* src/TagLib/Asf/File.cs: 
+	* src/TagLib/Asf/HeaderObject.cs: 
+	* src/TagLib/Asf/DescriptionRecord.cs: 
+	* src/TagLib/Asf/FilePropertiesObject.cs: 
+	* src/TagLib/Asf/ExtendedContentDescriptionObject.cs: 
+	* src/TagLib/Asf/UnknownObject.cs: 
+	* src/TagLib/Asf/Guid.cs: 
+	* src/TagLib/Asf/MetadataLibraryObject.cs: 
+	* src/TagLib/Asf/PaddingObject.cs: 
+	* src/TagLib/Asf/StreamPropertiesObject.cs: 
+	* src/TagLib/Asf/ContentDescriptionObject.cs: 
+	* src/TagLib/Asf/Object.cs: 
+	* src/TagLib/Asf/ContentDescriptor.cs: Completed docs.
+
+2007-08-31  Brian Nickel <brian.nickel@gmail.com>
+ 
+	* src/TagLib/Ape/File.cs: 
+	* src/TagLib/Ape/StreamHeader.cs: 
+	* src/TagLib/FileTypes.cs: Added support for reading APE files. (Thanks
+	to hwahrmann for authoring the classes.)
+	
+	* src/TagLib/Id3v2/Tag.cs: Fixed docs.
+	
+	* src/TagLib/Ape/Item.cs: Completed docs.
+	
+	* src/TagLib/Id3v2/Frames/RelativeVolumeFrame.cs: Prevent
+	ArgumentOutOfRangeException when a corrupt frame is encountered. (Thanks
+	to jms for the bug report.)
+
+	* src/TagLib/Id3v1/Tag.cs: 
+	* src/TagLib/Riff/List.cs: 
+	* src/TagLib/Riff/DivXTag.cs: 
+	* src/TagLib/Riff/ListTag.cs: 
+	* src/TagLib/Riff/InfoTag.cs: 
+	* src/TagLib/Riff/MovieIdTag.cs: 
+	* src/TagLib/ByteVector.cs: 
+	* src/TagLib/Properties.cs: 
+	* src/TagLib/Ape/Tag.cs: 
+	* src/TagLib/Mpeg4/AppleTag.cs: 
+	* src/TagLib/Tag.cs: 
+	* src/TagLib/Asf/Tag.cs: 
+	* src/TagLib/Ogg/XiphComment.cs: Removed StringCollection usage (and
+	replaced some collections with arrays.
+	
+	* src/TagLib/TagLib.sources: 
+	* src/taglib-sharp.mdp: 
+	* taglib-sharp.csproj: Added files.
+
+	* configure.ac:  Now 2.0.2.12.
+
+2007-08-28  Brian Nickel <brian.nickel@gmail.com>
+
+	* src/TagLib/Ape/Tag.cs: Stop parsing when a corrupt item is detected.
+	
+	* src/TagLib/Ape/Item.cs: UTF-8 encoded length != string.Length. Was
+	messing up with Chinese titles. (Thanks to jms for the bug report.)
+	
+	* src/TagLib/CombinedTag.cs: Fix header.
+	
+	* src/TagLib/Id3v2/Tag.cs: Document, add generic GetFrames()
+	
+	* src/TagLib/Id3v2/Frames/TextIdentificationFrame.cs: 
+	* src/TagLib/Id3v2/Frame.cs: 
+	* src/TagLib/Mpeg/File.cs: Document.
+	
+	* src/TagLib/Mpeg/VideoHeader.cs: Fix copyright info.
+	
+	* src/TagLib/Mpeg/AudioFile.cs: Fix some typos.
+	
+	* src/TagLib/Properties.cs: 
+	* src/TagLib/SupportedMimeType.cs: 
+	* src/TagLib/StringList.cs: 
+	* src/TagLib/FileTypes.cs: 
+	* src/TagLib/Mpeg4/Boxes/IsoSampleTableBox.cs: 
+	* src/TagLib/Mpeg4/Boxes/AppleItemListBox.cs: 
+	* src/TagLib/Mpeg4/Boxes/IsoUserDataBox.cs: 
+	* src/TagLib/Mpeg4/Boxes/IsoAudioSampleEntry.cs: 
+	* src/TagLib/Mpeg4/Boxes/IsoVisualSampleEntry.cs: 
+	* src/TagLib/Mpeg4/Boxes/AppleAnnotationBox.cs: 
+	* src/TagLib/Mpeg4/Boxes/IsoSampleDescriptionBox.cs: 
+	* src/TagLib/Mpeg4/Boxes/IsoMetaBox.cs: 
+	* src/TagLib/Mpeg4/FileParser.cs: 
+	* src/TagLib/Mpeg4/AppleTag.cs: 
+	* src/TagLib/Mpeg4/Box.cs: Fixed generics documentation.
+	
+	* src/TagLib/Mpeg4/File.cs: Accidentally marked constructors as
+	protected when copy/pasting code from NonContainer.File. (Thanks to
+	hwahrmann for the bug report.)
+	
+	* configure.ac:  Now 2.0.2.11.
+
+2007-08-24  Brian Nickel <brian.nickel@gmail.com>
+
+	* src/TagLib/Mpeg/AudioHeader.cs: Restore copyright notice.
+	
+	* src/TagLib/ICodec.cs: Wording Change.
+	
+	* src/TagLib/Mpeg/XingHeader.cs:
+	* src/TagLib/Mpeg/VideoHeader.cs:
+	* src/TagLib/Mpeg/AudioFile.cs: 
+	* src/TagLib/Mpeg4/Boxes/FullBox.cs: 
+	* src/TagLib/Mpeg4/Boxes/IsoMovieHeaderBox.cs: 
+	* src/TagLib/Mpeg4/Boxes/IsoSampleTableBox.cs: 
+	* src/TagLib/Mpeg4/Boxes/IsoSampleEntry.cs: 
+	* src/TagLib/Mpeg4/Boxes/IsoChunkLargeOffsetBox.cs: 
+	* src/TagLib/Mpeg4/Boxes/AppleAdditionalInfoBox.cs: 
+	* src/TagLib/Mpeg4/Boxes/IsoFreeSpaceBox.cs: 
+	* src/TagLib/Mpeg4/Boxes/AppleItemListBox.cs: 
+	* src/TagLib/Mpeg4/Boxes/IsoUserDataBox.cs: 
+	* src/TagLib/Mpeg4/Boxes/IsoAudioSampleEntry.cs: 
+	* src/TagLib/Mpeg4/Boxes/IsoHandlerBox.cs: 
+	* src/TagLib/Mpeg4/Boxes/AppleElementaryStreamDescriptor.cs: 
+	* src/TagLib/Mpeg4/Boxes/IsoVisualSampleEntry.cs: 
+	* src/TagLib/Mpeg4/Boxes/IsoChunkOffsetBox.cs: 
+	* src/TagLib/Mpeg4/Boxes/AppleDataBox.cs: 
+	* src/TagLib/Mpeg4/Boxes/AppleAnnotationBox.cs: 
+	* src/TagLib/Mpeg4/Boxes/UnknownBox.cs: 
+	* src/TagLib/Mpeg4/Boxes/IsoSampleDescriptionBox.cs: 
+	* src/TagLib/Mpeg4/Boxes/IsoMetaBox.cs: 
+	* src/TagLib/Mpeg4/FileParser.cs: 
+	* src/TagLib/Mpeg4/AppleTag.cs: 
+	* src/TagLib/Mpeg4/BoxTypes.cs: 
+	* src/TagLib/Mpeg4/File.cs: 
+	* src/TagLib/Mpeg4/BoxFactory.cs: 
+	* src/TagLib/Mpeg4/BoxHeader.cs: 
+	* src/TagLib/Mpeg4/Box.cs: Document completely.
+
+2007-08-19  Brian Nickel <brian.nickel@gmail.com>
+
+	* src/TagLib/Mpeg4/Boxes/IsoVisualSampleEntry.cs:
+	* src/TagLib/Mpeg4/Boxes/UnknownBox.cs: Document completely.
+
+	* src/TagLib/Mpeg4/AppleTag.cs: Committed too soon. File didn't compile.
+	* src/TagLib/Mpeg4/BoxFactory.cs: Forgot a bunch of end tags.
+	
+	* src/TagLib/Mpeg4/Box.cs: Fix doc typo.
+	
+	* src/TagLib/Mpc/StreamHeader.cs:
+	* src/TagLib/WavPack/StreamHeader.cs: Slight change in wording.
+
+2007-08-19  Brian Nickel <brian.nickel@gmail.com>
+
+	* src/TagLib/Id3v2/Frames/PopularimeterFrame.cs: Fix an exception when
+	saving a PopularimeterFrame with a play count of 0.
+	
+	* src/taglib-sharp.mdp: Remove BoxList.cs. It hasn't been used in
+	forever and is an empty file.
+	
+	* src/TagLib/Mpeg4/FileParser.cs: Started documentation.
+	
+	* src/TagLib/Mpeg4/BoxTypes.cs:
+	* src/TagLib/Mpeg4/File.cs:
+	* src/TagLib/Mpeg4/BoxFactory.cs:
+	* src/TagLib/Mpeg4/BoxHeader.cs:
+	* src/TagLib/Mpeg4/BoxList.cs:
+	* src/TagLib/Mpeg4/Box.cs:
+	* src/TagLib/Mpc/File.cs:
+	* src/TagLib/WavPack/File.cs: Completed documentation.
+	
+	* src/TagLib/Mpc/StreamHeader.cs:
+	* src/TagLib/WavPack/StreamHeader.cs: Completed documentation, except
+	for IEquitable overrides.
+	
+	* src/TagLib/Mpeg4/AppleTag.cs: Completed documentation, except for
+	IEnumerable overrides.
+	
+	* configure.ac: Now 2.0.2.10.
+
+2007-08-19  Brian Nickel <brian.nickel@gmail.com>
+
+	* src/TagLib/File.cs: Fix some typos in documentation.
+	
+	* src/TagLib/NonContainer/Tag.cs:
+	* src/TagLib/NonContainer/File.cs:
+	* src/TagLib/NonContainer/EndTag.cs:
+	* src/TagLib/NonContainer/StartTag.cs: Document completely.
+
+2007-08-17  Brian Nickel <brian.nickel@gmail.com>
+
+	* src/TagLib/Mpeg/AudioHeader.cs: Go back to setting XingHeader early,
+	there are just too many things that depend on `this'. (Thanks to jmurphy
+	for the bug report.)
+	
+	* src/TagLib/Ape/Tag.cs: Support APEv2 cover pictures. (Thanks to
+	renzska for the feature request.)
+	
+	* src/TagLib/Picture.cs: Add new constructors, obsolete CreateFromFile
+	and CreateFromPath, detect GIF and BMP files.
+	
+	* src/TagLib/NonContainer/EndTag.cs: Check that the footer contains
+	sane values.
+
+	* configure.ac: Now 2.0.2.9. Remove pkgconfig check for Mono. It isn't
+	really needed.
+
+2007-08-16  Brian Nickel <brian.nickel@gmail.com>
+
+	* src/TagLib/Asf/Tag.cs:
+	* src/TagLib/Asf/File.cs:
+	* src/TagLib/Asf/HeaderObject.cs:
+	* src/TagLib/Asf/DescriptionRecord.cs:
+	* src/TagLib/Asf/MetadataLibraryObject.cs:
+	* src/TagLib/Asf/ContentDescriptor.cs: Added support for the ASF
+	Metadata Library Object. This object supports content descriptors as big
+	as uint.MaxValue as opposed to ushort.MaxValue. Tag.Pictures now reads
+	from this source as well, and large pictures are now written to it. They
+	were previously ignored. (Thanks to renzska for the bug report.)
+
+	* src/TagLib/TagLib.sources:
+	* src/taglib-sharp.mdp:
+	* taglib-sharp.csproj: Added new files.
+	
+	* configure.ac: Now 2.0.2.8
+
+2007-08-16  Brian Nickel <brian.nickel@gmail.com>
+
+	* src/TagLib/Mpeg/AudioHeader.cs: Use non-property checks in public
+	constructor, assigning the XingHeader after sanity tests was causing
+	compiler problems on MS .NET. (Thanks to jmurphy for the bug report.)
+
+	* configure.ac: Now 2.0.2.7
+
+2007-08-14  Brian Nickel <brian.nickel@gmail.com>
+
+	* src/TagLib/Mpeg/XingHeader.cs: Add XingHeader.FileIdentifier to speed
+	things up.
+	
+	* src/TagLib/Mpeg/AudioHeader.cs: Fully document, reformat and add a
+	check for the Xing identifier before calling the constructor to avoid an
+	unnecessary exception/try/catch.
+	
+	* src/TagLib/ICodec.cs: Correct some documentation.
+	
+	* src/TagLib/Properties.cs:
+	* src/TagLib/SupportedMimeType.cs:
+	* src/TagLib/StringList.cs:
+	* src/TagLib/FileTypes.cs: Correct for documentation compiler warning.
+	
+	* taglib-sharp.csproj: Added PopularimeterFrame.cs
+
+	* configure.ac: Now 2.0.2.6
+
+2007-08-12  Brian Nickel <brian.nickel@gmail.com>
+
+	* src/TagLib/Id3v2/FrameTypes.cs: Added POPM
+	
+	* src/TagLib/Id3v2/FrameFactory.cs: Added PopularimeterFrame
+	
+	* src/TagLib/Id3v2/Frames/PopularimeterFrame.cs: NEW. Supports ID3v2
+	POPM (4.17) frame. (Thanks to renzska for the feature request.)
+	
+	* src/TagLib/Id3v2/Frames/PlayCountFrame.cs: Removed 'using
+	System.Collections;
+
+	* src/TagLib/TagLib.sources:
+	* src/taglib-sharp.mdp: Added PopularimeterFrame.cs
+	
+	* configure.ac: Now 2.0.2.5
+
+2007-08-12  Brian Nickel <brian.nickel@gmail.com>
+
+	* src/TagLib/Riff/List.cs: Reordered operations. Was incrementing a
+	value after it would have made a difference.
+	
+	* src/TagLib/Id3v2/Tag.cs: Added static UseNumericGenres which can be
+	set to false to prevent genres from being stored as ID3v1 indices.
+	(Thanks to craig for the feature request.)
+	
+	* src/TagLib/Id3v2/Frames/TextIdentificationFrame.cs: Use a
+	StringBuilder instead of + operations when formatting genres.
+	
+	* src/TagLib/Mpeg4/Boxes/IsoHandlerBox.cs: Check that a negative length
+	is not being passed to Mid if '\0' is not found.
+	
+	* src/TagLib/Mpeg4/BoxTypes.cs: Add Mdat.
+	
+	* src/TagLib/Riff/File.cs:
+	* src/TagLib/Mpeg4/FileParser.cs:
+	* src/TagLib/Mpeg4/File.cs:
+	* src/TagLib/NonContainer/File.cs:
+	* src/TagLib/Asf/File.cs:
+	* src/TagLib/Ogg/File.cs:
+	* src/TagLib/File.cs: Added InvariantStartPosition and
+	InvariantEndPosition describing the invariant/media section of the file
+	that should be uneffected by TagLib# write operations. (Thanks to AgentS
+	and kajic for their feature requests.)
+	
+	* configure.ac: Now 2.0.2.4
+
+2007-08-02  Brian Nickel <brian.nickel@gmail.com>
+
+	* src/TagLib/Id3v2/Frame.cs: Files were throwing ArgumentOutOfRange
+	exceptions after the changes on 2007-07-29. It now checks that the
+	ByteVector contains enough bytes and if not throws a
+	CorruptFileException. (Caught in TagLib.Id3v2.Tag)
+	
+	* src/TagLib/Mpeg/AudioFile.cs: Limit scanning to only the first 0x4000
+	bytes of the audio stream to avoid reading bad files forever. I got no
+	false negatives at 0x1000 so I'm hoping this is enough. If not, I can
+	throttle it up more. (Thanks to its-me for the bug report.)
+	
+	* configure.ac: Now 2.0.2.3
+
+2007-07-29  Brian Nickel <brian.nickel@gmail.com>
+
+	* src/TagLib/CombinedTag.cs: Fully documented and replaced the protected
+	constructor with a public one, as it wasn't protecting anything and
+	causing a compiler error in Orcas. (Thanks to jmurphy for the bug
+	report.)
+	
+	* src/TagLib/ByteVectorList.cs: Reformatted code. I had beautiful
+	documentation, but MonoDevelop crashed. :(
+	
+	* src/TagLib/ByteVector.cs: Started documenting and adding some
+	exceptions rather than letting them occur in the underlying methods.
+	
+	* src/TagLib/ListBase.cs: Reformatted code.
+	
+	* src/TagLib/File.cs: Added total documentation.
+	
+	* src/TagLib/Debugger.cs: Reformatted code.
+	
+	* src/Makefile.am:
+	* Makefile.am: Added MonoDevelop files to EXTRA_DIST. (Thanks to jopsen
+	for pointing this out.)
+	
+	* configure.ac: Now 2.0.2.2
+
+2007-07-22  Brian Nickel <brian.nickel@gmail.com>
+
+	* src/TagLib/Id3v2/Tag.cs: 
+	* src/TagLib/Ape/Tag.cs: 
+	* src/TagLib/Ogg/XiphComment.cs: Parse beats per minute as floating
+	point numbers, round them, and then convert them to uints. Values were
+	showing up as 0 if a decimal point was present. (Thanks to nokturnal for
+	the bug report.)
+
+	* src/TagLib/ByteVector.cs: Switch back from "_data" to "data"
+
+	* src/TagLib/ICodec.cs: Minor reorganization.
+
+	* src/TagLib/Genres.cs: 
+	* src/TagLib/Properties.cs: 
+	* src/TagLib/SupportedMimeType.cs: 
+	* src/TagLib/StringList.cs: 
+	* src/TagLib/FileTypes.cs: 
+	* src/TagLib/Tag.cs: 
+	* src/TagLib/Picture.cs: 
+	* src/TagLib/File.cs: 
+	* src/TagLib/ReadOnlyByteVector.cs: Documentation.
+
+	* configure.ac: Now 2.0.2.1
+
+2007-07-03  Brian Nickel <brian.nickel@gmail.com>
+
+	+-------------+
+	| VERSON BUMP |
+	|    2.0.2    |
+	+-------------+
+	
+	* src/TagLib/Id3v2/Frames/MusicCdIdentifierFrame.cs: Fix docs.
+	* src/TagLib/File.cs: Some doc work.
+	* src/AssemblyInfo.cs.in: Conditionally sign the assembly.
+	* src/AssemblyInfo-windows.cs: DELETED. AssemblyInfo.cs.in is all that's
+	necessary.
+	* src/Makefile.am: Add distwin target
+	
+	* windows-files/TagLibSharpDocs.chm: Added.
+	
+	* configure.ac: Don't use svn revision because it is greater than
+	ushort.MaxValue.
+	
+	* Makefile.am: Add distwin target.
+	
+	* NEWS: Updated for new release.
+	
+	* src/taglib-sharp.mdp:
+	* taglib-sharp.csproj: Use AssemblyInfo.cs.
+
+2007-06-27  Brian Nickel <brian.nickel@gmail.com>
+
+	* src/TagLib/Id3v2/Frames/AttachedPictureFrame.cs: Fixed reading problem
+	with UTF-16 encoded descriptions. (Thanks to renzska for the bug
+	report.)
+	
+	* src/TagLib/Id3v2/Frames/RelativeVolumeFrame.cs:
+	* src/TagLib/Id3v2/Frames/CommentsFrame.cs:
+	* src/TagLib/Id3v2/Frames/GeneralEncapsulatedObjectFrame.cs: Use Mono
+	coding guidelines.
+	
+	* src/TagLib/Asf/File.cs: Added ReadObject and detection of
+	HeaderExtensionObject.
+	
+	* src/TagLib/TagLib.sources: Added HeaderExtensionObject.cs
+	
+	* src/TagLib/Asf/HeaderExtensionObject.cs: ADDED. This will be used to
+	store large objects in the future (pictures bigger than 64k).
+	
+	* src/TagLib/Asf/Guid.cs: Added GUID's for HeaderExtensionObject.
+	
+	* src/AssemblyInfo.cs.in: Cleaned up.
+	* src/AssemblyInfo-windows.cs: Cleaned up.
+	
+	* src/taglib-sharp.mdp: Added HeaderExtensionObject.cs
+	
+	* configure.ac: Removed extra line.
+	
+	* taglib-sharp.csproj: Added HeaderExtensionObject.cs
+
+2007-06-26  Brian Nickel <brian.nickel@gmail.com>
+
+	* src/TagLib/Id3v2/Frames/CommentsFrame.cs: Readd ToString.
+	
+	* src/TagLib/Mpeg/XingHeader.cs: Don't throw an exception just because
+	the header doesn't contain everything we want.
+	
+	* src/TagLib/Mpeg/AudioHeader.cs: Prevent infinite loop. (Thanks to
+	sambeckett for the bug report.) Add "VBR" to the description if a Xing
+	header is present.
+	
+	* tests/fixtures/TagLib.FormatTests/FlacFormatTest.cs:
+	* tests/fixtures/TagLib.FormatTests/Id3V1FormatTest.cs:
+	* tests/fixtures/TagLib.FormatTests/Id3V2FormatTest.cs:
+	* tests/fixtures/TagLib.FormatTests/AsfFormatTest.cs:
+	* tests/fixtures/TagLib.FormatTests/Id3BothFormatTest.cs:
+	* tests/fixtures/TagLib.FormatTests/OggFormatTest.cs:
+	* tests/fixtures/TagLib.FormatTests/MpcFormatTest.cs:
+	* tests/fixtures/TagLib.FormatTests/M4aFormatTest.cs: Use Performers
+	instead of Artists.
+
+2007-06-26  Brian Nickel <brian.nickel@gmail.com>
+
+	* src/TagLib/CorruptFileException.cs:
+	* src/TagLib/Id3v2/Frames/CommentsFrame.cs:
+	* src/TagLib/Id3v2/Frames/AttachedPictureFrame.cs:
+	* src/TagLib/Id3v2/Frames/PrivateFrame.cs:
+	* src/TagLib/Id3v2/Frames/MusicCdIdentifierFrame.cs:
+	* src/TagLib/Id3v2/Frames/PlayCountFrame.cs:
+	* src/TagLib/UnsupportedFormatException.cs: Added XML documentation.
+	
+	* src/TagLib/Tag.cs: Started XML documentation. Artists was pointing 
+	nowhere. Pointed at Performers.
+
+	* src/TagLib/ByteVector.cs: ByteVector.Find was not returning -1 if 
+	searching at (data.Count == pattern.Count + offset). Caused extra '\0' 
+	to appear in comment frames. (Thanks to gozza11 for the bug report.)
+	
+	* src/taglib-sharp.mdp:
+	
+	* configure.ac: Work with "make distcheck"
+	
+	* Makefile.am: Include "svn-version" in dist.
+
+2007-06-25  Brian Nickel <brian.nickel@gmail.com>
+
+	* src/TagLib/Id3v2/Frames/PrivateFrame.cs: Set to this.data instead of
+	data in constructor. Thanks to pipes for the bug report.)
+	
+	* configure.ac: Make the fourth part of the assembly version equal to
+	the SVN revision.
+
+2007-06-24  Brian Nickel <brian.nickel@gmail.com>
+
+	+-------------+
+	| VERSON BUMP |
+	|    2.0.1    |
+	+-------------+
+	
+	* src/AssemblyInfo.cs.in:
+	* configure.ac:
+	* src/Makefile.am:
+	* src/policy.2.0.taglib-sharp.config.in: Install a policy in GAC so
+	assemblies compiled against older versions use 2.0.1.0.
+	* src/AssemblyInfo-windows.cs: Version bump.
+	* NEWS: Information on new release.
+
+2007-06-24  Brian Nickel <brian.nickel@gmail.com>
+
+	* src/TagLib/Id3v2/Tag.cs: Fixed bug in commit from 2007-06-20.
+	TPE2 and TPE1 were being swapped when they were stored. (Thanks to
+	jmurphy for the bug report.)
+
+2007-06-24  Brian Nickel <brian.nickel@gmail.com>
+
+	* src/TagLib/Id3v2/Frames/CommentsFrame.cs: Split the string into 3
+	pieces instead of 2. This way nil delimiters and badly formatted strings
+	don't mess up the value. (Thanks to gozza11 for the bug report.)
+
+2007-06-22  Brian Nickel <brian.nickel@gmail.com>
+
+	* src/TagLib/Id3v2/Tag.cs: Remove picture frames if Picture is set to
+	null or an empty array. (Thanks to wilson for the bug report.)
+
+2007-06-20  Brian Nickel <brian.nickel@gmail.com>
+
+	* src/TagLib/Mpeg4/AppleTag.cs:
+	* src/TagLib/Asf/Tag.cs: Don't return Performers if AlbumArtists is not
+	found. This, provided with the second to last commit should resolve
+	inconsistancies in the behaviour. (Thanks to JustinC for the bug
+	report, otherwise that travesty that is the previous implementation may
+	have gone on forever.)
+	
+	* src/TagLib/Tag.cs: Fix typos.
+
+2007-06-20  Brian Nickel <brian.nickel@gmail.com>
+
+	* src/TagLib/Id3v2/Frames/UnsynchronisedLyricsFrame.cs:
+	* src/TagLib/Id3v2/Frames/RelativeVolumeFrame.cs:
+	* src/TagLib/Id3v2/Frames/CommentsFrame.cs:
+	* src/TagLib/Id3v2/Frames/SynchronizedLyricsFrame.cs:
+	* src/TagLib/Id3v2/Frames/AttachedPictureFrame.cs:
+	* src/TagLib/Id3v2/Frames/UniqueFileIdentifierFrame.cs:
+	* src/TagLib/Id3v2/Frames/PrivateFrame.cs:
+	* src/TagLib/Id3v2/Frames/GeneralEncapsulatedObjectFrame.cs:
+	* src/TagLib/Id3v2/Frames/TextIdentificationFrame.cs: Use
+	ByteVector.TextDelimiter instead of Frame.TextDelimiter.
+	
+	* src/TagLib/Id3v2/Frame.cs: Mark TextDelimiter as obsolete.
+	* src/TagLib/ByteVector.cs: Add TextDelimiter method.
+	
+	* src/TagLib/Asf/Tag.cs: Discard new pictures if their rendered size is
+	greater than 64KB to avoid corrupting files. (Thanks to renzska for the
+	bug report.)
+
+2007-06-20  Brian Nickel <brian.nickel@gmail.com>
+
+	* src/TagLib/Id3v1/Tag.cs: Rework to match Picard specs.
+	
+	* src/TagLib/Riff/DivXTag.cs: Rework to match Picard specs.
+	
+	* src/TagLib/Riff/MovieIdTag.cs: Rework to match Picard specs.
+	
+	* src/TagLib/Id3v2/Tag.cs: Rework to match Picard specs.
+	
+	* src/TagLib/Ape/Tag.cs: Rework to match Picard specs.
+	
+	* src/TagLib/Ogg/XiphComment.cs: Rework to match Picard specs.
+
+	* src/TagLib/Tag.cs: Added JoinedAlbumArtists and FirstAlbumArtist.
+	Changed JoinedArtists and FirstArtist to point to Performers (marked as
+	obsolete), and added Artists which points to Performers (also obsolete).
+	This should aleviate confusion.
+	
+2007-06-12  Brian Nickel <brian.nickel@gmail.com>
+
+	* src/TagLib/Mpeg4/File.cs: Fix support for writing files that don't 
+	have UTDA tags. (Thanks to renzska for the bug report.)
+	
+	* src/TagLib/Mpeg4/Box.cs: Fix support for clearing boxes. (Thanks to 
+	maciej for the bug report.) Calculate padding size based on DataSize 
+	rather than header.DataSize. Fixes problem where 4 bytes are added on 
+	every save. (Discovered in bug report by lindea.)
+	
+	* src/TagLib/Riff/WaveFormatEx.cs: Recognize WMA Lossless. (Thanks to 
+	JustinC for the patch.)
+	
+	* ALSO: Thanks to JustinC for reminding me to credit people for their 
+	contributions. With the countless audio and video files in existence,
+	TagLib# would be far less complete and considerably buggier if not for 
+	everyone's contributions. Thank you!
+
+2007-06-11  Brian Nickel <brian.nickel@gmail.com>
+
+	* src/TagLib/Ogg/Paginator.cs: Fix save support in OGG. Thanks to
+	maciej for pointing this out.
+	
+	* NEWS: Added NEWS file.
+
+2007-06-10  Brian Nickel <brian.nickel@gmail.com>
+
+	+-------------+
+	| VERSON BUMP |
+	|    2.0.0    |
+	+-------------+
+	
+	The official announcement, tarballs, and excessive drinking will come
+	tomorrow after I get Windows documentation in order. In the mean time
+	I'll tidy up the site a bit.
+
+	* src/TagLib/Id3v2/Tag.cs: Combine TYER, TDAT, and TIME into a single 
+	TDRC, rather than discarding TDAT and TIME.
+	
+	* src/TagLib/Id3v2/FrameTypes.cs: Add some more types.
+	
+	* src/TagLib/Id3v2/FrameFactory.cs: Change for renamed frames.
+	
+	* src/TagLib/Id3v2/FrameHeader.cs: Don't discard TIME and TDAT.
+	
+	* src/TagLib/Id3v2/Frames/UnsynchronisedLyricsFrame.cs: Remove SetText.
+	It is redundant and identical to set_Text.
+	
+	* src/TagLib/Id3v2/Frames/CommentsFrame.cs: Remove SetText. It is
+	redundant and identical to set_Text.
+	
+	* src/TagLib/Id3v2/Frames/MusicCdIdentifierFrame.cs: Rename 
+	MusicCdIdentifier to MusicCdIdentiferFrame. I don't know how I made that
+	mistake.
+	
+	* src/TagLib/Id3v2/Frames/TermsOfUseFrame.cs: Remove SetText. It is
+	redundant and identical to set_Text.
+	
+	* src/TagLib/Id3v2/Frames/TextIdentificationFrame.cs: Rename to 
+	TextInformationFrame to better reflect specification. (Text
+	Identification frame is a subset of Text Information Frame). Split TDRC
+	into TYER, TDAT, and TIME if saving as version 2.3.
+	
+	* src/TagLib/Id3v2/Frame.cs: Make Render virtual to allow for more 
+	robust features. (Applied in TextInformationFrame.)
+	
+	* src/TagLib/ByteVector.cs: Fix typo.
+	
+	* src/TagLib/Ape/Tag.cs: Make enumerable.
+	
+	* src/TagLib/Mpeg4/Box.cs: Remove GetChild(System.Type), as all other 
+	System.Type based functionality has been removed.
+	
+	* src/AssemblyInfo-windows.cs: Version bump.
+	
+	* configure.ac: Version bump. Remove unit tests to shrink tarball.
+	
+	* Makefile.am: Remove unit tests to shrink tarball.
+
+2007-06-10  Brian Nickel <brian.nickel@gmail.com>
+
+	* docs/*: Get 100% caught up.
+
+2007-06-07  Brian Nickel <brian.nickel@gmail.com>
+
+	* src/TagLib/CombinedTag.cs: Add Tag.Clear, Tag.IsEmpty
+	* src/TagLib/Id3v1/Tag.cs: Add Tag.Clear, Tag.IsEmpty
+	* src/TagLib/Riff/File.cs: Use ReadOnlyByteVector.
+	* src/TagLib/Riff/DivXTag.cs: Add Tag.Clear, Tag.IsEmpty
+	* src/TagLib/Riff/ListTag.cs: Add Tag.Clear, Tag.IsEmpty
+	* src/TagLib/Id3v2/Tag.cs:
+	* src/TagLib/Id3v2/Footer.cs:
+	* src/TagLib/Id3v2/FrameTypes.cs:
+	* src/TagLib/Id3v2/FrameFactory.cs:
+	* src/TagLib/Id3v2/FrameHeader.cs:
+	* src/TagLib/Id3v2/Header.cs:
+	* src/TagLib/Id3v2/Frames/UnsynchronisedLyricsFrame.cs:
+	* src/TagLib/Id3v2/Frames/RelativeVolumeFrame.cs:
+	* src/TagLib/Id3v2/Frames/CommentsFrame.cs:
+	* src/TagLib/Id3v2/Frames/SynchronizedLyricsFrame.cs:
+	* src/TagLib/Id3v2/Frames/AttachedPictureFrame.cs:
+	* src/TagLib/Id3v2/Frames/UniqueFileIdentifierFrame.cs:
+	* src/TagLib/Id3v2/Frames/PrivateFrame.cs:
+	* src/TagLib/Id3v2/Frames/MusicCdIdentifierFrame.cs:
+	* src/TagLib/Id3v2/Frames/TermsOfUseFrame.cs:
+	* src/TagLib/Id3v2/Frames/GeneralEncapsulatedObjectFrame.cs:
+	* src/TagLib/Id3v2/Frames/TextIdentificationFrame.cs:
+	* src/TagLib/Id3v2/Frames/PlayCountFrame.cs:
+	* src/TagLib/Id3v2/Frame.cs: Use TagLib.Id3v2.FrameType instead of hard-
+	coding. Cuts out a lot of read time.
+	* src/TagLib/Flac/File.cs: Use ReadOnlyByteVector.
+	* src/TagLib/Flac/Block.cs: BlockSize instead of Size.
+	* src/TagLib/Ape/Tag.cs: Add Tag.Clear, Tag.IsEmpty
+	* src/TagLib/Ape/Footer.cs: Use ReadOnlyByteVector.
+	* src/TagLib/Ape/Item.cs: Use ReadOnlyByteVector.
+	* src/TagLib/Mpeg4/Boxes/AppleAdditionalInfoBox.cs:Don't parse text
+	before its needed.
+	* src/TagLib/Mpeg4/Boxes/IsoMovieHeaderBox.cs:
+	* src/TagLib/Mpeg4/Boxes/IsoChunkLargeOffsetBox.cs:
+	* src/TagLib/Mpeg4/Boxes/AppleElementaryStreamDescriptor.cs:
+	* src/TagLib/Mpeg4/Boxes/IsoChunkOffsetBox.cs:
+	* src/TagLib/Mpeg4/Boxes/IsoSampleDescriptionBox.cs: Don't do extra seeks.
+	* src/TagLib/Mpeg4/FileParser.cs: Use do/while instead of for. Was doing
+	extra reading.
+	* src/TagLib/Mpeg4/AppleTag.cs: Add Tag.Clear, Tag.IsEmpty
+	* src/TagLib/Mpeg4/BoxTypes.cs: Make internal.
+	* src/TagLib/Mpeg4/File.cs:
+	* src/TagLib/Mpeg4/BoxFactory.cs:
+	* src/TagLib/Mpeg4/BoxHeader.cs:
+	* src/TagLib/Mpeg4/Box.cs: Rename "BoxTypes" to "BoxType"
+	* src/TagLib/Mpc/StreamHeader.cs: Use ReadOnlyByteVector
+	* src/TagLib/Tag.cs: Add Tag.Clear
+	* src/TagLib/File.cs: Do away with ReadBlock(uint)
+	* src/TagLib/WavPack/StreamHeader.cs: Use ReadOnlyByteVector.
+	* src/TagLib/Asf/Tag.cs: Add Tag.Clear, Tag.IsEmpty
+	* src/TagLib/Asf/ContentDescriptionObject.cs: Add IsEmpty
+	* src/TagLib/Asf/ExtendedContentDescriptionObject.cs: Add IsEmpty
+	* src/TagLib/Ogg/XiphComment.cs: Add Tag.Clear
+	* src/TagLib/Ogg/PageHeader.cs: Use ReadBlock(int)
+	* src/TagLib/Ogg/GroupedComment.cs: Add Tag.Clear
+	* docs/en/TagLib.Riff/DivXTag.xml
+	* docs/en/TagLib.Riff/File.xml
+	* docs/en/TagLib.Id3v1/Tag.xml
+	* docs/en/TagLib.Id3v2/Header.xml
+	* docs/en/TagLib.Id3v2/Frame.xml
+	* docs/en/TagLib.Id3v2/Footer.xml
+	* docs/en/TagLib.Id3v2/FrameHeader.xml
+	* docs/en/TagLib.Mpeg/AudioFile.xml
+	* docs/en/TagLib.Mpeg/File.xml
+	* docs/en/TagLib.WavPack/StreamHeader.xml
+	* docs/en/TagLib.WavPack/File.xml
+	* docs/en/TagLib/Tag.xml
+	* docs/en/TagLib/File.xml
+	* docs/en/index.xml
+	* docs/en/TagLib.Flac/Metadata.xml
+	* docs/en/TagLib.Flac/Block.xml
+	* docs/en/TagLib.Flac/File.xml
+	* docs/en/TagLib.Ape/Tag.xml
+	* docs/en/TagLib.Ape/Footer.xml
+	* docs/en/TagLib.MusePack/StreamHeader.xml
+	* docs/en/TagLib.MusePack/File.xml
+	* docs/en/TagLib.Asf/ContentDescriptionObject.xml
+	* docs/en/TagLib.Asf/ExtendedContentDescriptionObject.xml
+	* docs/en/TagLib.Asf/Tag.xml
+	* docs/en/TagLib.Asf/File.xml
+	* docs/en/TagLib.Ogg/GroupedComment.xml
+	* docs/en/TagLib.Ogg/XiphComment.xml
+	* docs/en/TagLib.Ogg/File.xml
+	* docs/en/TagLib.Mpeg4/Box.xml
+	* docs/en/TagLib.Mpeg4/AppleTag.xml
+	* docs/en/TagLib.Mpeg4/BoxTypes.xml
+	* docs/en/TagLib.Mpeg4/File.xml: Synched docs.
+
+2007-06-04  Brian Nickel <brian.nickel@gmail.com>
+
+	* src/TagLib/Mpeg/File.cs: Prevent overflow.
+	* src/TagLib/Mpc/File.cs: Add support for "mpp" extention.
+
+2007-06-01  Brian Nickel <brian.nickel@gmail.com>
+
+	+-------------+
+	| VERSON BUMP |
+	|  1.9.99995  |
+	+-------------+
+
+	* examples/SetPictures.cs: Fix for API changes.
+	* src/TagLib/ByteVector.cs:
+	* src/TagLib/Mpeg4/AppleTag.cs:
+	* src/TagLib/Mpeg4/BoxTypes.cs:
+	* src/TagLib/TagLib.sources:
+	* src/TagLib/ReadOnlyByteVector.cs:
+	* src/taglib-sharp.mdp:
+	* docs/en/TagLib/ReadOnlyByteVector.xml:
+	* docs/en/TagLib/ByteVector.xml:
+	* docs/en/index.xml:
+	* docs/en/TagLib.Mpeg4/BoxTypes.xml:
+	* taglib-sharp.csproj: Add immutable ReadOnlyByteVector.
+
+2007-05-30  Brian Nickel <brian.nickel@gmail.com>
+
+        Redid a lot of the internals of FLAC to make them cleaner. Reverted the
+        change to TagLib.Mpeg4.BoxTypes. The change was safer but slowed things
+        down by 1.7329ms. Perhaps the addition of a superclass,
+        ImmutableByteVector, would help.
+        
+	* src/TagLib/Flac/Picture.cs
+	* src/TagLib/Flac/File.cs
+	* src/TagLib/Flac/BlockHeader.cs
+	* src/TagLib/Flac/Block.cs
+	* src/TagLib/Mpeg4/BoxTypes.cs
+	* docs/en/index.xml
+	* docs/en/TagLib.Flac/Metadata.xml
+	* docs/en/TagLib.Flac/BlockHeader.xml
+	* docs/en/TagLib.Flac/Block.xml
+	* docs/en/TagLib.Mpeg4/BoxTypes.xml:
+
+2007-05-30  Brian Nickel <brian.nickel@gmail.com>
+
+	Major API changes. The API has been changed a bunch to accommodate
+	Microsoft naming rules, globalization rules, etc. Hundreds of issues
+	brought to light by FxCop. Nothing like throwing a hundred
+	ArgumentNullExceptions, changing "h" to "Header",
+	"last_absolute_granular_position" to "lastAbsoluteGranularPosition",
+	"StringList" to "StringCollection", etc.
+	
+	Another major change is the dropping of
+	TagLib.File.{Push|Pop|Set|Default}FileAbstractionCreator. Now if you
+	want to create a local file, use TagLib.File.Create (string) and if you
+	want to use a stream, or a VFS, or whatever, use
+	TagLib.File.Create(File.IFileAbstraction). This should save a lot of
+	headache and make things a lot safer and cleaner. Sorry to those of you
+	who were using the old API.
+	
+	I've got a few hundred docs to fill in, but then it's 2.0 RC2.
+
+	* src/TagLib/Mpc/File.cs
+	* src/TagLib/Mpc/StreamHeader.cs
+	* src/TagLib/Tag.cs
+	* src/TagLib/Picture.cs
+	* src/TagLib/CombinedTag.cs
+	* src/TagLib/CorruptFileException.cs
+	* src/TagLib/File.cs
+	* src/TagLib/UnsupportedFormatException.cs
+	* src/TagLib/TagLib.sources
+	* src/TagLib/ByteVectorList.cs
+	* src/TagLib/Id3v1/Tag.cs
+	* src/TagLib/Id3v1/StringHandler.cs
+	* src/TagLib/Riff/List.cs
+	* src/TagLib/Riff/AviStream.cs
+	* src/TagLib/Riff/File.cs
+	* src/TagLib/Riff/BitmapInfoHeader.cs
+	* src/TagLib/Riff/AviHeaderList.cs
+	* src/TagLib/Riff/DivXTag.cs
+	* src/TagLib/Riff/ListTag.cs
+	* src/TagLib/Riff/InfoTag.cs
+	* src/TagLib/Riff/MovieIdTag.cs
+	* src/TagLib/Riff/WaveFormatEx.cs
+	* src/TagLib/Genres.cs
+	* src/TagLib/Id3v2/Tag.cs
+	* src/TagLib/Id3v2/Footer.cs
+	* src/TagLib/Id3v2/SynchData.cs
+	* src/TagLib/Id3v2/FrameFactory.cs
+	* src/TagLib/Id3v2/FrameHeader.cs
+	* src/TagLib/Id3v2/Header.cs
+	* src/TagLib/Id3v2/Frames/UnsynchronisedLyricsFrame.cs
+	* src/TagLib/Id3v2/Frames/RelativeVolumeFrame.cs
+	* src/TagLib/Id3v2/Frames/CommentsFrame.cs
+	* src/TagLib/Id3v2/Frames/SynchronizedLyricsFrame.cs
+	* src/TagLib/Id3v2/Frames/AttachedPictureFrame.cs
+	* src/TagLib/Id3v2/Frames/UniqueFileIdentifierFrame.cs
+	* src/TagLib/Id3v2/Frames/PrivateFrame.cs
+	* src/TagLib/Id3v2/Frames/MusicCdIdentifierFrame.cs
+	* src/TagLib/Id3v2/Frames/TermsOfUseFrame.cs
+	* src/TagLib/Id3v2/Frames/GeneralEncapsulatedObjectFrame.cs
+	* src/TagLib/Id3v2/Frames/TextIdentificationFrame.cs
+	* src/TagLib/Id3v2/Frames/PlayCountFrame.cs
+	* src/TagLib/Id3v2/Frames/UnknownFrame.cs
+	* src/TagLib/Id3v2/ExtendedHeader.cs
+	* src/TagLib/Id3v2/Frame.cs
+	* src/TagLib/Debugger.cs
+	* src/TagLib/Mpeg/XingHeader.cs
+	* src/TagLib/Mpeg/File.cs
+	* src/TagLib/Mpeg/VideoHeader.cs
+	* src/TagLib/Mpeg/AudioFile.cs
+	* src/TagLib/Mpeg/AudioHeader.cs
+	* src/TagLib/ByteVector.cs
+	* src/TagLib/IntList.cs
+	* src/TagLib/ICodec.cs
+	* src/TagLib/WavPack/File.cs
+	* src/TagLib/WavPack/StreamHeader.cs
+	* src/TagLib/NonContainer/File.cs
+	* src/TagLib/NonContainer/EndTag.cs
+	* src/TagLib/NonContainer/StartTag.cs
+	* src/TagLib/Properties.cs
+	* src/TagLib/SupportedMimeType.cs
+	* src/TagLib/Ape/Tag.cs
+	* src/TagLib/Ape/Footer.cs
+	* src/TagLib/Ape/Item.cs
+	* src/TagLib/Flac/Picture.cs
+	* src/TagLib/Flac/File.cs
+	* src/TagLib/Flac/BlockHeader.cs
+	* src/TagLib/Flac/StreamHeader.cs
+	* src/TagLib/Flac/Block.cs
+	* src/TagLib/StringList.cs
+	* src/TagLib/Asf/Tag.cs
+	* src/TagLib/Asf/File.cs
+	* src/TagLib/Asf/HeaderObject.cs
+	* src/TagLib/Asf/StreamPropertiesObject.cs
+	* src/TagLib/Asf/FilePropertiesObject.cs
+	* src/TagLib/Asf/ContentDescriptionObject.cs
+	* src/TagLib/Asf/Object.cs
+	* src/TagLib/Asf/UnknownObject.cs
+	* src/TagLib/Asf/ContentDescriptor.cs
+	* src/TagLib/ListBase.cs
+	* src/TagLib/Mpeg4/Boxes/FullBox.cs
+	* src/TagLib/Mpeg4/Boxes/IsoMovieHeaderBox.cs
+	* src/TagLib/Mpeg4/Boxes/IsoSampleTableBox.cs
+	* src/TagLib/Mpeg4/Boxes/IsoChunkLargeOffsetBox.cs
+	* src/TagLib/Mpeg4/Boxes/IsoSampleEntry.cs
+	* src/TagLib/Mpeg4/Boxes/AppleAdditionalInfoBox.cs
+	* src/TagLib/Mpeg4/Boxes/IsoFreeSpaceBox.cs
+	* src/TagLib/Mpeg4/Boxes/AppleItemListBox.cs
+	* src/TagLib/Mpeg4/Boxes/IsoUserDataBox.cs
+	* src/TagLib/Mpeg4/Boxes/IsoAudioSampleEntry.cs
+	* src/TagLib/Mpeg4/Boxes/IsoHandlerBox.cs
+	* src/TagLib/Mpeg4/Boxes/IsoVisualSampleEntry.cs
+	* src/TagLib/Mpeg4/Boxes/AppleElementaryStreamDescriptor.cs
+	* src/TagLib/Mpeg4/Boxes/IsoChunkOffsetBox.cs
+	* src/TagLib/Mpeg4/Boxes/AppleDataBox.cs
+	* src/TagLib/Mpeg4/Boxes/AppleAnnotationBox.cs
+	* src/TagLib/Mpeg4/Boxes/UnknownBox.cs
+	* src/TagLib/Mpeg4/Boxes/IsoSampleDescriptionBox.cs
+	* src/TagLib/Mpeg4/Boxes/IsoMetaBox.cs
+	* src/TagLib/Mpeg4/FileParser.cs
+	* src/TagLib/Mpeg4/AppleTag.cs
+	* src/TagLib/Mpeg4/BoxTypes.cs
+	* src/TagLib/Mpeg4/File.cs
+	* src/TagLib/Mpeg4/BoxFactory.cs
+	* src/TagLib/Mpeg4/BoxHeader.cs
+	* src/TagLib/Mpeg4/BoxList.cs
+	* src/TagLib/Mpeg4/Box.cs
+	* src/TagLib/Ogg/XiphComment.cs
+	* src/TagLib/Ogg/Page.cs
+	* src/TagLib/Ogg/Codecs/Theora.cs
+	* src/TagLib/Ogg/Codecs/Vorbis.cs
+	* src/TagLib/Ogg/Codec.cs
+	* src/TagLib/Ogg/File.cs
+	* src/TagLib/Ogg/Paginator.cs
+	* src/TagLib/Ogg/PageHeader.cs
+	* src/TagLib/Ogg/GroupedComment.cs
+	* src/TagLib/Ogg/Bitstream.cs
+	* src/AssemblyInfo.cs.in
+	* src/AssemblyInfo-windows.cs
+	* src/taglib-sharp.mdp
+	* docs/en/TagLib.Riff/BitmapInfoHeader.xml
+	* docs/en/TagLib.Riff/AviHeaderList.xml
+	* docs/en/TagLib.Riff/DivXTag.xml
+	* docs/en/TagLib.Riff/ListTag.xml
+	* docs/en/TagLib.Riff/WaveFormatEx.xml
+	* docs/en/TagLib.Riff/AviStream.xml
+	* docs/en/TagLib.Riff/List.xml
+	* docs/en/TagLib.Riff/File.xml
+	* docs/en/TagLib.Id3v1/StringHandler.xml
+	* docs/en/TagLib.Id3v1/Tag.xml
+	* docs/en/TagLib.Id3v2/UniqueFileIdentifierFrame.xml
+	* docs/en/TagLib.Id3v2/AttachedPictureFrame.xml
+	* docs/en/TagLib.Id3v2/PrivateFrame.xml
+	* docs/en/TagLib.Id3v2/Header.xml
+	* docs/en/TagLib.Id3v2/PlayCountFrame.xml
+	* docs/en/TagLib.Id3v2/Frame.xml
+	* docs/en/TagLib.Id3v2/MusicCdIdentifier.xml
+	* docs/en/TagLib.Id3v2/Footer.xml
+	* docs/en/TagLib.Id3v2/CommentsFrame.xml
+	* docs/en/TagLib.Id3v2/TermsOfUseFrame.xml
+	* docs/en/TagLib.Id3v2/GeneralEncapsulatedObjectFrame.xml
+	* docs/en/TagLib.Id3v2/UserTextIdentificationFrame.xml
+	* docs/en/TagLib.Id3v2/SynchronisedLyricsFrame.xml
+	* docs/en/TagLib.Id3v2/TextIdentificationFrame.xml
+	* docs/en/TagLib.Id3v2/UnknownFrame.xml
+	* docs/en/TagLib.Id3v2/Tag.xml
+	* docs/en/TagLib.Id3v2/UnsynchronisedLyricsFrame.xml
+	* docs/en/TagLib.Id3v2/RelativeVolumeFrame.xml
+	* docs/en/TagLib.Mpeg/Marker.xml
+	* docs/en/TagLib.Mpeg/AudioFile.xml
+	* docs/en/TagLib.Mpeg/Version.xml
+	* docs/en/TagLib.Mpeg/AudioHeader.xml
+	* docs/en/TagLib.Mpeg/XingHeader.xml
+	* docs/en/TagLib.Mpeg/VideoHeader.xml
+	* docs/en/TagLib.Mpeg/File.xml
+	* docs/en/TagLib.WavPack/StreamHeader.xml
+	* docs/en/TagLib.WavPack/File.xml
+	* docs/en/TagLib.NonContainer/File.xml
+	* docs/en/TagLib/UnsupportedFormatException.xml
+	* docs/en/TagLib/Genres.xml
+	* docs/en/TagLib/IntList.xml
+	* docs/en/TagLib/ListBase`1.xml
+	* docs/en/TagLib/SupportedMimeType.xml
+	* docs/en/TagLib/File+LocalFileAbstraction.xml
+	* docs/en/TagLib/ByteVectorCollection.xml
+	* docs/en/TagLib/MediaTypes.xml
+	* docs/en/TagLib/Picture.xml
+	* docs/en/TagLib/File.xml
+	* docs/en/TagLib/ByteVectorList.xml
+	* docs/en/TagLib/StringCollection.xml
+	* docs/en/TagLib/ByteVector.xml
+	* docs/en/TagLib/TagTypes.xml
+	* docs/en/TagLib/StringList.xml
+	* docs/en/TagLib/PictureType.xml
+	* docs/en/TagLib/CorruptFileException.xml
+	* docs/en/TagLib/File+FileTypeResolver.xml
+	* docs/en/index.xml
+	* docs/en/TagLib.Flac/BlockHeader.xml
+	* docs/en/TagLib.Flac/StreamHeader.xml
+	* docs/en/TagLib.Flac/Block.xml
+	* docs/en/TagLib.Flac/BlockType.xml
+	* docs/en/TagLib.Flac/File.xml
+	* docs/en/TagLib.Ape/Tag.xml
+	* docs/en/TagLib.Ape/FooterFlags.xml
+	* docs/en/TagLib.Ape/Footer.xml
+	* docs/en/TagLib.Ape/Item.xml
+	* docs/en/TagLib.MusePack/StreamHeader.xml
+	* docs/en/TagLib.MusePack/File.xml
+	* docs/en/TagLib.Asf/Object.xml
+	* docs/en/TagLib.Asf/ContentDescriptor.xml
+	* docs/en/TagLib.Asf/StreamPropertiesObject.xml
+	* docs/en/TagLib.Asf/HeaderObject.xml
+	* docs/en/TagLib.Asf/File.xml
+	* docs/en/TagLib.Ogg/PageHeader.xml
+	* docs/en/TagLib.Ogg/GroupedComment.xml
+	* docs/en/TagLib.Ogg/Bitstream.xml
+	* docs/en/TagLib.Ogg/XiphComment.xml
+	* docs/en/TagLib.Ogg/Page.xml
+	* docs/en/TagLib.Ogg/Codec.xml
+	* docs/en/TagLib.Ogg/File.xml
+	* docs/en/TagLib.Mpeg4/BoxFactory.xml
+	* docs/en/TagLib.Mpeg4/IsoFreeSpaceBox.xml
+	* docs/en/TagLib.Mpeg4/BoxList.xml
+	* docs/en/TagLib.Mpeg4/AppleItemListBox.xml
+	* docs/en/TagLib.Mpeg4/Box.xml
+	* docs/en/TagLib.Mpeg4/IsoUserDataBox.xml
+	* docs/en/TagLib.Mpeg4/FileParser.xml
+	* docs/en/TagLib.Mpeg4/AppleTag.xml
+	* docs/en/TagLib.Mpeg4/AppleDataBox+FlagTypes.xml
+	* docs/en/TagLib.Mpeg4/IsoAudioSampleEntry.xml
+	* docs/en/TagLib.Mpeg4/BoxHeader.xml
+	* docs/en/TagLib.Mpeg4/IsoHandlerBox.xml
+	* docs/en/TagLib.Mpeg4/IsoVisualSampleEntry.xml
+	* docs/en/TagLib.Mpeg4/AppleElementaryStreamDescriptor.xml
+	* docs/en/TagLib.Mpeg4/IsoChunkOffsetBox.xml
+	* docs/en/TagLib.Mpeg4/AppleDataBox.xml
+	* docs/en/TagLib.Mpeg4/AppleAnnotationBox.xml
+	* docs/en/TagLib.Mpeg4/UnknownBox.xml
+	* docs/en/TagLib.Mpeg4/IsoSampleDescriptionBox.xml
+	* docs/en/TagLib.Mpeg4/IsoMetaBox.xml
+	* docs/en/TagLib.Mpeg4/FullBox.xml
+	* docs/en/TagLib.Mpeg4/AppleDataBox+FlagType.xml
+	* docs/en/TagLib.Mpeg4/IsoMovieHeaderBox.xml
+	* docs/en/TagLib.Mpeg4/IsoSampleTableBox.xml
+	* docs/en/TagLib.Mpeg4/BoxTypes.xml
+	* docs/en/TagLib.Mpeg4/IsoChunkLargeOffsetBox.xml
+	* docs/en/TagLib.Mpeg4/IsoSampleEntry.xml
+	* docs/en/TagLib.Mpeg4/AppleAdditionalInfoBox.xml
+	* docs/en/TagLib.Mpeg4/File.xml
+	* tests/tests.mdp
+	* tests/fixtures/TagLib.CollectionTests/ByteVectorListTest.cs
+	* tests/fixtures/TagLib.CollectionTests/StringListTest.cs
+	* tests/fixtures/TagLib.CollectionTests/ByteVectorCollectionTest.cs
+	* tests/fixtures/TagLib.CollectionTests/StringCollectionTest.cs
+	* tests/fixtures/TagLib.CollectionTests/ByteVectorTest.cs
+	* configure.ac
+	* taglib-sharp.csproj
+	* examples/ReadFromUri.cs
+	* examples/muine-use-taglibsharp.patch: Aye Aye Aye!
+
+2007-05-25  Brian Nickel <brian.nickel@gmail.com>
+
+	+-------------+
+	| VERSON BUMP |
+	|  1.9.99994  |
+	+-------------+
+
+	* src/TagLib/TagLib.sources: Remove debugger.
+	* src/TagLib/Mpeg/AudioHeader.cs: Compile on Windows.
+	* docs/en/TagLib.Riff/File.xml:
+	* docs/en/TagLib.Mpeg/AudioFile.xml:
+	* docs/en/TagLib.Mpeg/File.xml:
+	* docs/en/TagLib.WavPack/File.xml:
+	* docs/en/index.xml:
+	* docs/en/TagLib.Flac/File.xml:
+	* docs/en/TagLib.MusePack/File.xml:
+	* docs/en/TagLib.Asf/File.xml:
+	* docs/en/TagLib.Ogg/File.xml:
+	* docs/en/TagLib.Mpeg4/File.xml: Fixed tpos.
+	* docs/Makefile.am: Change target.
+	* configure.ac: Version bump.
+	* taglib-sharp.csproj: Add missing files.
+
+2007-05-25  Brian Nickel <brian.nickel@gmail.com>
+
+There were changes to 153 files in the last three days. I can't vouch for
+everything that happened, as I may have blacked out for some portions, but tags
+now have an abstract Tag.TagTypes property, Everything that should be a struct
+is, there were a bunch of tiny cleanups, "private Flac.File+PictureTag" is now
+"public Flac.Metadata"... And as of 3:55 AM (Arizona Time), THERE IS NOT ONE 
+FREAKIN' INSTANCE OF "To be added." IN THE ENTIRE docs/en DIRECTORY. I really 
+must love you guys, 'cause that was really, really painful.
+
+	* src/TagLib/Tag.cs:
+	* src/TagLib/CombinedTag.cs:
+	* src/TagLib/File.cs:
+	* src/TagLib/Id3v1/Tag.cs:
+	* src/TagLib/Riff/AviStream.cs:
+	* src/TagLib/Riff/File.cs:
+	* src/TagLib/Riff/DivXTag.cs:
+	* src/TagLib/Riff/InfoTag.cs:
+	* src/TagLib/Riff/MovieIdTag.cs:
+	* src/TagLib/Id3v2/Tag.cs:
+	* src/TagLib/Id3v2/Frames/PlayCountFrame.cs:
+	* src/TagLib/Id3v2/ExtendedHeader.cs:
+	* src/TagLib/Mpeg/XingHeader.cs:
+	* src/TagLib/Mpeg/File.cs:
+	* src/TagLib/Mpeg/AudioFile.cs:
+	* src/TagLib/Mpeg/AudioHeader.cs:
+	* src/TagLib/NonContainer/Tag.cs:
+	* src/TagLib/NonContainer/File.cs:
+	* src/TagLib/NonContainer/EndTag.cs:
+	* src/TagLib/NonContainer/StartTag.cs:
+	* src/TagLib/Ape/Tag.cs:
+	* src/TagLib/Flac/Picture.cs:
+	* src/TagLib/Flac/File.cs:
+	* src/TagLib/Flac/StreamHeader.cs:
+	* src/TagLib/Asf/Tag.cs:
+	* src/TagLib/Asf/File.cs:
+	* src/TagLib/Mpeg4/Boxes/FullBox.cs:
+	* src/TagLib/Mpeg4/Boxes/IsoMovieHeaderBox.cs:
+	* src/TagLib/Mpeg4/Boxes/IsoSampleEntry.cs:
+	* src/TagLib/Mpeg4/Boxes/IsoChunkLargeOffsetBox.cs:
+	* src/TagLib/Mpeg4/Boxes/IsoAudioSampleEntry.cs:
+	* src/TagLib/Mpeg4/Boxes/IsoHandlerBox.cs:
+	* src/TagLib/Mpeg4/Boxes/IsoVisualSampleEntry.cs:
+	* src/TagLib/Mpeg4/Boxes/IsoChunkOffsetBox.cs:
+	* src/TagLib/Mpeg4/Boxes/AppleDataBox.cs:
+	* src/TagLib/Mpeg4/Boxes/IsoSampleDescriptionBox.cs:
+	* src/TagLib/Mpeg4/FileParser.cs:
+	* src/TagLib/Mpeg4/AppleTag.cs:
+	* src/TagLib/Mpeg4/File.cs:
+	* src/TagLib/Mpeg4/BoxFactory.cs:
+	* src/TagLib/Mpeg4/BoxHeader.cs:
+	* src/TagLib/Mpeg4/BoxList.cs:
+	* src/TagLib/Mpeg4/Box.cs:
+	* src/TagLib/Ogg/XiphComment.cs:
+	* src/TagLib/Ogg/Page.cs:
+	* src/TagLib/Ogg/Codecs/Theora.cs:
+	* src/TagLib/Ogg/Codecs/Vorbis.cs:
+	* src/TagLib/Ogg/Codec.cs:
+	* src/TagLib/Ogg/File.cs:
+	* src/TagLib/Ogg/Paginator.cs:
+	* src/TagLib/Ogg/GroupedComment.cs:
+	* src/TagLib/Ogg/Bitstream.cs:
+	* src/taglib-sharp.mdp: 53 C# files changed.
+	* docs/en/*: 100 XML files filled in.
+
+2007-05-22  Brian Nickel <brian.nickel@gmail.com>
+
+	* src/TagLib/Tag.cs: Make abstract.
+	* src/TagLib/Mpc/File.cs: Make namespace "MusePack".
+	* src/TagLib/Mpc/StreamHeader.cs: Convert to struct.
+	* src/TagLib/File.cs: Store TagTypes as uint. Remove unused read styles.
+	Add File.TagTypes and File.TagTypesOnDisk. Add CloseStream to 
+	IFileAbstraction for SilverLight support.
+	* src/TagLib/Riff/File.cs: Add TagTypes.
+	* src/TagLib/ByteVectorList.cs: Remove ToByteVector()
+	* src/TagLib/Id3v2/Tag.cs:
+	* src/TagLib/Id3v2/Footer.cs:
+	* src/TagLib/Id3v2/SynchData.cs:
+	* src/TagLib/Id3v2/FrameFactory.cs:
+	* src/TagLib/Id3v2/FrameHeader.cs:
+	* src/TagLib/Id3v2/Header.cs:
+	* src/TagLib/Id3v2/Frames/PlayCountFrame.cs:
+	* src/TagLib/Id3v2/Frames/UnsynchronisedLyricsFrame.cs:
+	* src/TagLib/Id3v2/Frames/RelativeVolumeFrame.cs:
+	* src/TagLib/Id3v2/Frames/CommentsFrame.cs:
+	* src/TagLib/Id3v2/Frames/SynchronizedLyricsFrame.cs:
+	* src/TagLib/Id3v2/Frames/AttachedPictureFrame.cs:
+	* src/TagLib/Id3v2/Frames/UniqueFileIdentifierFrame.cs:
+	* src/TagLib/Id3v2/Frames/PrivateFrame.cs:
+	* src/TagLib/Id3v2/Frames/GeneralEncapsulatedObjectFrame.cs:
+	* src/TagLib/Id3v2/Frames/TextIdentificationFrame.cs:
+	* src/TagLib/Id3v2/Frames/UnknownFrame.cs:
+	* src/TagLib/Id3v2/Frame.cs: Significant refactoring. Use byte for 
+	version. Use enums for header and frame flags. Use string for language.
+	Unsupported frames and frame properties throw NotImplementedException.
+	Added PlayCountFrame.
+	* src/TagLib/Mpeg/XingHeader.cs: Make struct.
+	* src/TagLib/Mpeg/File.cs:
+	* src/TagLib/Mpeg/VideoHeader.cs: Make struct.
+	* src/TagLib/Mpeg/AudioFile.cs:
+	* src/TagLib/Mpeg/AudioHeader.cs: Make struct.
+	* src/TagLib/Debugger.cs: Make internal.
+	* src/TagLib/ByteVector.cs: Clean up constructors.
+	* src/TagLib/IntList.cs: Clean up constructors.
+	* src/TagLib/WavPack/StreamHeader.cs: Convert to struct.
+	* src/TagLib/NonContainer/Tag.cs: Add TagTypes.
+	* src/TagLib/NonContainer/File.cs: Add TagTypes.
+	* src/TagLib/NonContainer/EndTag.cs: Add TagTypes.
+	* src/TagLib/NonContainer/StartTag.cs: Add TagTypes.
+	* src/TagLib/Ape/Tag.cs: 
+	* src/TagLib/Ape/Footer.cs: Make struct. Use enum for flags.
+	* src/TagLib/Flac/File.cs:
+	* src/TagLib/Flac/BlockHeader.cs: Make struct.
+	* src/TagLib/Flac/StreamHeader.cs: Make struct.
+	* src/TagLib/StringList.cs: Clean up constructors.
+	* src/TagLib/FileTypes.cs: Add support for registering types.
+	* src/TagLib/Asf/File.cs: Add TagTypes.
+	* src/TagLib/Asf/HeaderObject.cs:
+	* src/TagLib/Asf/StreamPropertiesObject.cs:
+	* src/TagLib/Asf/FilePropertiesObject.cs:
+	* src/TagLib/Asf/ContentDescriptionObject.cs:
+	* src/TagLib/Asf/Object.cs:
+	* src/TagLib/Asf/Guid.cs: Use System.Guid.
+	* src/TagLib/Asf/ContentDescriptor.cs: Use unsigned types.
+	* src/TagLib/ListBase.cs: Clean up constructors.
+	* src/TagLib/Mpeg4/File.cs: Add TagTypes.
+	* src/TagLib/Ogg/GroupedComment.cs: Add IsEmpty.
+	* src/TagLib/Ogg/File.cs: Add TagTypes.
+	* src/TagLib/Ogg/Page.cs:
+	* src/TagLib/Ogg/Paginator.cs:
+	* src/TagLib/Ogg/Bitstream.cs:
+	* src/TagLib/Ogg/PageHeader.cs: Make PageHeader a struct and add 
+	PageFlags.
+	* docs/en/*: Thousands more docs filled out.
+
+2007-05-20  Brian Nickel <brian.nickel@gmail.com>
+
+	* src/TagLib/ByteVector.cs:
+	* src/TagLib/Id3v2/Frames/SynchronizedLyricsFrame.cs: Remove accidental
+	System.Console.WriteLine lines.
+	* src/TagLib/File.cs: Make constructor protected.
+	* src/TagLib/Ogg/File.cs:
+	* src/TagLib/Riff/File.cs: Add File(string) constructor.
+	* src/TagLib/Riff/BitmapInfoHeader.cs:
+	* src/TagLib/Riff/ListTag.cs:
+	* src/TagLib/Riff/WaveFormatEx.cs: Tidy up.
+	* src/TagLib/Id3v2/Frame.cs: Parse was redundant.
+	* src/TagLib/Mpeg/AudioHeader.cs: Make stream_length private.
+	* src/TagLib/Ogg/Codecs/Theora.cs:
+	* src/TagLib/Ogg/Codecs/Vorbis.cs: Make constructors private.
+	* docs/en/TagLib.Mpc/StreamHeader.xml:
+	* docs/en/TagLib.Mpc/File.xml:
+	* docs/en/TagLib.Riff.xml:
+	* docs/en/TagLib.Riff/BitmapInfoHeader.xml:
+	* docs/en/TagLib.Riff/InfoTag.xml:
+	* docs/en/TagLib.Riff/ListTag.xml:
+	* docs/en/TagLib.Riff/AviHeader.xml:
+	* docs/en/TagLib.Riff/MovieIdTag.xml:
+	* docs/en/TagLib.Riff/WaveFormatEx.xml:
+	* docs/en/TagLib.Riff/List.xml:
+	* docs/en/TagLib.Riff/File.xml:
+	* docs/en/TagLib.Id3v2/UniqueFileIdentifierFrame.xml:
+	* docs/en/TagLib.Id3v2/AttachedPictureFrame.xml:
+	* docs/en/TagLib.Id3v2/PrivateFrame.xml:
+	* docs/en/TagLib.Id3v2/Frame.xml:
+	* docs/en/TagLib.Id3v2/CommentsFrame.xml:
+	* docs/en/TagLib.Id3v2/UserTextIdentificationFrame.xml:
+	* docs/en/TagLib.Id3v2/GeneralEncapsulatedObjectFrame.xml:
+	* docs/en/TagLib.Id3v2/SynchronisedLyricsFrame.xml:
+	* docs/en/TagLib.Id3v2/TextIdentificationFrame.xml:
+	* docs/en/TagLib.Id3v2/UnknownFrame.xml:
+	* docs/en/TagLib.Id3v2/UnsynchronisedLyricsFrame.xml:
+	* docs/en/TagLib.Id3v2/RelativeVolumeFrame.xml:
+	* docs/en/TagLib.Mpeg/AudioFile.xml:
+	* docs/en/TagLib.Mpeg/AudioHeader.xml:
+	* docs/en/TagLib.Mpeg/VideoHeader.xml:
+	* docs/en/TagLib.Mpeg/File.xml:
+	* docs/en/TagLib.WavPack/StreamHeader.xml:
+	* docs/en/TagLib.WavPack/File.xml:
+	* docs/en/TagLib.NonContainer/File.xml:
+	* docs/en/TagLib/ICodec.xml:
+	* docs/en/TagLib/Properties.xml:
+	* docs/en/TagLib/IAudioCodec.xml:
+	* docs/en/TagLib/IVideoCodec.xml:
+	* docs/en/TagLib/File.xml:
+	* docs/en/TagLib.Flac/StreamHeader.xml:
+	* docs/en/TagLib.Flac/File.xml:
+	* docs/en/TagLib.Asf/File.xml:
+	* docs/en/TagLib.Ogg.Codecs/Theora.xml:
+	* docs/en/TagLib.Ogg.Codecs/Vorbis.xml:
+	* docs/en/TagLib.Ogg/Codec.xml:
+	* docs/en/TagLib.Ogg/File.xml:
+	* docs/en/TagLib.Mpeg4/IsoAudioSampleEntry.xml:
+	* docs/en/TagLib.Mpeg4/IsoVisualSampleEntry.xml:
+	* docs/en/TagLib.Mpeg4/IsoMovieHeaderBox.xml:
+	* docs/en/TagLib.Mpeg4/File.xml: Filled out some docs, baby.
+
+2007-05-18  Brian Nickel <brian.nickel@gmail.com>
+
+	+-------------+
+	| VERSON BUMP |
+	|  1.9.99993  |
+	+-------------+
+
+	* src/TagLib/TagLib.sources: Fixed typo.
+	* src/TagLib/ByteVector.cs: Fix for reading nil-separated UTF-16
+	strings. Now StringTypeToEncoding assumes the previously used UTF-16 
+	endianness if a BOM is not found. Additionally, Find and RFind now base
+	byte align on distance from the original offset, not offset from start.
+	* src/TagLib/WavPack/File.cs:
+	* src/TagLib/WavPack/StreamHeader.cs: Reformat code.
+	* src/TagLib/NonContainer/StartTag.cs: Make sure APE tags have headers
+	when placed at the front of a file.
+	* src/TagLib/Ape/Tag.cs:
+	* src/TagLib/Ape/Footer.cs:
+	* src/TagLib/Ape/Item.cs: API changes to improve clarity and
+	functionality.
+	* docs/en/TagLib.Riff/WaveFormatEx.xml:
+	* docs/en/TagLib.WavPack/StreamHeader.xml:
+	* docs/en/TagLib.WavPack/File.xml:
+	* docs/en/TagLib.Ape.xml:
+	* docs/en/TagLib.Ape/ItemType.xml:
+	* docs/en/TagLib.Ape/Tag.xml:
+	* docs/en/TagLib.Ape/Footer.xml:
+	* docs/en/TagLib.Ape/Item.xml:
+	* docs/en/TagLib.Ogg.Codecs/Vorbis.xml: Some solid documentation.
+	TagLib.Ape and TagLib.WavPack namespaces are 100% documented.
+	* docs/Makefile.am: docdir is a bad name, using monodocdir.
+	* configure.ac: Version bump.
+	* taglib-sharp.csproj: Fixed typos.
+
+2007-05-18  Brian Nickel <brian.nickel@gmail.com>
+
+	* src/TagLib/File.cs: Reprivatize file_stream.
+	* src/TagLib/Id3v2/Footer.cs: Remove SetData.
+	* src/TagLib/Id3v2/Tag.cs:
+	* src/TagLib/Id3v2/FrameFactory.cs: Don't load compressed or encrypted
+	frames rather than corrupting them.
+	* src/TagLib/Id3v2/FrameHeader.cs: Handle flags properly.
+	* src/TagLib/Id3v2/Header.cs: Remove SetData.
+	* src/TagLib/Id3v2/Frames/UnsynchronisedLyricsFrame.cs:
+	* src/TagLib/Id3v2/Frames/RelativeVolumeFrame.cs:
+	* src/TagLib/Id3v2/Frames/CommentsFrame.cs:
+	* src/TagLib/Id3v2/Frames/SynchronizedLyricsFrame.cs:
+	* src/TagLib/Id3v2/Frames/AttachedPictureFrame.cs:
+	* src/TagLib/Id3v2/Frames/UniqueFileIdentifierFrame.cs:
+	* src/TagLib/Id3v2/Frames/PrivateFrame.cs:
+	* src/TagLib/Id3v2/Frames/GeneralEncapsulatedObjectFrame.cs:
+	* src/TagLib/Id3v2/Frames/TextIdentificationFrame.cs:
+	* src/TagLib/Id3v2/Frames/UnknownFrame.cs: Tidy up source.
+	* src/TagLib/Id3v2/ExtendedHeader.cs: Replace SetData with constructor.
+	* src/TagLib/Id3v2/Frame.cs: Improve support for frame flags.
+	* src/TagLib/ByteVector.cs: Privitize SetData.
+	* src/TagLib/Asf/Tag.cs: Provide easy access to multi-string
+	descriptors.
+	* src/TagLib/Mpeg4/AppleTag.cs: If AlbumArtists is empty, use
+	Performers. (The aART data box is pretty new and underused.)
+	* docs/en/*: Updated docs. Stripped duplicates. Filled some out.
+
+2007-05-15  Brian Nickel <brian.nickel@gmail.com>
+
+	* src/TagLib/Id3v2/Tag.cs: Fix BPM storage.
+	* src/TagLib/Tag.cs:
+	* src/TagLib/CombinedTag.cs:
+	* src/TagLib/Riff/InfoTag.cs:
+	* src/TagLib/Ape/Tag.cs:
+	* src/TagLib/Asf/Tag.cs:
+	* src/TagLib/Mpeg4/AppleTag.cs:
+	* src/TagLib/Ogg/XiphComment.cs:
+	* src/TagLib/Ogg/GroupedComment.cs: Rename BPM to BeatsPerMinute.
+	* examples/ReadFromUri.cs: Push/Pop abstractor. Add new tags to output.
+
+2007-05-15  Brian Nickel <brian.nickel@gmail.com>
+
+	* src/TagLib/Tag.cs:
+	* src/TagLib/CombinedTag.cs:
+	* src/TagLib/Riff/InfoTag.cs:
+	* src/TagLib/Id3v2/Tag.cs
+	* src/TagLib/Ape/Tag.cs:
+	* src/TagLib/Asf/Tag.cs:
+	* src/TagLib/Mpeg4/AppleTag.cs:
+	* src/TagLib/Mpeg4/BoxTypes.cs:
+	* src/TagLib/Ogg/XiphComment.cs:
+	* src/TagLib/Ogg/GroupedComment.cs: Added support for Copyright, BPM,
+	Composer, and Grouping.
+
+2007-05-14  Brian Nickel <brian.nickel@gmail.com>
+
+	* src/TagLib/Id3v2/Frames/SynchronizedLyricsFrame.cs: Include TextType
+	in Get, GetPreferred, and constructors.
+
+2007-05-14  Brian Nickel <brian.nickel@gmail.com>
+
+Feature Request: http://forum.taglib-sharp.com/viewtopic.php?f=4&t=12
+
+	* src/TagLib/File.cs: Support pushing and poping file abstractors.
+	* src/TagLib/Id3v2/Frames/UnsynchronisedLyricsFrame.cs:
+	* src/TagLib/Id3v2/Frames/CommentsFrame.cs:
+	* src/TagLib/Id3v2/Tag.cs: Be a little bit smarter when storing lyrics
+	and comments. GetPreferred shouldn't be used for storing, because we
+	want to store in exactly what we want, not a best guess.
+	* src/TagLib/Id3v2/FrameFactory.cs:
+	* src/TagLib/Id3v2/Frames/SynchronizedLyricsFrame.cs: Support
+	synchronized lyrics.
+	* src/TagLib/TagLib.sources:
+	* src/taglib-sharp.mdp:
+	* taglib-sharp.csproj: Added file.
+
+2007-05-10  Brian Nickel <brian.nickel@gmail.com>
+
+	* src/TagLib/Mpeg/Properties.cs:
+	* src/TagLib/Asf/Properties.cs:
+	* src/TagLib/Ogg/Properties.cs:
+	* src/TagLib/Ogg/Vorbis/File.cs:
+	* src/TagLib/Ogg/Flac/File.cs:
+	* src/TagLib/Mpeg4/Properties.cs: Deleted. I thought MonoDevelop did
+	this automatically. My bad.
+
+2007-05-09  Brian Nickel <brian.nickel@gmail.com>
+
+	* src/TagLib/Mpeg/AudioFile.cs: Throw a proper CorruptFileException if
+	AudioHeader isn't found.
+	* src/TagLib/File.cs:
+	* src/TagLib/ICodec.cs: Use FlagsAttribute for sexy output.
+	* docs/taglib-sharp-docs.source:
+	* docs/Makefile.am:
+	* docs/MonodocNodeConfig.cs: Doc stuff mysteriously vanished from SVN
+	a while back. Returning.
+	* examples/ReadFromUri.cs: Cleaned up a bit.
+	* examples/ReadFromUri.boo: First boo example. Would have an IronPython
+	one, but I'm having some issues with inheritance.
+
+2007-05-09  Brian Nickel <brian.nickel@gmail.com>
+
+	+-------------+
+	| VERSON BUMP |
+	|  1.9.99992  |
+	+-------------+
+
+	* src/TagLib/Id3v2/Tag.cs: Use new TextIdentificationFrame.Get
+	* configure.ac: Version bump.
+
+2007-05-07  Aaron Bockover  <abockover@novell.com>
+
+	* src/TagLib/TagLib.sources: Added a separate file to define what sources
+	to build so that applications bundling TagLib don't have to worry about
+	keeping the list in sync - they can just include the file in their build
+
+	* src/Makefile.am: Include TagLib/TagLib.sources
+
+	* docs/Makefile.am: Added an empty/stub file to fix the build for no
+
+2007-05-07  Brian Nickel <brian.nickel@gmail.com>
+
+	* src/TagLib/Riff/File.cs: Add support for WAVE files. Better improve
+	"Read ()" to handle other extensions. (Still pretty ugly.)
+	* src/TagLib/Riff/AviStream.cs:
+	* src/TagLib/Riff/BitmapInfoHeader.cs:
+	* src/TagLib/Riff/AviHeaderList.cs:
+	* src/TagLib/Riff/WaveFormatEx.cs:
+	* src/TagLib/Asf/StreamPropertiesObject.cs: De-stupidify. Make
+	WaveFormatEx and BitmapInfoHeader inheric I*Codec and remove excess
+	formats.
+
+2007-05-07  Brian Nickel <brian.nickel@gmail.com>
+
+	* src/TagLib/Id3v2/Frames/RelativeVolumeFrame.cs:
+	* src/TagLib/Id3v2/Frames/AttachedPictureFrame.cs:
+	* src/TagLib/Id3v2/Frames/UniqueFileIdentifierFrame.cs:
+	* src/TagLib/Id3v2/Frames/PrivateFrame.cs:
+	* src/TagLib/Id3v2/Frames/GeneralEncapsulatedObjectFrame.cs:
+	* src/TagLib/Id3v2/Frames/TextIdentificationFrame.cs: Added better type
+	checking in "Get"
+	* src/TagLib/ByteVector.cs: Fixed ToStrings align problem from previous
+	revision.
+	* docs/en/*/*.xml: Updated.
+
+2007-05-04  Brian Nickel <brian.nickel@gmail.com>
+
+	* src/TagLib/Riff/AviStream.cs:
+	* src/TagLib/Riff/BitmapInfoHeader.cs:
+	* src/TagLib/Riff/WaveFormatEx.cs:
+	* src/TagLib/Id3v2/Frames/RelativeVolumeFrame.cs:
+	* src/TagLib/Mpeg/File.cs:
+	* src/TagLib/Mpeg/VideoHeader.cs:
+	* src/TagLib/ByteVector.cs:
+	* src/TagLib/WavPack/StreamHeader.cs:
+	* src/TagLib/Ape/Footer.cs:
+	* src/TagLib/Asf/PaddingObject.cs:
+	* src/TagLib/Asf/File.cs:
+	* src/TagLib/Asf/HeaderObject.cs:
+	* src/TagLib/Asf/StreamPropertiesObject.cs:
+	* src/TagLib/Asf/FilePropertiesObject.cs:
+	* src/TagLib/Asf/ContentDescriptionObject.cs:
+	* src/TagLib/Asf/ExtendedContentDescriptionObject.cs:
+	* src/TagLib/Asf/Object.cs:
+	* src/TagLib/Asf/Guid.cs:
+	* src/TagLib/Asf/ContentDescriptor.cs:
+	* src/TagLib/Mpeg4/Boxes/IsoMovieHeaderBox.cs:
+	* src/TagLib/Mpeg4/Boxes/IsoSampleEntry.cs:
+	* src/TagLib/Mpeg4/Boxes/IsoChunkLargeOffsetBox.cs:
+	* src/TagLib/Mpeg4/Boxes/IsoAudioSampleEntry.cs:
+	* src/TagLib/Mpeg4/Boxes/AppleElementaryStreamDescriptor.cs:
+	* src/TagLib/Mpeg4/Boxes/IsoVisualSampleEntry.cs:
+	* src/TagLib/Mpeg4/AppleTag.cs:
+	* src/TagLib/Mpeg4/BoxHeader.cs:
+	* src/TagLib/Mpeg4/Box.cs:
+	* src/TagLib/Ogg/Codecs/Theora.cs:
+	* src/TagLib/Ogg/PageHeader.cs: Goodbye, short and long, hello ushort
+	and ulong. This should avoid those pesky OverflowExceptions.
+
+2007-05-03  Brian Nickel <brian.nickel@gmail.com>
+
+Revamped TagLib.Properties by making it non-overridable and having it read
+ICodec, IAudioCodec, and IVideoCodec items. This provides support for reading
+information strictly from an audio or video stream property, decreasing the
+abstraction.
+
+	* src/TagLib/Mpc/File.cs:
+	* src/TagLib/Mpc/StreamHeader.cs:
+	* src/TagLib/File.cs:
+	* src/TagLib/ByteVectorList.cs:
+	* src/TagLib/Riff/List.cs:
+	* src/TagLib/Riff/AviStream.cs:
+	* src/TagLib/Riff/File.cs:
+	* src/TagLib/Riff/BitmapInfoHeader.cs:
+	* src/TagLib/Riff/AviHeaderList.cs:
+	* src/TagLib/Riff/ListTag.cs:
+	* src/TagLib/Riff/InfoTag.cs:
+	* src/TagLib/Riff/MovieIdTag.cs:
+	* src/TagLib/Riff/WaveFormatEx.cs:
+	* src/TagLib/Mpeg/File.cs:
+	* src/TagLib/Mpeg/VideoHeader.cs:
+	* src/TagLib/Mpeg/AudioFile.cs:
+	* src/TagLib/Mpeg/AudioHeader.cs:
+	* src/TagLib/ICodec.cs:
+	* src/TagLib/WavPack/File.cs:
+	* src/TagLib/WavPack/StreamHeader.cs:
+	* src/TagLib/Properties.cs:
+	* src/TagLib/Flac/File.cs:
+	* src/TagLib/Flac/StreamHeader.cs:
+	* src/TagLib/Asf/File.cs:
+	* src/TagLib/Asf/HeaderObject.cs:
+	* src/TagLib/Asf/StreamPropertiesObject.cs:
+	* src/TagLib/ListBase.cs:
+	* src/TagLib/Mpeg4/Boxes/IsoMovieHeaderBox.cs:
+	* src/TagLib/Mpeg4/Boxes/IsoAudioSampleEntry.cs:
+	* src/TagLib/Mpeg4/Boxes/IsoVisualSampleEntry.cs:
+	* src/TagLib/Mpeg4/File.cs:
+	* src/TagLib/Ogg/Codecs/Theora.cs:
+	* src/TagLib/Ogg/Codecs/Vorbis.cs:
+	* src/TagLib/Ogg/Codec.cs:
+	* src/TagLib/Ogg/File.cs:
+	* examples/ReadFromUri.cs: Add support for new ICodec derivatives.
+	* src/TagLib/ByteVector.cs: Fix reading of UTF16 in certain cases.
+	* src/taglib-sharp.mdp:
+	* src/Makefile.am:
+	* taglib-sharp.csproj: New files.
+	* docs/en/*/*.xml: Updated docs.
+
+2007-04-26  Brian Nickel <brian.nickel@gmail.com>
+
+	* docs/en/*/*.xml: Updated docs. Removed bad files.
+	
+2007-04-25  Brian Nickel <brian.nickel@gmail.com>
+
+taglib-sharp-1.9.99991 (2.0 beta 1)
+
+	* src/TagLib/Riff/List.cs:
+	* src/TagLib/Riff/File.cs: RIFF abhors odd byte counts.
+	* src/TagLib/Asf/Tag.cs: Removed random extra Console.WriteLine.
+	* docs/en/*/*.xml: Synced
+	* configure.ac: Version bump
+
+2007-04-23  Brian Nickel <brian.nickel@gmail.com>
+
+Added support for AVI video files! Revamped the GenreList for video genres.
+
+	* src/TagLib/File.cs: New tag types.
+	* src/TagLib/Id3v1/Tag.cs: Clean up.
+	* src/TagLib/Riff/List.cs:
+	* src/TagLib/Riff/AviProperties.cs:
+	* src/TagLib/Riff/File.cs:
+	* src/TagLib/Riff/DivXTag.cs:
+	* src/TagLib/Riff/ListTag.cs:
+	* src/TagLib/Riff/InfoTag.cs:
+	* src/TagLib/Riff/MovieIdTag.cs: AVI support!
+	* src/TagLib/Genres.cs: Refactored GenreList.
+	* src/TagLib/Id3v2/Tag.cs: Clean up rendering.
+	* src/TagLib/Id3v2/Frames/UnknownFrame.cs: Expand support.
+	* src/TagLib/NonContainer/EndTag.cs:
+	* src/TagLib/NonContainer/StartTag.cs: Id3v2 changes.
+	* src/TagLib/FileTypes.cs: Added Riff type.
+	* src/TagLib/Asf/File.cs:
+	* src/TagLib/Asf/Tag.cs:
+	* src/TagLib/Asf/ExtendedContentDescriptionObject.cs: IEnumerable.
+	* src/TagLib/Mpeg4/FileParser.cs:
+	* src/TagLib/Mpeg4/AppleTag.cs: Use BoxList and IEnumerable.
+	* src/TagLib/Ogg/File.cs: AccessMode should be Write, not read.
+	* src/taglib-sharp.mdp:
+	* src/Makefile.am:
+	* taglib-sharp.csproj: New files.
+
+2007-04-17  Brian Nickel <brian.nickel@gmail.com>
+
+Added support for MPEG-1/2 video files! Major API changes in TagLib.Mpeg
+namespace.
+
+	* src/TagLib/File.cs: Make BufferSize public.
+	* src/TagLib/Id3v2/Tag.cs: Accidentally accounted for footer twice.
+	* src/TagLib/Mpeg/Properties.cs: Support video, refractor code.
+	* src/TagLib/Mpeg/File.cs: Support complete MPEG-1/2 file.
+	* src/TagLib/Mpeg/VideoHeader.cs: Parses the content of a mpeg box.
+	* src/TagLib/Mpeg/AudioFile.cs: Renamed from File.cs as it is simply an
+	implementation of the audio stream rather than a complete file.
+	* src/TagLib/Mpeg/AudioHeader.cs: Renamed from Header.cs
+	* src/TagLib/NonContainer/EndTag.cs: Fix rendering of Id3v1 tags. Fix
+	prioritizing of tags.
+	* src/TagLib/FileTypes.cs: New file type Mpeg.AudioFile
+	* src/Makefile.am:
+	* src/taglib-sharp.mdp:
+	* taglib-sharp.csproj: New files.
+
+2007-04-15  Brian Nickel <brian.nickel@gmail.com>
+
+Added support for MPEG-4 video!
+
+	* src/TagLib/Tag.cs:
+	* src/TagLib/File.cs:
+	* src/TagLib/Mpeg/XingHeader.cs:
+	* src/TagLib/Properties.cs: Removed obsolete properties and methods.
+	* src/TagLib/Ape/Tag.cs:
+	* src/TagLib/Ape/Footer.cs:
+	* src/TagLib/Ape/Item.cs: Cleaned up formatting a bit.
+	* src/TagLib/Mpeg4/Boxes/IsoSampleEntry.cs:
+	* src/TagLib/Mpeg4/Boxes/IsoAudioSampleEntry.cs:
+	* src/TagLib/Mpeg4/Boxes/IsoVisualSampleEntry.cs:
+	* src/TagLib/Mpeg4/Boxes/AppleElementaryStreamDescriptor.cs:
+	* src/TagLib/Mpeg4/Boxes/IsoSampleDescriptionBox.cs:
+	* src/TagLib/Mpeg4/Properties.cs:
+	* src/TagLib/Mpeg4/FileParser.cs:
+	* src/TagLib/Mpeg4/File.cs:
+	* src/TagLib/Mpeg4/BoxFactory.cs: Added visual support.
+	* src/Makefile.am
+	* src/taglib-sharp.mdp
+	* taglib-sharp.csproj: Added new files.
+	* tests/fixtures/TagLib.FormatTests/AsfFormatTest.cs: The test did not
+	represent the field interpretation.
+
+2007-04-15  Brian Nickel <brian.nickel@gmail.com>
+
+	* src/TagLib/Id3v2/Tag.cs:
+	* src/TagLib/Id3v2/FrameFactory.cs: Removed DefaultEncoding stuff from
+	FrameFactory and put it in Tag. Additionally, instead of enforcing the
+	default encoding at read time, it is enforced at render time. It has
+	also been changed so the tags save in the same version they were read in
+	by default. This should avoid the greatest number of problems without
+	the need for developer intervention.
+	* src/TagLib/Id3v2/Frames/UnsynchronisedLyricsFrame.cs:
+	* src/TagLib/Id3v2/Frames/RelativeVolumeFrame.cs:
+	* src/TagLib/Id3v2/Frames/CommentsFrame.cs:
+	* src/TagLib/Id3v2/Frames/AttachedPictureFrame.cs:
+	* src/TagLib/Id3v2/Frames/UniqueFileIdentifierFrame.cs:
+	* src/TagLib/Id3v2/Frames/PrivateFrame.cs:
+	* src/TagLib/Id3v2/Frames/GeneralEncapsulatedObjectFrame.cs:
+	* src/TagLib/Id3v2/Frames/TextIdentificationFrame.cs: Replace Find with
+	Get (Tag tag, ..., bool create). This new method will find a specified
+	frame if it exists, and can create it and append it if it doesn't.
+	* src/TagLib/Id3v2/Frame.cs: Enforce ForceDefaultEncoding.
+	* src/TagLib/Asf/Tag.cs:
+	* src/TagLib/Asf/File.cs:
+	* src/TagLib/Asf/HeaderObject.cs:
+	* src/TagLib/Asf/ExtendedContentDescriptionObject.cs: All generic.
+	* src/TagLib/Mpeg4/File.cs:
+	* src/TagLib/Mpeg4/Box.cs: AppleTag wasn't getting attached to .Tag
+	* tests/tests.mdp: Removed ApeFormatTest as it was unsupported.
+	* tests/fixtures/TagLib.FormatTests/FlacFormatTest.cs:
+	* tests/fixtures/TagLib.FormatTests/Id3V1FormatTest.cs:
+	* tests/fixtures/TagLib.FormatTests/Id3V2FormatTest.cs:
+	* tests/fixtures/TagLib.FormatTests/AsfFormatTest.cs:
+	* tests/fixtures/TagLib.FormatTests/Id3BothFormatTest.cs:
+	* tests/fixtures/TagLib.FormatTests/OggFormatTest.cs:
+	* tests/fixtures/TagLib.FormatTests/MpcFormatTest.cs:
+	* tests/fixtures/TagLib.FormatTests/M4aFormatTest.cs: Updated for new
+	API.
+	* configure.ac: Version bump.
+
+2007-04-09  Brian Nickel <brian.nickel@gmail.com>
+
+	* src/AssemblyInfo-windows.cs:
+	* configure.ac:
+	* taglib-sharp.csproj: Apply version bump. Now 1.9.*
+
+2007-04-06  Brian Nickel <brian.nickel@gmail.com>
+
+MAJOR API CHANGES! COMPLETE NEW OGG BACKEND! VIDEO SUPPORT IN OGG AND ASF!
+
+	* src/TagLib/Mpc/Properties.cs:
+	* src/TagLib/Mpc/File.cs:  Support new "Properties".
+	* src/TagLib/File.cs:  Support new "Properties".
+	* src/TagLib/Id3v2/Tag.cs:
+	* src/TagLib/Id3v2/FrameFactory.cs:
+	* src/TagLib/Id3v2/Frames/AttachedPictureFrame.cs:
+	* src/TagLib/Id3v2/Frames/PrivateFrame.cs: 
+	* src/TagLib/Id3v2/Frames/GeneralEncapsulatedObjectFrame.cs: Better error
+	handling.
+	* src/TagLib/Mpeg/Properties.cs: Support new "Properties".
+	* src/TagLib/Mpeg/XingHeader.cs: Mark IsValid as obsolete.
+	* src/TagLib/Mpeg/File.cs:
+	* src/TagLib/WavPack/Properties.cs:
+	* src/TagLib/WavPack/File.cs: Support new "Properties".
+	* src/TagLib/NonContainer/File.cs: Support new "Properties".
+	* src/TagLib/NonContainer/EndTag.cs:
+	* src/TagLib/NonContainer/StartTag.cs: Better error handling.
+	* src/TagLib/Properties.cs: Abolish overly specific "AudioProperties"
+	* src/TagLib/Ape/Item.cs: Replace Debugger with Exception
+	* src/TagLib/Flac/Properties.cs:
+	* src/TagLib/Flac/File.cs: Support new "Properties".
+	* src/TagLib/FileTypes.cs: Remove dead file types.
+	* src/TagLib/Asf/Tag.cs: Allow tag clearing.
+	* src/TagLib/Asf/Properties.cs:
+	* src/TagLib/Asf/File.cs: Support new "Properties". Support video.
+	* src/TagLib/Asf/Guid.cs: Fix typo in GUID plain text.
+	* src/TagLib/Mpeg4/Properties.cs:
+	* src/TagLib/Mpeg4/AppleTag.cs:
+	* src/TagLib/Mpeg4/File.cs: Move saving out of the AppleTag. Will allow
+	future implimentation of ID3v2 boxes.
+	* src/TagLib/Ogg/XiphComment.cs:
+	* src/TagLib/Ogg/Page.cs:
+	* src/TagLib/Ogg/Codecs/Theora.cs:
+	* src/TagLib/Ogg/Codecs/Vorbis.cs:
+	* src/TagLib/Ogg/Properties.cs:
+	* src/TagLib/Ogg/Codec.cs:
+	* src/TagLib/Ogg/File.cs:
+	* src/TagLib/Ogg/Paginator.cs:
+	* src/TagLib/Ogg/PageHeader.cs:
+	* src/TagLib/Ogg/GroupedComment.cs:
+	* src/TagLib/Ogg/Bitstream.cs: Recoded for multistream files.
+	* src/Makefile.am:
+	* src/taglib-sharp.mdp: Updated for new files.
+	* docs/en/*: Updated docs to new API.
+	* examples/ReadFromUri.cs: Added video support.
+
+
+2007-03-23  Brian Nickel <brian.nickel@gmail.com>
+
+	* src/TagLib/File.cs: Don't catch exceptions on mode change.
+	* src/TagLib/Id3v1/Tag.cs: Use TryParse rather than try{Parse}.
+	* src/TagLib/Id3v2/Tag.cs: Remove "0" values rather than storing "0". Use
+	TryParse rather than try{Parse}.
+	* src/TagLib/Id3v2/Frames/TextIdentificationFrame.cs: Use TryParse rather 
+	than try{Parse}.
+	* src/TagLib/Ape/Tag.cs: Remove "0" values rather than storing "0". Use
+	TryParse rather than try{Parse}.
+	* src/TagLib/Asf/Tag.cs: Remove "0" values rather than storing "0". Use
+	TryParse rather than try{Parse}.
+	* src/TagLib/Asf/ContentDescriptor.cs: Use TryParse rather than try{Parse}.
+	* src/TagLib/Mpeg4/AppleTag.cs: Use TryParse rather than try{Parse}.
+	* src/TagLib/Ogg/XiphComment.cs: Remove "0" values rather than storing "0". 
+	Use TryParse rather than try{Parse}.
+	* src/TagLib/Ogg/Vorbis/File.cs: Don't catch exceptions on mode change.
+
+2007-03-22  Brian Nickel <brian.nickel@gmail.com>
+
+	* src/TagLib/Id3v2/Frames/TextIdentificationFrame.cs: Remove null termination
+	in ID3v2.3 and below.
+	* src/TagLib/WavPack/File.cs: 
+	* src/TagLib/Mpc/File.cs: 
+	* src/TagLib/Mpeg/File.cs: Include sane default tags.
+	* docs/en/*: Synched docs.
+
+2007-03-14  Brian Nickel  <brian.nickel@gmail.com>
+
+	* docs/en/*: Synced docs.
+
+2007-03-13  Brian Nickel  <brian.nickel@gmail.com>
+	
+	Lyrics support! Fixed write support in MPEG-4 and ASF.
+	
+	* src/TagLib/Tag.cs:
+	* src/TagLib/CombinedTag.cs:
+	* src/TagLib/Id3v2/Tag.cs:
+	* src/TagLib/Id3v2/FrameFactory.cs:
+	* src/TagLib/Id3v2/Frames/UnsynchronisedLyricsFrame.cs:
+	* src/TagLib/Ape/Tag.cs:
+	* src/TagLib/Asf/Tag.cs:
+	* src/TagLib/Mpeg4/Boxes/FullBox.cs:
+	* src/TagLib/Mpeg4/AppleTag.cs:
+	* src/TagLib/Mpeg4/BoxTypes.cs:
+	* src/TagLib/Mpeg4/Box.cs:
+	* src/TagLib/Ogg/XiphComment.cs: Lyrics support. Special thanks to Patrick
+	Laplante.
+	* src/TagLib/Id3v2/Frames/CommentsFrame.cs:
+	* src/TagLib/ByteVector.cs: Fix up UTF16 handling.
+	* src/TagLib/Asf/HeaderObject.cs: Fix writing. Wasn't writing header GUID!
+	* src/Makefile.am:
+	* src/taglib-sharp.mdp:
+	* taglib-sharp.csproj: Update project files.
+	* examples/BatchSet.cs:
+	* examples/ReadFromUri.cs: Support lyrics.
+
+2007-03-13  Brian Nickel  <brian.nickel@gmail.com>
+
+	Performance enhancement for MPEG-4 files. Stole an idea from Entagged#.
+	
+	* src/TagLib/Mpeg4/FileParser.cs: ADDED
+	* src/TagLib/Mpeg4/BoxTypes.cs: ADDED
+	* src/TagLib/Mpeg4/BoxFactory.cs: ADDED
+	* src/TagLib/Mpeg4/BoxList.cs: ADDED
+	* src/TagLib/Mpeg4/Box.cs: ADDED
+	* src/TagLib/Mpeg4/Boxes/FullBox.cs:
+	* src/TagLib/Mpeg4/Boxes/IsoMovieHeaderBox.cs:
+	* src/TagLib/Mpeg4/Boxes/IsoSampleTableBox.cs:
+	* src/TagLib/Mpeg4/Boxes/IsoChunkLargeOffsetBox.cs:
+	* src/TagLib/Mpeg4/Boxes/IsoSampleEntry.cs:
+	* src/TagLib/Mpeg4/Boxes/AppleAdditionalInfoBox.cs:
+	* src/TagLib/Mpeg4/Boxes/IsoFreeSpaceBox.cs:
+	* src/TagLib/Mpeg4/Boxes/AppleItemListBox.cs:
+	* src/TagLib/Mpeg4/Boxes/IsoUserDataBox.cs:
+	* src/TagLib/Mpeg4/Boxes/IsoHandlerBox.cs:
+	* src/TagLib/Mpeg4/Boxes/AppleElementaryStreamDescriptor.cs:
+	* src/TagLib/Mpeg4/Boxes/IsoChunkOffsetBox.cs:
+	* src/TagLib/Mpeg4/Boxes/AppleDataBox.cs:
+	* src/TagLib/Mpeg4/Boxes/AppleAnnotationBox.cs:
+	* src/TagLib/Mpeg4/Boxes/UnknownBox.cs:
+	* src/TagLib/Mpeg4/Boxes/IsoSampleDescriptionBox.cs:
+	* src/TagLib/Mpeg4/Boxes/IsoMetaBox.cs:
+	* src/TagLib/Mpeg4/Properties.cs:
+	* src/TagLib/Mpeg4/AppleTag.cs:
+	* src/TagLib/Mpeg4/File.cs:
+	* src/TagLib/Mpeg4/BoxHeader.cs: Adapted to new parser.
+	* src/TagLib/Mpeg4/Boxes/IsoTrackBox.cs: DELETED
+	* src/TagLib/Mpeg4/Boxes/Box.cs: DELETED
+	* src/TagLib/Mpeg4/Boxes/FileBox.cs: DELETED
+	* src/TagLib/Mpeg4/Boxes/IsoMovieBox.cs: DELETED
+	* src/TagLib/Mpeg4/Boxes/IsoMediaBox.cs: DELETED
+	* src/TagLib/Mpeg4/Boxes/IsoMediaInformationBox.cs: DELETED
+	
+	* src/TagLib/File.cs: Make ReadBlock make a a little more sense.
+	* src/TagLib/Id3v2/Tag.cs: Support tag-wide unsynchronization.
+	* src/TagLib/Id3v2/SynchData.cs: Add support for unsynching a bytevector.
+	* src/TagLib/Id3v2/FrameHeader.cs: We don't actually support frame tags.
+	Don't pretend that we do.
+	* src/TagLib/Debugger.cs: Fix typo and crasher in code timer.
+	* src/TagLib/ByteVector.cs: Make Mid a little faster.
+	* src/TagLib/NonContainer/EndTag.cs:
+	* src/TagLib/NonContainer/StartTag.cs: End tags should be at least version 4
+	* src/Makefile.am:
+	* src/taglib-sharp.mdp:
+	* taglib-sharp.csproj: Update for new files.
+
+2007-03-09  Brian Nickel  <brian.nickel@gmail.com>
+	* configure.ac: Fixed version information.
+
+2007-03-09  Brian Nickel  <brian.nickel@gmail.com>
+
+"I do not regret the things I've done, but those I did not do."
+
+	* src/TagLib/Id3v2/Tag.cs:
+	* src/TagLib/Id3v2/FrameFactory.cs:
+	* src/TagLib/Id3v2/FrameHeader.cs:
+	* src/TagLib/Id3v2/Header.cs:
+	* src/TagLib/Id3v2/Frames/RelativeVolumeFrame.cs:
+	* src/TagLib/Id3v2/Frames/CommentsFrame.cs:
+	* src/TagLib/Id3v2/Frames/AttachedPictureFrame.cs:
+	* src/TagLib/Id3v2/Frames/UniqueFileIdentifierFrame.cs:
+	* src/TagLib/Id3v2/Frames/PrivateFrame.cs:
+	* src/TagLib/Id3v2/Frames/GeneralEncapsulatedObjectFrame.cs:
+	* src/TagLib/Id3v2/Frames/TextIdentificationFrame.cs:
+	* src/TagLib/Id3v2/Frames/UnknownFrame.cs:
+	* src/TagLib/Id3v2/Frame.cs: Reworked reading/writing code to better support
+	writing Id3v2.2 and Id2v2.3. This is the first go at it, and there is room
+	for cleanup in the code, but it works, and it works and it works well.
+
+2007-03-08  Brian Nickel  <brian.nickel@gmail.com>
+	* src/TagLib/Mpc/File.cs: Inherit NonContainer.File
+	* src/TagLib/CombinedTag.cs: Add some useful features for NonContainer.*
+	* src/TagLib/Id3v1/Tag.cs: Add Tag.Size instead of repeated hardcoding of
+	128.
+	* src/TagLib/Id3v2/Footer.cs:
+	* src/TagLib/Id3v2/Header.cs: Throw proper CorruptFileExceptions
+	* src/TagLib/Mpeg/File.cs: Inherit NonContainer.File
+	* src/TagLib/WavPack/File.cs: Inherit NonContainer.File
+	* src/TagLib/NonContainer:
+	* src/TagLib/NonContainer/Tag.cs:
+	* src/TagLib/NonContainer/File.cs:
+	* src/TagLib/NonContainer/EndTag.cs:
+	* src/TagLib/NonContainer/StartTag.cs: New generic abstracts for files 
+	that can start/end with an assortment of tags. (FLAC, WV, MPC, MP3)
+	* src/TagLib/Ape/Tag.cs: Read backwards if a footer is found and forwards if
+	a header is found.
+	* src/TagLib/Ape/Footer.cs: FooterPresent and IsHeader were read
+	 incorrectly. Also throw proper exceptions while reading.
+	* src/TagLib/Flac/File.cs: Inherit NonContainer.File
+	* src/TagLib/Flac/BlockHeader.cs:
+	* src/TagLib/Flac/Block.cs: Removed from Flac.File, made public.
+	* src/TagLib/Mpeg4/File.cs: Remove old commented code.
+	* src/Makefile.am:
+	* src/taglib-sharp.csproj:
+	* src/taglib-sharp.mdp:
+	* taglib-sharp.mds:
+	* tests/tests.mdp:
+	* examples/SetPictures.mdp:
+	* examples/ReadFromUri.mdp: Updates.
+
+2007-03-04  Brian Nickel  <brian.nickel@gmail.com>
+
+	* src/TagLib/File.cs: We don't use file.file_types. Comment it out to avoid
+	the warning.
+	* src/TagLib/Tag.cs:
+	* src/TagLib/Id3v1/Tag.cs:
+	* src/TagLib/Id3v2/Tag.cs:
+	* src/TagLib/Id3v2/FrameFactory.cs:
+	* src/TagLib/Id3v2/Frames/GeneralEncapsulatedObjectFrame.cs:
+	* src/TagLib/Id3v2/Frames/TextIdentificationFrame.cs:
+	* src/TagLib/Debugger.cs:
+	* src/TagLib/Ape/Tag.cs:
+	* src/TagLib/Asf/Tag.cs:
+	* src/TagLib/Asf/ContentDescriptionObject.cs:
+	* src/TagLib/Mpeg4/AppleTag.cs:
+	* src/TagLib/Ogg/XiphComment.cs:
+	* docs/MonodocNodeConfig.cs:
+	* tests/fixtures/TagLib.CollectionTests/StringListTest.cs:
+	* tests/fixtures/TagLib.CollectionTests/IntListTest.cs:
+	* examples/ReadFromUri.cs: Use string.Empty instead of "".
+	* src/TagLib/Id3v2/Frames/CommentsFrame.cs: Support broken COMM frames that
+	don't contain a comment description string.
+
+2007-02-12  Brian Nickel  <brian.nickel@gmail.com>
+
+	* src/TagLib/File.cs: Added support for read sharing in ReadStream. This
+	should eliminate a problem in Windows where files couldn't be read while
+	they were playing. Solution by Ion Todirel.
+	* src/TagLib/Id3v2/Frames/TextIdentificationFrame.cs: Strip all empty
+	strings from the end of the FieldList. This should fix strings that were
+	badly tagged, with either a nil character or the sum total of the ID3v1
+	string attached. May fix banshee bug #410116.
+	* tests/Makefile.am: Removed line blocking distcheck
+
+2007-02-12  Brian Nickel  <brian.nickel@gmail.com>
+
+	* src/TagLib/ByteVector.cs: Fix support for Latin1.
+	* taglib-sharp.csproj: Work on Windows.
+
+2007-02-12  Brian Nickel  <brian.nickel@gmail.com>
+
+	* src/TagLib/File.cs: Remove ReadOnly checking. This is to add compatability
+	with the .NET Compact Framework and to remove some ugly code. Libraries 
+	using TagLib# should check file writability for themselves if they want
+	the writable status before Save() is called. Also use more compatable
+	Array.Copy().
+	* src/TagLib/Mpeg/File.cs: Comment out unused method.
+	* src/TagLib/ByteVector.cs: Use more compatable Array.Copy()
+	* src/TagLib/ReadOnlyException.cs: Removed because unused.
+	* src/AssemblyInfo.cs.in: Update copyright.
+	* src/AssemblyInfo-windows.cs: Update version and copyright.
+	* src/Makefile.am:
+	* src/taglib-sharp.mdp:
+	* taglib-sharp.csproj: Update files.
+
+2007-02-10  Brian Nickel  <brian.nickel@gmail.com>
+
+	* src/TagLib/Id3v2/Tag.cs:
+	* src/TagLib/Id3v2/FrameFactory.cs:
+	* src/TagLib/Id3v2/Frames/RelativeVolumeFrame.cs:
+	* src/TagLib/Id3v2/Frames/CommentsFrame.cs:
+	* src/TagLib/Id3v2/Frames/AttachedPictureFrame.cs:
+	* src/TagLib/Id3v2/Frames/UniqueFileIdentifierFrame.cs:
+	* src/TagLib/Id3v2/Frames/PrivateFrame.cs:
+	* src/TagLib/Id3v2/Frames/GeneralEncapsulatedObjectFrame.cs:
+	* src/TagLib/Id3v2/Frames/TextIdentificationFrame.cs:
+	* src/TagLib/Id3v2/Frames/UnknownFrame.cs:
+	* src/TagLib/Id3v2/Frame.cs:
+	* src/TagLib/ByteVector.cs: VASTLY improved the loading of ID3v2 tags by
+	breaking API compatability. (This isn't a major concern at the moment.)
+	Removed a major piece of code which was causing about 80% of the read time.
+	* src/TagLib/Debugger.cs: Added new way to test for slow code blocks.
+
+2007-02-10  Brian Nickel  <brian.nickel@gmail.com>
+
+	* src/TagLib/Mpeg/File.cs: Fix bug introduced on 2007-01-26. If a file
+	lacked an Id3v2 tag, TagLib read the whole file. Initial analysis shows this
+	being marginally faster than the even older version.
+	* src/TagLib/Id3v2/Frames/RelativeVolumeFrame.cs:
+	* src/TagLib/Ape/Tag.cs:
+	* src/TagLib/Ogg/XiphComment.cs:
+	* src/TagLib/Ogg/File.cs: Abolish Hashtable. ArrayList is next.
+
+2007-01-29  Brian Nickel  <brian.nickel@gmail.com>
+
+	* examples/ReadFromUri.cs: Remove accidental commenting out.
+
+2007-01-26  Brian Nickel  <brian.nickel@gmail.com>
+
+	CLEANUPS! For the most part, internal code has been cleaned up to be less
+	hackish. One major feature is the obsoleting of SetValid and IsValid. If
+	a file is invalid, it will now throw a CorruptFileException.
+	
+	* src/TagLib/Mpc/Properties.cs:
+	* src/TagLib/Mpc/File.cs: Better search functions.
+	* src/TagLib/File.cs: Clean out and Obsolete bad code.
+	* src/TagLib/Id3v1/Tag.cs: Cleaner functions.
+	* src/TagLib/Mpeg/Properties.cs:
+	* src/TagLib/Mpeg/XingHeader.cs:
+	* src/TagLib/Mpeg/File.cs:
+	* src/TagLib/Mpeg/Header.cs: Better search functions, calculations, and
+	exceptions.
+	* src/TagLib/WavPack/Properties.cs:
+	* src/TagLib/WavPack/File.cs: Use better search functions.
+	* src/TagLib/Ape/Footer.cs: Throw better exception.
+	* src/TagLib/Flac/File.cs: Fix padding calculation.
+	* src/TagLib/Asf/PaddingObject.cs:
+	* src/TagLib/Asf/File.cs:
+	* src/TagLib/Asf/HeaderObject.cs:
+	* src/TagLib/Asf/FilePropertiesObject.cs:
+	* src/TagLib/Asf/ContentDescriptionObject.cs:
+	* src/TagLib/Asf/ExtendedContentDescriptionObject.cs: Throw better 
+	exceptions.
+	* src/TagLib/Mpeg4/Boxes/FullBox.cs:
+	* src/TagLib/Mpeg4/Boxes/IsoMovieHeaderBox.cs:
+	* src/TagLib/Mpeg4/Boxes/IsoSampleEntry.cs:
+	* src/TagLib/Mpeg4/Boxes/FileBox.cs:
+	* src/TagLib/Mpeg4/Boxes/Box.cs:
+	* src/TagLib/Mpeg4/Boxes/IsoSampleDescriptionBox.cs:
+	* src/TagLib/Mpeg4/File.cs: Read bigger blocks and less often.
+	* src/TagLib/Ogg/XiphComment.cs: Support "XX/XX" values in Track and Disc.
+	* src/TagLib/Ogg/File.cs:
+	* src/TagLib/Ogg/Vorbis/Properties.cs:
+	* src/TagLib/Ogg/Vorbis/File.cs:
+	* src/TagLib/Ogg/Flac/File.cs: Obsolete Set/IsValid and throw useful
+	exceptions.
+	* docs/en/TagLib.Id3v1/Tag.xml:
+	* docs/en/TagLib.Id3v2/FrameFactory.xml:
+	* docs/en/TagLib.Mpeg/Header.xml:
+	* docs/en/TagLib.Mpeg/Properties.xml:
+	* docs/en/TagLib.Mpeg/File.xml:
+	* docs/en/TagLib/UnsupportedFormatException.xml:
+	* docs/en/TagLib/ByteVector.xml:
+	* docs/en/TagLib/ReadOnlyException.xml:
+	* docs/en/TagLib/SupportedMimeType.xml:
+	* docs/en/TagLib/AudioProperties.xml:
+	* docs/en/TagLib/File.xml:
+	* docs/en/index.xml:
+	* docs/en/TagLib.Asf/FilePropertiesObject.xml:
+	* docs/en/TagLib.Asf/StreamPropertiesObject.xml:
+	* docs/en/TagLib.Mpeg4/Box.xml:
+	* docs/en/TagLib.Mpeg4/Properties.xml:
+	* docs/en/TagLib.Mpeg4/IsoMovieHeaderBox.xml:
+	* docs/en/TagLib.Mpeg4/File.xml: Doc updates.
+	* examples/ReadFromUri.cs: Add timer, clean output, and avoid crash.
+
+2007-01-07  Brian Nickel  <brian.nickel@gmail.com>
+
+	* src/TagLib/File.cs: Throw ReadOnlyException when it makes sense.
+	* src/TagLib/Id3v2/Frames/AttachedPictureFrame.cs: Fix for UTF16.
+	* src/TagLib/Id3v2/Frames/GeneralEncapsulatedObjectFrame.cs:
+	* src/TagLib/Id3v2/FrameFactory.cs:
+	* src/TagLib/Id3v1/Tag.cs:
+	* src/TagLib/Id3v2/Frames/TextIdentificationFrame.cs:
+	* src/TagLib/Mpeg/XingHeader.cs: 
+	* src/TagLib/Mpeg/Header.cs: Improvements from TagLib.
+	* src/TagLib/Flac/Picture.cs:
+	* src/TagLib/Flac/File.cs: Massive code rewrite. Added support for Picture
+	Block.
+	* src/TagLib/Mpeg4/Boxes/IsoHandlerBox.cs: Fix typo.
+	* src/Makefile.am: Add new files.
+	* examples/ReadFromUri.cs: Update for changes in TagLib.Tag
+
+2006-12-26  Aaron Bockover  <abockover@novell.com>
+
+	* src/TagLib/CorruptFileException.cs: Added new exception
+
+	* src/TagLib/Mpeg4/File.cs:
+	* src/TagLib/Ogg/Vorbis/File.cs: Guard against nullrefs, if necessary
+	parts are null, throw a CorruptFileException instead to avoid seg violation
+
+	* tests/fixtures/TagLib.FormatTests/IFormatTest.cs: Added interface for
+	the format test
+
+	* tests/fixtures/TagLib.FormatTests/*.cs: Implement IFormatTest,
+	added TestCorruptionResistance
+
+	* tests/samples/corrupt/*: Added some 'corrupt' samples
+
+2006-12-15  Brian Nickel  <brian.nickel@gmail.com>
+
+	* src/TagLib/Mpeg/Properties.cs:
+	* src/TagLib/Mpeg/Header.cs: Made some changes based on KDE bug 135459, 
+	which should hopefully improve the accuracy of length reporting.
+
+2006-12-14  Brian Nickel  <brian.nickel@gmail.com>
+
+	* src/TagLib/Mpeg/Header.cs: Fixed typo causing MP3 channels to always
+	equal 1.
+
+2006-11-15  Brian Nickel  <brian.nickel@gmail.com>
+
+	* src/TagLib/Tag.cs:
+	* src/TagLib/CombinedTag.cs:
+	* src/TagLib/Id3v1/Tag.cs:
+	* src/TagLib/Id3v2/Tag.cs:
+	* src/TagLib/Ape/Tag.cs:
+	* src/TagLib/Asf/Tag.cs:
+	* src/TagLib/Ogg/XiphComment.cs: Renamed Artists -> AlbumArtists.
+	* src/TagLib/Mpeg4/Boxes/FullBox.cs:
+	* src/TagLib/Mpeg4/Boxes/IsoChunkLargeOffsetBox.cs:
+	* src/TagLib/Mpeg4/Boxes/IsoHandlerBox.cs:
+	* src/TagLib/Mpeg4/Boxes/IsoChunkOffsetBox.cs:
+	* src/TagLib/Mpeg4/BoxHeader.cs: Don't read so many times.
+	* src/TagLib/File.cs:
+	* src/TagLib/Mpeg4/Boxes/Box.cs: Generics.
+	* src/TagLib/Mpeg4/AppleTag.cs: Generics and smarter compilation handling.
+	* docs/en/*: Massive docs update.
+	* tests/fixtures/PerformanceTest.cs: A performance test.
+
+2006-11-13  Aaron Bockover  <abock@gnome.org>
+
+	* src/TagLib/SupportedMimeType.cs: Load mime types in static constructor
+
+	* src/TagLib/FileTypes.cs: File type loader that initializes the 
+	SupportedMimeType support
+
+	* src/TagLib/File.cs: Use FileTypes.AvailableTypes
+
+	* src/Makefile.am: Added src/TagLib/FileTypes.cs
+
+2006-11-06  Brian Nickel  <brian.nickel@gmail.com>
+
+	* src/TagLib/Id3v2/Tag.cs:
+	* src/TagLib/Id3v2/FrameHeader.cs:
+	* src/TagLib/Id3v2/Frame.cs:
+	* src/TagLib/ByteVector.cs:
+	* src/TagLib/Ape/Tag.cs:
+	* src/TagLib/Flac/File.cs:
+	* src/TagLib/Asf/Tag.cs:
+	* src/TagLib/Asf/HeaderObject.cs:
+	* src/TagLib/Asf/StreamPropertiesObject.cs:
+	* src/TagLib/Asf/FilePropertiesObject.cs:
+	* src/TagLib/Asf/ContentDescriptionObject.cs:
+	* src/TagLib/Asf/ExtendedContentDescriptionObject.cs:
+	* src/TagLib/Asf/Object.cs:
+	* src/TagLib/Asf/Guid.cs:
+	* src/TagLib/Asf/ContentDescriptor.cs:
+	* src/TagLib/Mpeg4/Boxes/FullBox.cs:
+	* src/TagLib/Mpeg4/Boxes/IsoChunkLargeOffsetBox.cs:
+	* src/TagLib/Mpeg4/Boxes/Box.cs:
+	* src/TagLib/Mpeg4/Boxes/IsoHandlerBox.cs:
+	* src/TagLib/Mpeg4/Boxes/IsoChunkOffsetBox.cs:
+	* src/TagLib/Mpeg4/AppleTag.cs:
+	* src/TagLib/Mpeg4/BoxHeader.cs: Improve performance by not using plus
+	operator so much. Less allocations.
+	* tests/fixtures/TagLib.FormatTests/Id3BothFormatTest.cs: Fixed multiformat
+	tests. Removed Tag Count test.
+
+2006-11-03  Brian Nickel  <brian.nickel@gmail.com>
+
+	* src/TagLib/ByteVector.cs: Use Boyer-Moore String Searching Algorithm 
+	to speed things up a little. (Very little.)
+
+2006-10-30  Aaron Bockover  <abock@gnome.org>
+
+	* src/TagLib/IntList.cs:
+	* src/TagLib/ByteVector.cs:
+	* src/TagLib/StringList.cs:
+	* src/TagLib/ByteVectorList.cs: Use generics, refactored code, massive 
+	optimizations; all collections except ByteVector derives new ListBase<T>
+
+	* src/TagLib/ListBase.cs: New generic base collection
+
+	* src/Makefile.am: Updated
+
+	* tests/fixtures/PerformanceTest.cs: Updated
+
+2006-10-20  Brian Nickel  <brian.nickel@gmail.com>
+
+	* src/TagLib/Mpc/Properties.cs: Fix property reading.
+	* src/TagLib/Mpc/File.cs: Fix total brokenness.
+	* src/TagLib/Mpeg/File.cs: Fix reading with no ID3v2 Tag.
+	* src/TagLib/Mpeg4/AppleTag.cs: Fix reading of ID3v1 Genres.
+	* tests/fixtures/TagLib.FormatTests/MpcFormatTest.cs: Fixed test. (I think.)
+
+2006-10-29  Aaron Bockover  <abock@gnome.org>
+
+	* tests/: Added more tests (IntList, StringList), restructured layout
+
+2006-10-29  Aaron Bockover  <abock@gnome.org>
+
+	* src/TagLib/File.cs: Do not use reflection (Assembly.GetTypes) to find
+	file formats, instead use a static type table. Assembly.GetTypes leaks
+	types on the heap that will never be GCed (saves about 200KB of heap);
+	this means that if a new type is added, it must be entered in the static
+	type table for it to be available. Also this improves startup time.
+
+	* src/TagLib/Asf/Properties.cs: Suppress unused variable warning
+
+2006-10-29  Aaron Bockover  <abock@gnome.org>
+
+	* tests/samples: Organized into supported and unsupported formats, added
+	vector.bin as data for a checksum test of ByteVector
+
+	* tests/Makefile.am: Set up NUnit console test driver, can be 
+	run with 'make run-test'
+
+	* tests/AssemblyInfo.cs:
+	* tests/ConsoleUi.cs: NUnit console test driver
+
+	* tests/CodeTimer.cs: Timing utility
+
+	* tests/fixtures/*FormatTest.cs: File format reading test fixtures
+
+	* tests/fixtures/ByteVectorTests.cs: Extensive tests for ByteVector
+
+	* tests/tests.mdp: MonoDevelop project for tests that allows running
+	NUnit tests with in the IDE for graphical results, recommended for
+	running tests as history is logged here (preferred over 'make run-test')
+
+	* configure.ac: NUnit detection, optional
+
+	* examples/tangerine-use-taglibsharp.patch: Removed, tangerine now
+	uses taglib-sharp instead of entagged-sharp
+
+	* examples/Makefile.am:
+	* examples/ListSupportedMimeTypes.cs: New example
+
+	* taglib-sharp.mds: Restored MonoDevelop solution
+
+2006-10-20  Brian Nickel  <brian.nickel@gmail.com>
+
+	* src/TagLib/File.cs: Include the name of the file throwing the exception
+	in LocalFileAbstraction.
+	* src/TagLib/Mpeg/Header.cs: Make frame length logic match Lame (from
+	TagLib Devel List).
+	* examples/ReadFromUri.cs: Read multiple files.
+
+2006-10-12  Brian Nickel  <brian.nickel@gmail.com>
+
+	* src/TagLib/Mpeg4/Boxes/IsoChunkLargeOffsetBox.cs:
+	* src/TagLib/Mpeg4/Boxes/IsoChunkOffsetBox.cs:
+	* src/TagLib/Mpeg4/AppleTag.cs: Fixed a bug where changing tag size would
+	devalidate offsets for data before the tag.
+	* examples/BatchSet.cs:
+	* examples/Makefile.am: Add a simple program to update tags on multiple
+	files.
+
+2006-10-08  Aaron Bockover  <abock@gnome.org>
+
+	* src/TagLib/SupportedMimeType.cs: Added extension support
+
+2006-10-08  Aaron Bockover  <abock@gnome.org>
+
+	* src/TagLib/SupportedMimeType.cs: Added AllMimeTypes static enumerator
+
+2006-09-25  Brian Nickel  <brian.nickel@gmail.com>
+
+	* src/TagLib/CombinedTag.cs: Fixed a bug in CombinedTag.get_Pictures
+	* configure.ac: Don't break the gac on binary compatable versions.
+
+2006-09-20  Brian Nickel  <brian.nickel@gmail.com>
+
+	* src/TagLib/Mpc/File.cs: Added mime types.
+	* src/TagLib/Wavpack/File.cs: Added mime types.
+	* src/TagLib/ByteVector.cs: Fixed big endian StringType.UTF16
+	not to fail on big endian. (Confusing naming scheme by Microsoft.)
+
+2006-09-17  Brian Nickel  <brian.nickel@gmail.com>
+
+	* src/TagLib/Asf/Tag.cs: Added generic picture support.
+	* docs/en/*: Updated docs.
+
+2006-09-15  Brian Nickel  <brian.nickel@gmail.com>
+
+	* src/TagLib/Picture.cs:
+	* src/TagLib/Tag.cs:
+	* src/TagLib/CombinedTag.cs:
+	* src/TagLib/File.cs:
+	* docs/en/*: Updated docs.
+	* src/TagLib/Id3v2/Tag.cs:
+	* src/TagLib/Id3v2/Frames/AttachedPictureFrame.cs:
+	* src/TagLib/ByteVector.cs:
+	* src/TagLib/Mpeg4/Boxes/Box.cs:
+	* src/TagLib/Mpeg4/Boxes/IsoHandlerBox.cs:
+	* src/TagLib/Mpeg4/Boxes/AppleDataBox.cs:
+	* src/TagLib/Mpeg4/AppleTag.cs:
+	* src/TagLib/Ogg/XiphComment.cs: Add generic picture support to TagLib#. This
+	currently supports MP3 and M4A tags although support can and will be added
+	for other tag types in the future.
+	* src/Makefile.am:
+	* taglib-sharp.mds:
+	* taglib-sharp.csproj:
+	* examples/ReadFromUri.cs:
+	* examples/Makefile.am:
+	* examples/SetPictures.mdp:
+	* examples/SetPictures.cs:
+	* examples/ReadFromUri.mdp: New examples from Aaron Bockover.
+	* src/TagLib/Mpeg4/Boxes/IsoChunkLargeOffsetBox.cs:
+	* src/TagLib/Mpeg4/Boxes/IsoChunkOffsetBox.cs: Eliminate a nasty bug where
+	changes to 'mdat' offsets, ie. any file size change, broke MP4 files.
+
+2006-09-11  Brian Nickel  <brian.nickel@gmail.com>
+
+	* src/TagLib/Mpeg4/File.cs: Added "audio/mp4" to types.
+
+2006-09-01  Aaron Bockover  <abockover@novell.com>
+
+	* examples/covers/: Added sample cover art files
+
+2006-09-01  Aaron Bockover  <abockover@novell.com>
+
+	* tests/: Added test sample audio files
+
+2006-09-01  Aaron Bockover  <abockover@novell.com>
+
+	* configure.ac: Added ASM_VERSION; added DISTCHECK_CONFIGURE_FLAGS so
+	distcheck target works properly as user (--disable-docs is passed on
+	distcheck now)
+
+	* src/AssemblyInfo.cs.in: Use ASM_VERSION instead of VERSION to get
+	build revisions in version string
+
+	* examples/Makefile.am: Added EXTRA_DIST, fixed distcheck build bug
+
+2006-08-31  Brian Nickel  <brian.nickel@gmail.com>
+
+	* src/TagLib/ByteVector.cs: Perform a few additions better, getting rid of
+	for (...) Add (byte).
+	* src/TagLib/Id3v2/FrameFactory.cs: Con-current bug fix with TagLib,
+	correcting an invalid frame conversion.
+
+2006-08-28  Brian Nickel  <brian.nickel@gmail.com>
+
+	* src/TagLib/Asf/Tag.cs: Fixes a segmentation fault that can arise from
+	TagLib.Asf.Tag.DiscCount when WM/PartOfSet doesn't contain a '/'.
+
+2006-08-27  Aaron Bockover  <abockover@novell.com>
+
+	* src/TagLib/ReadOnlyException.cs: New exception
+
+	* src/TagLib/File.cs:
+	* src/TagLib/Mpc/File.cs:
+	* src/TagLib/Mpeg/File.cs:
+	* src/TagLib/WavPack/File.cs:
+	* src/TagLib/Flac/File.cs:
+	* src/TagLib/Asf/File.cs:
+	* src/TagLib/Mpeg4/AppleTag.cs:
+	* src/TagLib/Mpeg4/File.cs:
+	* src/TagLib/Ogg/File.cs:
+	* src/TagLib/Ogg/Vorbis/File.cs:
+	* src/TagLib/Ogg/Flac/File.cs: Save is now void, throws exceptions
+	when a problem has arisen instead of eventually returning false, masking
+	the source of the problem
+
+	* taglib-sharp.csproj:
+	* src/Makefile.am: Updated
+
+2006-08-25  Aaron Bockover  <abockover@novell.com>
+
+	* examples/Makefile.am: Added Makefile.am, was missing from forge
+	repository
+
+2006-08-25  Brian Nickel  <brian.nickel@gmail.com>
+
+	* Fixed a bug where ByteVector.Find wouldn't find items
+	  at the end of files, resulting in strings with '\0' in
+	  them.
+
+2006-08-25  Brian Nickel  <brian.nickel@gmail.com>
+
+	* Nice big patch by Aaron with:
+	* New attribute allows automatic support for mime types.
+	* Make things easier for Banshee with convenience functions
+	  in TagLib.Tag
+
+2006-08-22  Brian Nickel  <brian.nickel@gmail.com>
+
+	* Adopted changes by Aaron Bockover.
+	* Added TagLib.AudioProperties.Duration
+	* Marked TagLib.AudioProperties.Length obsolete
+	* Added support for Windows Media Audio.
+

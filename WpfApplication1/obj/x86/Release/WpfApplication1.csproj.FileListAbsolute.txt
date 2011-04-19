@@ -1,0 +1,17 @@
+C:\Users\Administrator\documents\visual studio 2010\Projects\WpfApplication1\WpfApplication1\bin\Release\WpfApplication1.exe
+C:\Users\Administrator\documents\visual studio 2010\Projects\WpfApplication1\WpfApplication1\bin\Release\WpfApplication1.pdb
+C:\Users\Administrator\documents\visual studio 2010\Projects\WpfApplication1\WpfApplication1\bin\Release\taglib-sharp.dll
+C:\Users\Administrator\documents\visual studio 2010\Projects\WpfApplication1\WpfApplication1\obj\x86\Release\ResolveAssemblyReference.cache
+C:\Users\Administrator\documents\visual studio 2010\Projects\WpfApplication1\WpfApplication1\obj\x86\Release\MixerMain.baml
+C:\Users\Administrator\documents\visual studio 2010\Projects\WpfApplication1\WpfApplication1\obj\x86\Release\MainWindow.g.cs
+C:\Users\Administrator\documents\visual studio 2010\Projects\WpfApplication1\WpfApplication1\obj\x86\Release\MixerMain.g.cs
+C:\Users\Administrator\documents\visual studio 2010\Projects\WpfApplication1\WpfApplication1\obj\x86\Release\App.g.cs
+C:\Users\Administrator\documents\visual studio 2010\Projects\WpfApplication1\WpfApplication1\obj\x86\Release\WpfApplication1_MarkupCompile.cache
+C:\Users\Administrator\documents\visual studio 2010\Projects\WpfApplication1\WpfApplication1\obj\x86\Release\WpfApplication1_MarkupCompile.lref
+C:\Users\Administrator\documents\visual studio 2010\Projects\WpfApplication1\WpfApplication1\obj\x86\Release\MainWindow.baml
+C:\Users\Administrator\documents\visual studio 2010\Projects\WpfApplication1\WpfApplication1\obj\x86\Release\WpfApplication1.g.resources
+C:\Users\Administrator\documents\visual studio 2010\Projects\WpfApplication1\WpfApplication1\obj\x86\Release\WpfApplication1.Properties.Resources.resources
+C:\Users\Administrator\documents\visual studio 2010\Projects\WpfApplication1\WpfApplication1\obj\x86\Release\GenerateResource.read.1.tlog
+C:\Users\Administrator\documents\visual studio 2010\Projects\WpfApplication1\WpfApplication1\obj\x86\Release\GenerateResource.write.1.tlog
+C:\Users\Administrator\documents\visual studio 2010\Projects\WpfApplication1\WpfApplication1\obj\x86\Release\WpfApplication1.exe
+C:\Users\Administrator\documents\visual studio 2010\Projects\WpfApplication1\WpfApplication1\obj\x86\Release\WpfApplication1.pdb
