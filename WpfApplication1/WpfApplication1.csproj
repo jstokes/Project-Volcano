@@ -1,0 +1,184 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">x86</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{4E03C2E2-3675-473D-865B-C0834D79AFB7}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>WpfApplication1</RootNamespace>
+    <AssemblyName>WpfApplication1</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <TargetFrameworkProfile>Client</TargetFrameworkProfile>
+    <FileAlignment>512</FileAlignment>
+    <ProjectTypeGuids>{60dc8134-eba5-43b8-bcc9-bb4bc16c2548};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Xaml">
+      <RequiredTargetFramework>4.0</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="taglib-sharp">
+      <HintPath>.\taglib-sharp.dll</HintPath>
+    </Reference>
+    <Reference Include="WindowsBase" />
+    <Reference Include="PresentationCore" />
+    <Reference Include="PresentationFramework" />
+  </ItemGroup>
+  <ItemGroup>
+    <ApplicationDefinition Include="App.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </ApplicationDefinition>
+    <Compile Include="Channel.cs" />
+    <Compile Include="ChannelControl.cs" />
+    <Compile Include="CrossfaderControl.cs" />
+    <Compile Include="DeckControl.cs" />
+    <Compile Include="DirectoryClass.cs" />
+    <Compile Include="fmod\fmod.cs" />
+    <Compile Include="fmod\fmod_dsp.cs" />
+    <Compile Include="fmod\fmod_errors.cs" />
+    <Compile Include="fmod\fmod_memoryinfo.cs" />
+    <Compile Include="KnobControl.cs" />
+    <Compile Include="MixerMain.xaml.cs">
+      <DependentUpon>MixerMain.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="DirectoryList.cs" />
+    <Compile Include="DirectoryListItem.cs" />
+    <Compile Include="RecordController.cs" />
+    <Compile Include="Sample.cs" />
+    <Compile Include="SliderButton.cs" />
+    <Compile Include="ToggleButton.cs" />
+    <Compile Include="ToggleTapButton.cs" />
+    <Page Include="MainWindow.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Compile Include="App.xaml.cs">
+      <DependentUpon>App.xaml</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="MainWindow.xaml.cs">
+      <DependentUpon>MainWindow.xaml</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+    <Page Include="MixerMain.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Properties\AssemblyInfo.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <AppDesigner Include="Properties\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="png\channelSlider.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="png\channelKnob.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="png\background.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="png\mute_off.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="png\loop_off.png" />
+    <Resource Include="png\loop_on.png" />
+    <Resource Include="png\mute_on.png" />
+    <Resource Include="png\play_off.png" />
+    <Resource Include="png\play_on.png" />
+    <Resource Include="png\record.png" />
+    <Resource Include="png\solo_off.png" />
+    <Resource Include="png\solo_on.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="png\deck_background.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="png\record_background.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="png\dial_background.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="png\dial_knob.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="png\inforthekill.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="png\crossfadeBackground.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="png\crossfadeSlider.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="png\record_hover.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="png\inforthekill_selected.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="png\record_hover_loading.png" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

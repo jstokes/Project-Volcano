@@ -1,0 +1,8 @@
+﻿<Window x:Class="WpfApplication1.MixerMain"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="MixerMain" Height="1080" Width="1920" Loaded="Window_Loaded">
+    <Grid>
+        <Canvas Height="1080" HorizontalAlignment="Left" Name="_canvas" VerticalAlignment="Top" Width="1920" Background="#FF0F1010" />
+    </Grid>
+</Window>
